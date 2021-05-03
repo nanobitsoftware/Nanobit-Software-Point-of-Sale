@@ -1,0 +1,1652 @@
+Walkheap: 0) m_add: 0x8abd20, file: D:\Source Code\nanopo\Nano PoS.c, line: 107
+Walkheap: 1) m_add: 0x90f3e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 45
+Walkheap: 2) m_add: 0x910478, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 3) m_add: 0x8ce270, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 4) m_add: 0x90f6f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 5) m_add: 0x8cafe0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 6) m_add: 0x90f7f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 7) m_add: 0x8db5c0, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 8) m_add: 0x90f8f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 9) m_add: 0x927d98, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 10) m_add: 0x8a9828, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 11) m_add: 0x927618, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 12) m_add: 0x8daa20, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 13) m_add: 0x927bb8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 14) m_add: 0x917dd0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 15) m_add: 0x927af8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 16) m_add: 0x920868, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 17) m_add: 0x927df8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 18) m_add: 0x8cc7e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 19) m_add: 0x9277f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 20) m_add: 0x917f80, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 21) m_add: 0x927318, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 22) m_add: 0x8ca840, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 23) m_add: 0x927c18, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 24) m_add: 0x8aa9c0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 25) m_add: 0x927978, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 26) m_add: 0x927678, file: D:\Source Code\nanopo\NWC_Main.c, line: 1859
+Walkheap: 27) m_add: 0x90f9f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 28) m_add: 0x8aa248, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 29) m_add: 0x90fa78, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 30) m_add: 0x8d7380, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 31) m_add: 0x935d60, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 32) m_add: 0x930390, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 33) m_add: 0x8cbfd0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 34) m_add: 0x9303d8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 35) m_add: 0x8d7430, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 36) m_add: 0x9304b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 37) m_add: 0x935bd8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 38) m_add: 0x935c48, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 39) m_add: 0x935a88, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 40) m_add: 0x935c80, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 41) m_add: 0x935dd0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 42) m_add: 0x935f90, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 43) m_add: 0x9272b8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 44) m_add: 0x935970, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: Total size unfreed: 2956 bytes
+Walkheap: Allocations called: 343. Deallocations called: 298, total: 45. (This number SHOULD be zero. 
+	If not, then we got some problems.
+
+Walkheap: 0) m_add: 0x99bbf8, file: D:\Source Code\nanopo\Nano PoS.c, line: 107
+Walkheap: 1) m_add: 0x9d7cf0, file: D:\Source Code\nanopo\NWC_Main.c, line: 45
+Walkheap: 2) m_add: 0x9d6230, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 3) m_add: 0x9d6790, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 4) m_add: 0x9d5b30, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 5) m_add: 0x99a518, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 6) m_add: 0x9d5930, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 7) m_add: 0x9d6ab8, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 8) m_add: 0x9d5bb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 9) m_add: 0x9fba90, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 10) m_add: 0xa042e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 11) m_add: 0x9fb7f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 12) m_add: 0xa05118, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 13) m_add: 0x9fb8b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 14) m_add: 0xa053a8, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 15) m_add: 0x9fb550, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 16) m_add: 0xa065b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 17) m_add: 0x9fbaf0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 18) m_add: 0xa06700, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 19) m_add: 0x9fbb50, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 20) m_add: 0xa06868, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 21) m_add: 0x9fb9d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 22) m_add: 0xa069c0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 23) m_add: 0x9fbc70, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 24) m_add: 0xa06b38, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 25) m_add: 0x9fb6d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 26) m_add: 0x9fb910, file: D:\Source Code\nanopo\NWC_Main.c, line: 1859
+Walkheap: 27) m_add: 0xa1a2e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 28) m_add: 0x9ef080, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 29) m_add: 0x9d5c30, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 30) m_add: 0xa1f590, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 31) m_add: 0x9d5cb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 32) m_add: 0x9f58c8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 33) m_add: 0xa0dc70, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 34) m_add: 0xa0c160, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 35) m_add: 0xa027c8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 36) m_add: 0xa0c508, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 37) m_add: 0xa0c2c8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 38) m_add: 0x9f59d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 39) m_add: 0xa0db20, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 40) m_add: 0xa0e1b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 41) m_add: 0xa0e1e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 42) m_add: 0xa0dca8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 43) m_add: 0xa0e220, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 44) m_add: 0xa11358, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 45) m_add: 0xa0e258, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: Total size unfreed: 3020 bytes
+Walkheap: Allocations called: 642. Deallocations called: 596, total: 46. (This number SHOULD be zero. 
+	If not, then we got some problems.
+
+Tax: 10
+TAX AFTER: 0.10
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10969424, but we did not own it. Not freeing.
+Warranty ""
+Warranty ""
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967632, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Warranty ""
+Warranty ""
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970448, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10970704, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10967248, but we did not own it. Not freeing.
+Warranty ""
+Warranty ""
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 10966992, but we did not own it. Not freeing.
+Walkheap: 0) m_add: 0xa3be18, file: D:\Source Code\nanopo\Nano PoS.c, line: 107
+Walkheap: 1) m_add: 0xa77c90, file: D:\Source Code\nanopo\NWC_Main.c, line: 45
+Walkheap: 2) m_add: 0xa75950, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 3) m_add: 0xa76730, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 4) m_add: 0xa75c50, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 5) m_add: 0xa39eb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 6) m_add: 0xa76450, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 7) m_add: 0xa76a58, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 8) m_add: 0xa75dd0, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 9) m_add: 0xa9b818, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 10) m_add: 0xaa4248, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 11) m_add: 0xa9b998, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 12) m_add: 0xaa5080, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 13) m_add: 0xa9b9f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 14) m_add: 0xaa5310, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 15) m_add: 0xa9b7b8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 16) m_add: 0xaa6518, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 17) m_add: 0xa9ba58, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 18) m_add: 0xaa6668, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 19) m_add: 0xa9bbd8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 20) m_add: 0xaa67d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 21) m_add: 0xa9b878, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 22) m_add: 0xaa6928, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 23) m_add: 0xa9bb18, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 24) m_add: 0xaa6aa0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 25) m_add: 0xa9bb78, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 26) m_add: 0xa9b458, file: D:\Source Code\nanopo\NWC_Main.c, line: 1859
+Walkheap: 27) m_add: 0xab4830, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 28) m_add: 0xab44d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 29) m_add: 0xaa1e30, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 30) m_add: 0xa763d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 31) m_add: 0xa961d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 32) m_add: 0xab35a8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 33) m_add: 0xab49e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 34) m_add: 0xaa2430, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 35) m_add: 0xaa1ff0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 36) m_add: 0xaa2470, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 37) m_add: 0xab8e18, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 38) m_add: 0xab77e8, file: D:\Source Code\nanopo\customers.c, line: 29
+Walkheap: 39) m_add: 0xabdea8, file: D:\Source Code\nanopo\customers.c, line: 47
+Walkheap: 40) m_add: 0xabd230, file: D:\Source Code\nanopo\customers.c, line: 48
+Walkheap: 41) m_add: 0xa91608, file: D:\Source Code\nanopo\customers.c, line: 49
+Walkheap: 42) m_add: 0xa91a70, file: D:\Source Code\nanopo\customers.c, line: 51
+Walkheap: 43) m_add: 0xa911a0, file: D:\Source Code\nanopo\customers.c, line: 53
+Walkheap: 44) m_add: 0xa91be8, file: D:\Source Code\nanopo\customers.c, line: 54
+Walkheap: 45) m_add: 0xa918f8, file: D:\Source Code\nanopo\customers.c, line: 55
+Walkheap: 46) m_add: 0xa91d60, file: D:\Source Code\nanopo\customers.c, line: 56
+Walkheap: 47) m_add: 0xa91028, file: D:\Source Code\nanopo\customers.c, line: 57
+Walkheap: 48) m_add: 0xa91318, file: D:\Source Code\nanopo\customers.c, line: 58
+Walkheap: 49) m_add: 0xac7008, file: D:\Source Code\nanopo\customers.c, line: 59
+Walkheap: 50) m_add: 0xac5888, file: D:\Source Code\nanopo\customers.c, line: 60
+Walkheap: 51) m_add: 0xac5e68, file: D:\Source Code\nanopo\customers.c, line: 61
+Walkheap: 52) m_add: 0xac76f0, file: D:\Source Code\nanopo\customers.c, line: 62
+Walkheap: 53) m_add: 0xab68d0, file: D:\Source Code\nanopo\customers.c, line: 63
+Walkheap: 54) m_add: 0xacb720, file: D:\Source Code\nanopo\customers.c, line: 64
+Walkheap: 55) m_add: 0xab4998, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 56) m_add: 0xab45f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 57) m_add: 0xaa1eb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 58) m_add: 0xa761d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 59) m_add: 0xa96280, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 60) m_add: 0xab3ae8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 61) m_add: 0xab4a28, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 62) m_add: 0xaa2270, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 63) m_add: 0xaa1ef0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 64) m_add: 0xaa2070, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 65) m_add: 0xab9250, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 66) m_add: 0xab35e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 67) m_add: 0xaa21b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 68) m_add: 0xaa2130, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 69) m_add: 0xaabff0, file: D:\Source Code\nanopo\strings.c, line: 467
+Walkheap: 70) m_add: 0xab4248, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 71) m_add: 0xab4a70, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 72) m_add: 0xa75850, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 73) m_add: 0xaa8d98, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 74) m_add: 0xadaa78, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 75) m_add: 0xac45c8, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 76) m_add: 0xadaad8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 77) m_add: 0xac4538, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 78) m_add: 0xada4d8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 79) m_add: 0xac40b8, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 80) m_add: 0xa9b578, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 81) m_add: 0xac4ad8, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 82) m_add: 0xa9b5d8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 83) m_add: 0xab8970, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 84) m_add: 0xa9b698, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 85) m_add: 0xab1c98, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 86) m_add: 0xa9b758, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 87) m_add: 0xab2f08, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 88) m_add: 0xa9b8d8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 89) m_add: 0xac2520, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 90) m_add: 0xa9b938, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 91) m_add: 0xac2178, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 92) m_add: 0xabf4d8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 93) m_add: 0xac27f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 94) m_add: 0xabf718, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 95) m_add: 0xac2ad0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 96) m_add: 0xabf958, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 97) m_add: 0xabfa18, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 98) m_add: 0xadc310, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 99) m_add: 0xadc370, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 100) m_add: 0xadbfb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 101) m_add: 0xac21e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 102) m_add: 0xadc6d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 103) m_add: 0xaa8380, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 104) m_add: 0xadc190, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 105) m_add: 0xa762d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 106) m_add: 0xab2fe8, file: D:\Source Code\nanopo\NWC_Main.c, line: 439
+Walkheap: 107) m_add: 0xab4758, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 108) m_add: 0xab43f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 109) m_add: 0xadc4f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 110) m_add: 0xab4368, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 111) m_add: 0xa76250, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 112) m_add: 0xaa8b78, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 113) m_add: 0xadc010, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 114) m_add: 0xac4da8, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 115) m_add: 0xadc8b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 116) m_add: 0xac4c88, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 117) m_add: 0xadc430, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 118) m_add: 0xac4d18, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 119) m_add: 0xadc3d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 120) m_add: 0xac4028, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 121) m_add: 0xadc850, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 122) m_add: 0xaadda0, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 123) m_add: 0xadc130, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 124) m_add: 0xab1d30, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 125) m_add: 0xadca90, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 126) m_add: 0xab2a38, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 127) m_add: 0xadc070, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 128) m_add: 0xac2588, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 129) m_add: 0xadc1f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 130) m_add: 0xac25f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 131) m_add: 0xadc910, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 132) m_add: 0xac2658, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 133) m_add: 0xadcb50, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 134) m_add: 0xac2da8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 135) m_add: 0xadc250, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 136) m_add: 0xadc490, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 137) m_add: 0xadc7f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 138) m_add: 0xadc2b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 139) m_add: 0xadc790, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 140) m_add: 0xac2e10, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 141) m_add: 0xadc550, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 142) m_add: 0xaa8958, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 143) m_add: 0xadc0d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 144) m_add: 0xa760d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 145) m_add: 0xad4ea0, file: D:\Source Code\nanopo\NWC_Main.c, line: 439
+Walkheap: 146) m_add: 0xab4cf8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 147) m_add: 0xab4c20, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 148) m_add: 0xab48c0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 149) m_add: 0xab4950, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 150) m_add: 0xaa1f30, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 151) m_add: 0xa75e50, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 152) m_add: 0xa959e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 153) m_add: 0xaa1a28, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 154) m_add: 0xab4e18, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 155) m_add: 0xaa24b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 156) m_add: 0xaa22b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 157) m_add: 0xaa22f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 158) m_add: 0xab8cb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 159) m_add: 0xaa1a60, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 160) m_add: 0xaa2bb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 161) m_add: 0xaa2770, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 162) m_add: 0xaa2670, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 163) m_add: 0xab3650, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 164) m_add: 0xae5330, file: D:\Source Code\nanopo\strings.c, line: 467
+Walkheap: 165) m_add: 0xab4ef0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 166) m_add: 0xab4f38, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 167) m_add: 0xab4cb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 168) m_add: 0xaa27b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 169) m_add: 0xa75ad0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 170) m_add: 0xa95a98, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 171) m_add: 0xaeebd0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 172) m_add: 0xab4fc8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 173) m_add: 0xaa27f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 174) m_add: 0xaa2b30, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 175) m_add: 0xaa2830, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 176) m_add: 0xab8e90, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 177) m_add: 0xaee8f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 178) m_add: 0xab50e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 179) m_add: 0xab4e60, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 180) m_add: 0xab5130, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 181) m_add: 0xab4ab8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 182) m_add: 0xaa2a70, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 183) m_add: 0xa76650, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 184) m_add: 0xa958e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 185) m_add: 0xaeed90, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 186) m_add: 0xab5010, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 187) m_add: 0xaa2730, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 188) m_add: 0xaa2970, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 189) m_add: 0xaa29b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 190) m_add: 0xab9160, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 191) m_add: 0xaee8c0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 192) m_add: 0xab4bd8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 193) m_add: 0xab4b48, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 194) m_add: 0xab4b00, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 195) m_add: 0xab4ea8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 196) m_add: 0xaa2930, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 197) m_add: 0xa758d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 198) m_add: 0xa95bf8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 199) m_add: 0xaeea80, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 200) m_add: 0xab4dd0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 201) m_add: 0xaa29f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 202) m_add: 0xaa2a30, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 203) m_add: 0xaa2ab0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 204) m_add: 0xab91d8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 205) m_add: 0xaeeab8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 206) m_add: 0xaa2b70, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 207) m_add: 0xaa2c30, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 208) m_add: 0xaf6fe0, file: D:\Source Code\nanopo\strings.c, line: 467
+Walkheap: 209) m_add: 0xab50a0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 210) m_add: 0xab4b90, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 211) m_add: 0xab45a8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 212) m_add: 0xab4638, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 213) m_add: 0xaa25b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 214) m_add: 0xa757d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 215) m_add: 0xa95b48, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 216) m_add: 0xab3570, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 217) m_add: 0xab4680, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 218) m_add: 0xaa28b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 219) m_add: 0xaa28f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 220) m_add: 0xaa2bf0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 221) m_add: 0xab8f08, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 222) m_add: 0xab3848, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 223) m_add: 0xb0eeb0, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 224) m_add: 0xab1ef8, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 225) m_add: 0xb0f130, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 226) m_add: 0xb297a8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 227) m_add: 0xa77460, file: D:\Source Code\nanopo\NWC_Main.c, line: 734
+Walkheap: 228) m_add: 0xb29088, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 229) m_add: 0xb06e38, file: D:\Source Code\nanopo\NWC_Main.c, line: 1029
+Walkheap: 230) m_add: 0xb29868, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 231) m_add: 0xb0bfe0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1859
+Walkheap: 232) m_add: 0xb29988, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 233) m_add: 0xac24b8, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 234) m_add: 0xb290e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 235) m_add: 0xb0c2f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 236) m_add: 0xb29688, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 237) m_add: 0xac2930, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 238) m_add: 0xb296e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 239) m_add: 0xb0c6e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 240) m_add: 0xb299e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 241) m_add: 0xb0c520, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 242) m_add: 0xb10ee8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 243) m_add: 0xb14980, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 244) m_add: 0xb14e50, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: Total size unfreed: 39892 bytes
+Walkheap: Allocations called: 2666. Deallocations called: 2421, total: 245. (This number SHOULD be zero. 
+	If not, then we got some problems.
+
+Tax: 10
+TAX AFTER: 0.10
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8223488, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 8224128, but we did not own it. Not freeing.
+Walkheap: 0) m_add: 0x79c438, file: D:\Source Code\nanopo\Nano PoS.c, line: 107
+Walkheap: 1) m_add: 0x7d5378, file: D:\Source Code\nanopo\customers.c, line: 29
+Walkheap: 2) m_add: 0x7d8ab8, file: D:\Source Code\nanopo\customers.c, line: 47
+Walkheap: 3) m_add: 0x7d8c08, file: D:\Source Code\nanopo\customers.c, line: 48
+Walkheap: 4) m_add: 0x7d48b0, file: D:\Source Code\nanopo\customers.c, line: 49
+Walkheap: 5) m_add: 0x7d4d18, file: D:\Source Code\nanopo\customers.c, line: 51
+Walkheap: 6) m_add: 0x7d42d0, file: D:\Source Code\nanopo\customers.c, line: 53
+Walkheap: 7) m_add: 0x7d3fe0, file: D:\Source Code\nanopo\customers.c, line: 54
+Walkheap: 8) m_add: 0x7d4448, file: D:\Source Code\nanopo\customers.c, line: 55
+Walkheap: 9) m_add: 0x7d4158, file: D:\Source Code\nanopo\customers.c, line: 56
+Walkheap: 10) m_add: 0x7d45c0, file: D:\Source Code\nanopo\customers.c, line: 57
+Walkheap: 11) m_add: 0x7d4738, file: D:\Source Code\nanopo\customers.c, line: 58
+Walkheap: 12) m_add: 0x7da8c8, file: D:\Source Code\nanopo\customers.c, line: 59
+Walkheap: 13) m_add: 0x7da2e8, file: D:\Source Code\nanopo\customers.c, line: 60
+Walkheap: 14) m_add: 0x7da170, file: D:\Source Code\nanopo\customers.c, line: 61
+Walkheap: 15) m_add: 0x7dc3f8, file: D:\Source Code\nanopo\customers.c, line: 62
+Walkheap: 16) m_add: 0x7e0428, file: D:\Source Code\nanopo\customers.c, line: 63
+Walkheap: 17) m_add: 0x7e04b8, file: D:\Source Code\nanopo\customers.c, line: 64
+Walkheap: 18) m_add: 0x7d8560, file: D:\Source Code\nanopo\NWC_Main.c, line: 45
+Walkheap: 19) m_add: 0x7d7a80, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 20) m_add: 0x7d5240, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 21) m_add: 0x7d8080, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 22) m_add: 0x79cf20, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 23) m_add: 0x7d7880, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 24) m_add: 0x7d8720, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 25) m_add: 0x7d8100, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 26) m_add: 0x802f58, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 27) m_add: 0x80aef0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 28) m_add: 0x803138, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 29) m_add: 0x80bbd8, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 30) m_add: 0x802a78, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 31) m_add: 0x80bd18, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 32) m_add: 0x802c58, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 33) m_add: 0x80be70, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 34) m_add: 0x803198, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 35) m_add: 0x80bfc0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 36) m_add: 0x802cb8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 37) m_add: 0x80c128, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 38) m_add: 0x802a18, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 39) m_add: 0x80e288, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 40) m_add: 0x802d18, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 41) m_add: 0x80e400, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 42) m_add: 0x802e98, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 43) m_add: 0x802ad8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1859
+Walkheap: 44) m_add: 0x7d7900, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 45) m_add: 0x822a18, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 46) m_add: 0x7d8200, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 47) m_add: 0x7f95a8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 48) m_add: 0x808970, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 49) m_add: 0x7f6e08, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 50) m_add: 0x809600, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 51) m_add: 0x7f65e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 52) m_add: 0x823158, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 53) m_add: 0x7f9600, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 54) m_add: 0x824588, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 55) m_add: 0x8241d0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 56) m_add: 0x823f68, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 57) m_add: 0x8242b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 58) m_add: 0x8240b8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 59) m_add: 0x81f148, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 60) m_add: 0x824208, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 61) m_add: 0x8089a8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 62) m_add: 0x824240, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: 63) m_add: 0x7f9918, file: D:\Source Code\nanopo\NWC_Main.c, line: 1083
+Walkheap: Total size unfreed: 23484 bytes
+Walkheap: Allocations called: 549. Deallocations called: 485, total: 64. (This number SHOULD be zero. 
+	If not, then we got some problems.
+
+Tax: 10
+TAX AFTER: 0.10
+Walkheap: 0) m_add: 0x92db60, file: D:\Source Code\nanopo\Nano PoS.c, line: 107
+Walkheap: 1) m_add: 0x92e9e0, file: D:\Source Code\nanopo\customers.c, line: 29
+Walkheap: 2) m_add: 0x9673f8, file: D:\Source Code\nanopo\customers.c, line: 47
+Walkheap: 3) m_add: 0x967548, file: D:\Source Code\nanopo\customers.c, line: 48
+Walkheap: 4) m_add: 0x96af00, file: D:\Source Code\nanopo\customers.c, line: 49
+Walkheap: 5) m_add: 0x96b118, file: D:\Source Code\nanopo\customers.c, line: 51
+Walkheap: 6) m_add: 0x96b330, file: D:\Source Code\nanopo\customers.c, line: 53
+Walkheap: 7) m_add: 0x96b548, file: D:\Source Code\nanopo\customers.c, line: 54
+Walkheap: 8) m_add: 0x96b760, file: D:\Source Code\nanopo\customers.c, line: 55
+Walkheap: 9) m_add: 0x96b978, file: D:\Source Code\nanopo\customers.c, line: 56
+Walkheap: 10) m_add: 0x96bb90, file: D:\Source Code\nanopo\customers.c, line: 57
+Walkheap: 11) m_add: 0x96bda8, file: D:\Source Code\nanopo\customers.c, line: 58
+Walkheap: 12) m_add: 0x96bfc0, file: D:\Source Code\nanopo\customers.c, line: 59
+Walkheap: 13) m_add: 0x96c1d8, file: D:\Source Code\nanopo\customers.c, line: 60
+Walkheap: 14) m_add: 0x96c3f0, file: D:\Source Code\nanopo\customers.c, line: 61
+Walkheap: 15) m_add: 0x96d568, file: D:\Source Code\nanopo\customers.c, line: 62
+Walkheap: 16) m_add: 0x971598, file: D:\Source Code\nanopo\customers.c, line: 63
+Walkheap: 17) m_add: 0x971628, file: D:\Source Code\nanopo\customers.c, line: 64
+Walkheap: 18) m_add: 0x96a9a8, file: D:\Source Code\nanopo\NWC_Main.c, line: 45
+Walkheap: 19) m_add: 0x96a3c8, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 20) m_add: 0x967218, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 21) m_add: 0x969dc8, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 22) m_add: 0x92f610, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 23) m_add: 0x96a1c8, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 24) m_add: 0x96ab68, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 25) m_add: 0x969b48, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 26) m_add: 0x994108, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 27) m_add: 0x99a278, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 28) m_add: 0x994048, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 29) m_add: 0x99af60, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 30) m_add: 0x994348, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 31) m_add: 0x99b0a0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 32) m_add: 0x9942e8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 33) m_add: 0x99b1f8, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 34) m_add: 0x993fe8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 35) m_add: 0x99b348, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 36) m_add: 0x993e68, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 37) m_add: 0x99b4b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 38) m_add: 0x9943a8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 39) m_add: 0x99d610, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 40) m_add: 0x994468, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 41) m_add: 0x99d788, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 42) m_add: 0x9944c8, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 43) m_add: 0x993da8, file: D:\Source Code\nanopo\NWC_Main.c, line: 1859
+Walkheap: Total size unfreed: 22836 bytes
+Walkheap: Allocations called: 44. Deallocations called: 0, total: 44. (This number SHOULD be zero. 
+	If not, then we got some problems.
+
+Tax: 10
+TAX AFTER: 0.10
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9384008, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address -572662307, but we did not own it. Not freeing.
+Attempted to free address 9385544, but we did not own it. Not freeing.
+Tax: 10
+TAX AFTER: 0.10
+Walkheap: 0) m_add: 0x91bde8, file: D:\Source Code\nanopo\Nano PoS.c, line: 107
+Walkheap: 1) m_add: 0x956ba8, file: D:\Source Code\nanopo\customers.c, line: 29
+Walkheap: 2) m_add: 0x956d08, file: D:\Source Code\nanopo\customers.c, line: 47
+Walkheap: 3) m_add: 0x956e58, file: D:\Source Code\nanopo\customers.c, line: 48
+Walkheap: 4) m_add: 0x9575b0, file: D:\Source Code\nanopo\customers.c, line: 49
+Walkheap: 5) m_add: 0x957728, file: D:\Source Code\nanopo\customers.c, line: 51
+Walkheap: 6) m_add: 0x957148, file: D:\Source Code\nanopo\customers.c, line: 53
+Walkheap: 7) m_add: 0x957b90, file: D:\Source Code\nanopo\customers.c, line: 54
+Walkheap: 8) m_add: 0x956fd0, file: D:\Source Code\nanopo\customers.c, line: 55
+Walkheap: 9) m_add: 0x9572c0, file: D:\Source Code\nanopo\customers.c, line: 56
+Walkheap: 10) m_add: 0x957a18, file: D:\Source Code\nanopo\customers.c, line: 57
+Walkheap: 11) m_add: 0x9578a0, file: D:\Source Code\nanopo\customers.c, line: 58
+Walkheap: 12) m_add: 0x957d08, file: D:\Source Code\nanopo\customers.c, line: 59
+Walkheap: 13) m_add: 0x957438, file: D:\Source Code\nanopo\customers.c, line: 60
+Walkheap: 14) m_add: 0x958c48, file: D:\Source Code\nanopo\customers.c, line: 61
+Walkheap: 15) m_add: 0x95b650, file: D:\Source Code\nanopo\customers.c, line: 62
+Walkheap: 16) m_add: 0x95f680, file: D:\Source Code\nanopo\customers.c, line: 63
+Walkheap: 17) m_add: 0x95f710, file: D:\Source Code\nanopo\customers.c, line: 64
+Walkheap: 18) m_add: 0x956518, file: D:\Source Code\nanopo\NWC_Main.c, line: 45
+Walkheap: 19) m_add: 0x9558b8, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 20) m_add: 0x9566d8, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 21) m_add: 0x9561b8, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 22) m_add: 0x91a530, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 23) m_add: 0x9555b8, file: D:\Source Code\nanopo\NWC_Main.c, line: 62
+Walkheap: 24) m_add: 0x956760, file: D:\Source Code\nanopo\NWC_Main.c, line: 203
+Walkheap: 25) m_add: 0x955eb8, file: D:\Source Code\nanopo\NWC_Main.c, line: 205
+Walkheap: 26) m_add: 0x981b10, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 27) m_add: 0x98a760, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 28) m_add: 0x9819f0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 29) m_add: 0x98b448, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 30) m_add: 0x981a50, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 31) m_add: 0x98b588, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 32) m_add: 0x981c90, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 33) m_add: 0x98b6e0, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 34) m_add: 0x981e10, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 35) m_add: 0x98b830, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 36) m_add: 0x981f90, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 37) m_add: 0x98b998, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 38) m_add: 0x981ff0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 39) m_add: 0x98daf8, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 40) m_add: 0x981cf0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 41) m_add: 0x98dc70, file: D:\Source Code\nanopo\NWC_Main.c, line: 633
+Walkheap: 42) m_add: 0x9820b0, file: D:\Source Code\nanopo\NWC_Main.c, line: 481
+Walkheap: 43) m_add: 0x981930, file: D:\Source Code\nanopo\NWC_Main.c, line: 1859
+Walkheap: Total size unfreed: 22836 bytes
+Walkheap: Allocations called: 929. Deallocations called: 885, total: 44. (This number SHOULD be zero. 
+	If not, then we got some problems.
+
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Warranty ""
+Warranty ""
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
+Tax: 10
+TAX AFTER: 0.10
