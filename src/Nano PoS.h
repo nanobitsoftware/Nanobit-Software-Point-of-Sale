@@ -373,6 +373,10 @@ LRESULT APIENTRY UsrDate_proc (HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 char * get_date_notime(void);
 LRESULT APIENTRY DailyWindow_proc (HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
 void create_daily_reports(void);
+double get_add_percent(double total, float percent);
+double get_minus_percent(double total, float percent);
+
+
 BOOL is_date(char *range);
 void print_report(char *report);
 void SetFocusInternal(HWND h);

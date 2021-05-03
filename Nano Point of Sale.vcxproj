@@ -165,6 +165,7 @@
     <Manifest Include="Nano Point of Sale.exe.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\calculator.c" />
     <ClCompile Include="src\computers gui.c" />
     <ClCompile Include="src\customers.c" />
     <ClCompile Include="src\customer_gui.c" />

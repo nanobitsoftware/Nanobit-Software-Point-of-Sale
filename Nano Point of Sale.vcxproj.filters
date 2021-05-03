@@ -85,6 +85,9 @@
     <ClCompile Include="src\db.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\calculator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nano PoS.h">
