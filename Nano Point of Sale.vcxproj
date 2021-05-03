@@ -153,35 +153,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Source Code\nanopo\computers gui.c" />
-    <ClCompile Include="D:\Source Code\nanopo\customers.c" />
-    <ClCompile Include="D:\Source Code\nanopo\customer_gui.c" />
-    <ClCompile Include="D:\Source Code\nanopo\inventory gui.c" />
-    <ClCompile Include="D:\Source Code\nanopo\inventory.c" />
-    <ClCompile Include="D:\Source Code\nanopo\IO.c" />
-    <ClCompile Include="D:\Source Code\nanopo\nano Memory.c" />
-    <ClCompile Include="D:\Source Code\nanopo\Nano PoS.c" />
-    <ClCompile Include="D:\Source Code\nanopo\NWC_Main.c" />
-    <ClCompile Include="D:\Source Code\nanopo\printer.c" />
-    <ClCompile Include="D:\Source Code\nanopo\reports.c" />
-    <ClCompile Include="D:\Source Code\nanopo\setup GUI.c" />
-    <ClCompile Include="D:\Source Code\nanopo\sqlite3.c" />
-    <ClCompile Include="D:\Source Code\nanopo\strings.c" />
-    <ClCompile Include="D:\Source Code\nanopo\tickets gui.c" />
-    <ClCompile Include="D:\Source Code\nanopo\tickets.c" />
-    <ClCompile Include="D:\Source Code\nanopo\zipcodes.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\Source Code\nanopo\Nano PoS.h" />
-    <ClInclude Include="D:\Source Code\nanopo\NWC.h" />
-    <ClInclude Include="D:\Source Code\nanopo\resource.h" />
-    <ClInclude Include="D:\Source Code\nanopo\resource1.h" />
-    <ClInclude Include="D:\Source Code\nanopo\sqlite3.h" />
-    <ClInclude Include="D:\Source Code\nanopo\sqlite3ext.h" />
-    <ClInclude Include="resource2.h" />
-    <ClInclude Include="resource3.h" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="debug.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +163,33 @@
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="Nano Point of Sale.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\computers gui.c" />
+    <ClCompile Include="src\customers.c" />
+    <ClCompile Include="src\customer_gui.c" />
+    <ClCompile Include="src\inventory gui.c" />
+    <ClCompile Include="src\inventory.c" />
+    <ClCompile Include="src\IO.c" />
+    <ClCompile Include="src\nano Memory.c" />
+    <ClCompile Include="src\Nano PoS.c" />
+    <ClCompile Include="src\NWC_Main.c" />
+    <ClCompile Include="src\printer.c" />
+    <ClCompile Include="src\reports.c" />
+    <ClCompile Include="src\setup GUI.c" />
+    <ClCompile Include="src\sqlite3.c" />
+    <ClCompile Include="src\strings.c" />
+    <ClCompile Include="src\tickets gui.c" />
+    <ClCompile Include="src\tickets.c" />
+    <ClCompile Include="src\zipcodes.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Nano PoS.h" />
+    <ClInclude Include="src\NWC.h" />
+    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\resource1.h" />
+    <ClInclude Include="src\sqlite3.h" />
+    <ClInclude Include="src\sqlite3ext.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
