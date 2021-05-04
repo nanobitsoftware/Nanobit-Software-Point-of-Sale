@@ -82,6 +82,9 @@
     <ClCompile Include="src\zipcodes.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\db.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nano PoS.h">
