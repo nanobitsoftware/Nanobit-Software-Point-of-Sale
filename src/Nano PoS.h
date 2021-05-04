@@ -368,7 +368,7 @@ void do_print_work_order(void);
 void do_print_invoice(void);
 void print_invoice (char *str, int copies);
 LRESULT APIENTRY UsrDate_proc (HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
-
+char* make_salt(void);
 
 char * get_date_notime(void);
 LRESULT APIENTRY DailyWindow_proc (HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);

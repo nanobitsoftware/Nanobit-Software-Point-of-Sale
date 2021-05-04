@@ -96,7 +96,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 
 
 
-
+	srand(time(NULL));
 
 	
 
@@ -154,6 +154,9 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 		sprintf(SQLString, "CREATE TABLE Tickets(id INTEGER PRIMARY KEY,Locked INT, Invoice INT, RefID INTEGER, NotesTotal INT, Subtotal DECIMAL(18,2), DiscountLabor DECIMAL(18,2), DiscountParts DECIMAL(18,2),"
 						   "DiscountType INT, TicketWritten CHAR, TicketCompleted CHAR, TickedBilled CHAR, Charged INT, Open INT, ServiceWriter CHAR, CSID INT, Computer INT, DeviceID INT, Invoiced INT, Notes CHAR,"
 						   "DiscountTotal DECIMAL(18,2), DiscLabor DECIMAL(18,2), DiscParts DECIMAL(18,2));"
+						   "CREATE TABLE Users (id INTEGER PRIMARY KEY, Name STRING, Password TEXT, Hash TEXT, Admin INT, Created INT, Enabled INT, LastUsed INT, TotalSales DECIMAL(18,2), TotalRefunds DECIMAL(18,2), TotalVoids DECIMAL(18,2), "
+			               "CustomersCreated INT, InvoicesCreated INT, InvoicesPaidOut INT, CanRefund INT, CanCreate INT, CanDeleteTicket INT, UserLevel INT);"
+						   "CREATE TABLE Telemetry(id INTEGER PRIMARY KEY, Startup INT, Shutdown INT, User STRING, FreeMem INT, Duplicate INT);"
 						   "CREATE TABLE Inventory(id INTEGER PRIMARY KEY, Type INT, Count INT, TotalSold CHAR, LastSold INT, Cost DECIMAL(18,2),"
 					       "Retail DECIMAL(18,2), Discount DECIMAL(18,2), OnDiscount INT, Make CHAR, Model CHAR, Desc CHAR, InvID CHAR UNIQUE, Supplier CHAR);"
 			               "CREATE TABLE DeviceType (id INTEGER PRIMARY KEY, Name CHAR, RefID INT, Phone INT, Computer INT, Laptop INT, AIO INT, TV INT, Console INT, Tablet INT, Other INT);");
@@ -372,7 +375,8 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 	if (setupwindow)
 		SetFocus(setupwindow);
 
-	
+
+
 	//return 0;
 	while (1)
 		
