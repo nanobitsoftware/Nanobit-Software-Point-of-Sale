@@ -8,6 +8,7 @@
 #include <richedit.h>
 #include <assert.h>
 #include <math.h>
+//#include <crypt.h>
 #include "Nano PoS.h"
 
 char str_empty[1];
@@ -694,7 +695,7 @@ BOOL is_date(char *range)
  */
 char *make_salt(void)
 {
-	char table[86] = 
+	char table[88] = 
 		"abcdefghijklmnopqrstuvwxyz"
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 		"1234567890!@#$%^&*()`-=~_+"
@@ -928,13 +929,53 @@ char *make_salt(void)
 }
 
 
+// We WILL modify the salt during this operation.
+// Do not send a copy of it. send the actual pointer
+// to the real buffer.
 char* crypt_password(char* plaintext, char* salt)
 {
+	int pwlen = 0;
+	int saltlen = 0;
+	char* pwsalt = NULL; // we'll malloc this.
+
 	if (!plaintext || !salt)
 	{
-		LOG("No password salt were given to crypt_password() -- Check this out."_);
-		retrn NULL;
+		LOG("No password or salt was given to crypt_password() -- Check this out.");
+		return NULL;
 	}
 
-	return bcrypt()
+	// Let's take length of password and remove that length from the salt.
+	// That way we have 512 bits at all times. If the password is larger
+	// than 512...Well, We'll do something bad and just put the salt
+	// at the end and make it 1024.
+
+	pwlen = strlen(plaintext);
+
+	if (pwlen <= 0)
+		return NULL; // We need a password.
+	if (pwlen > 512)
+		saltlen = 512;
+	else
+		saltlen = (pwlen - 512);
+
+	if (saltlen < 0)
+		saltlen = 0;
+	// Truncate the salt.
+	salt[saltlen] = '\0';
+
+	// Create the new buffer for the pw + salt.
+	pwsalt = malloc(sizeof(char*) * ((pwlen + saltlen)+10)); // Add ten just as a buffer.
+
+	if (!pwsalt)
+		GiveError("Unable to allocate memory for password encryption.", TRUE);
+
+	sprintf(pwsalt, "%s%s", plaintext, salt);
+	pwsalt[pwlen + saltlen] = '\0';
+
+	// We now have a password + salt that we can turn in to a hash.
+
+	
+
+
+	//return crypt(pwsalt);
 }

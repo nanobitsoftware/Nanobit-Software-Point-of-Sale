@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\WjCrypt Library">
+      <UniqueIdentifier>{32dfdd48-cf7a-46a8-a7c5-56c7baf1acd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="debug.txt" />
@@ -88,6 +91,33 @@
     <ClCompile Include="src\calculator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCtr.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesOfb.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Md5.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Rc4.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha1.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha256.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.c">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nano PoS.h">
@@ -107,6 +137,33 @@
     </ClInclude>
     <ClInclude Include="src\sqlite3ext.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCtr.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesOfb.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Md5.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Rc4.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha1.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha256.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.h">
+      <Filter>Source Files\WjCrypt Library</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

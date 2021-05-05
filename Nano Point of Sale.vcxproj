@@ -183,6 +183,15 @@
     <ClCompile Include="src\strings.c" />
     <ClCompile Include="src\tickets gui.c" />
     <ClCompile Include="src\tickets.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCtr.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesOfb.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Md5.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Rc4.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha1.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha256.c" />
+    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.c" />
     <ClCompile Include="src\zipcodes.c" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +201,15 @@
     <ClInclude Include="src\resource1.h" />
     <ClInclude Include="src\sqlite3.h" />
     <ClInclude Include="src\sqlite3ext.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCtr.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesOfb.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Md5.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Rc4.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha1.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha256.h" />
+    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
