@@ -118,6 +118,9 @@
     <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.c">
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClCompile>
+    <ClCompile Include="src\crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nano PoS.h">

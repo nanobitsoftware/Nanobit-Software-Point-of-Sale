@@ -52,6 +52,7 @@ typedef struct employee_data EMPLOYEEDATA;
 typedef struct labor_data    LABORDATA;
 typedef struct parts_data	 PARTSDATA;
 typedef struct printer_data  printdata;
+typedef struct crypt_hash    CRYPTHASH;
 double TAX;
 
 sqlite3 *db;
@@ -269,7 +270,14 @@ struct print_info
 };
 	
 
+struct crypt_hash
+{
+	char		hash[64];
+	char        salt[1024];
+	char        password[1024];
+	char        pw_salt[1024];
 
+};
 
 
 
@@ -369,6 +377,7 @@ void do_print_invoice(void);
 void print_invoice (char *str, int copies);
 LRESULT APIENTRY UsrDate_proc (HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
 char* make_salt(void);
+char* crypt_password(char* plaintext, char* salt,CRYPTHASH* chash);
 
 char * get_date_notime(void);
 LRESULT APIENTRY DailyWindow_proc (HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
