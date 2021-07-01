@@ -375,13 +375,13 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 	if (setupwindow)
 		SetFocus(setupwindow);
 
-	CRYPTHASH hash;
-	hash.hash[0] = '\0';
-	crypt_password("testpassword", make_salt(),&hash);
-	GiveError(hash.password, 0);
-	GiveError(hash.hash, 0);
-	GiveError(hash.pw_salt, 0);
-	GiveError(hash.salt, 0);
+//	CRYPTHASH hash;
+//	hash.hash[0] = '\0';
+//	crypt_password("testpassword", make_salt(),&hash);
+//	GiveError(hash.password, 0);
+//	GiveError(hash.hash, 0);
+//	GiveError(hash.pw_salt, 0);
+//	GiveError(hash.salt, 0);
 	//return 0;
 	while (1)
 		
