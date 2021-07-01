@@ -120,7 +120,7 @@ void inv_fill_from_ticket(int idx)
 		sprintf(SQL, "SELECT InvID, Make, Model, Cost, Retail, id FROM Inventory WHERE Make LIKE '%%%s%%';", last_search);
 	}
 
-	sr = sqlite3_prepare(db, SQL, -1, &scstmt, 0);
+	sr = sqlite3_prepare(db, SQL, -1, &stmt, 0);
 	if (sr == SQLITE_OK)
 	{
 		while (sqlite3_step(stmt) == SQLITE_ROW)
