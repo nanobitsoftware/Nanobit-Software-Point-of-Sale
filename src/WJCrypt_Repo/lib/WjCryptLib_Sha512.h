@@ -19,17 +19,17 @@
 
 typedef struct
 {
-    uint64_t    length;
-    uint64_t    state[8];
-    uint32_t    curlen;
-    uint8_t     buf[128];
+	uint64_t    length;
+	uint64_t    state[8];
+	uint32_t    curlen;
+	uint8_t     buf[128];
 } Sha512Context;
 
 #define SHA512_HASH_SIZE           ( 512 / 8 )
 
 typedef struct
 {
-    uint8_t      bytes [SHA512_HASH_SIZE];
+	uint8_t      bytes[SHA512_HASH_SIZE];
 } SHA512_HASH;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,10 +42,10 @@ typedef struct
 //  Initialises a SHA512 Context. Use this to initialise/reset a context.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha512Initialise
-    (
-        Sha512Context*      Context         // [out]
-    );
+Sha512Initialise
+(
+	Sha512Context* Context         // [out]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Sha512Update
@@ -54,12 +54,12 @@ void
 //  calling this function until all the data has been added. Then call Sha512Finalise to calculate the hash.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha512Update
-    (
-        Sha512Context*      Context,        // [in out]
-        void const*         Buffer,         // [in]
-        uint32_t            BufferSize      // [in]
-    );
+Sha512Update
+(
+	Sha512Context* Context,        // [in out]
+	void const* Buffer,         // [in]
+	uint32_t            BufferSize      // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Sha512Finalise
@@ -68,8 +68,8 @@ void
 //  calling this, Sha512Initialised must be used to reuse the context.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha512Finalise
-    (
-        Sha512Context*      Context,        // [in out]
-        SHA512_HASH*        Digest          // [out]
-    );
+Sha512Finalise
+(
+	Sha512Context* Context,        // [in out]
+	SHA512_HASH* Digest          // [out]
+);

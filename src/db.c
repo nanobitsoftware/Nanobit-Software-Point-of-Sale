@@ -11,21 +11,15 @@
 #include "Nano PoS.h"
 #include "NWC.h"
 
-
-
-
 void create_db(void)
 {
-
 }
 
 void close_db(void)
 {
-
-
 }
 
-BOOL is_db_locked(FILE * db)
+BOOL is_db_locked(FILE* db)
 {
 	return FALSE; // Not locked
 }
@@ -33,17 +27,14 @@ BOOL is_db_locked(FILE * db)
 BOOL lock_db(FILE* fp)
 {
 	return FALSE;
-	
 }
 
 BOOL unlock_db(FILE* fp)
 {
 	return FALSE;
-
 }
 
 int write_db(FILE* fp, char* stmt)
 {
 	return 0;
 }
-

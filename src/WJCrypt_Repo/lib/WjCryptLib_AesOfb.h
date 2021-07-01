@@ -34,9 +34,9 @@
 // Do not modify the contents of this structure directly.
 typedef struct
 {
-    AesContext      Aes;
-    uint8_t         CurrentCipherBlock [AES_BLOCK_SIZE];
-    uint32_t        IndexWithinCipherBlock;
+	AesContext      Aes;
+	uint8_t         CurrentCipherBlock[AES_BLOCK_SIZE];
+	uint32_t        IndexWithinCipherBlock;
 } AesOfbContext;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -50,12 +50,12 @@ typedef struct
 //  to change the IV without requiring the more lengthy processes of reinitialising an AES key.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesOfbInitialise
-    (
-        AesOfbContext*      Context,                // [out]
-        AesContext const*   InitialisedAesContext,  // [in]
-        uint8_t const       IV [AES_OFB_IV_SIZE]    // [in]
-    );
+AesOfbInitialise
+(
+	AesOfbContext* Context,                // [out]
+	AesContext const* InitialisedAesContext,  // [in]
+	uint8_t const       IV[AES_OFB_IV_SIZE]    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesOfbInitialiseWithKey
@@ -65,13 +65,13 @@ void
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesOfbInitialiseWithKey
-    (
-        AesOfbContext*      Context,                // [out]
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_OFB_IV_SIZE]    // [in]
-    );
+AesOfbInitialiseWithKey
+(
+	AesOfbContext* Context,                // [out]
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_OFB_IV_SIZE]    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesOfbXor
@@ -83,13 +83,13 @@ int
 //  InBuffer and OutBuffer can point to the same location for in-place encrypting/decrypting
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesOfbXor
-    (
-        AesOfbContext*      Context,                // [in out]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            Size                    // [in]
-    );
+AesOfbXor
+(
+	AesOfbContext* Context,                // [in out]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            Size                    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesOfbOutput
@@ -98,12 +98,12 @@ void
 //  index by that number of bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesOfbOutput
-    (
-        AesOfbContext*      Context,                // [in out]
-        void*               Buffer,                 // [out]
-        uint32_t            Size                    // [in]
-    );
+AesOfbOutput
+(
+	AesOfbContext* Context,                // [in out]
+	void* Buffer,                 // [out]
+	uint32_t            Size                    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesOfbXorWithKey
@@ -115,12 +115,12 @@ void
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesOfbXorWithKey
-    (
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_OFB_IV_SIZE],   // [in]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            BufferSize              // [in]
-    );
+AesOfbXorWithKey
+(
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_OFB_IV_SIZE],   // [in]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            BufferSize              // [in]
+);

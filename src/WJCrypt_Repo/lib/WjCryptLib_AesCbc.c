@@ -44,18 +44,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 static
 void
-    XorAesBlock
-    (
-        uint8_t*            Block1,          // [in out]
-        uint8_t const*      Block2           // [in]
-    )
+XorAesBlock
+(
+	uint8_t* Block1,          // [in out]
+	uint8_t const* Block2           // [in]
+)
 {
-    uint32_t    i;
+	uint32_t    i;
 
-    for( i=0; i<AES_BLOCK_SIZE; i++ )
-    {
-        Block1[i] ^= Block2[i];
-    }
+	for (i = 0; i < AES_BLOCK_SIZE; i++)
+	{
+		Block1[i] ^= Block2[i];
+	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,16 +69,16 @@ void
 //  to change the IV without requiring the more lengthy processes of reinitialising an AES key.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesCbcInitialise
-    (
-        AesCbcContext*      Context,                // [out]
-        AesContext const*   InitialisedAesContext,  // [in]
-        uint8_t const       IV [AES_CBC_IV_SIZE]    // [in]
-    )
+AesCbcInitialise
+(
+	AesCbcContext* Context,                // [out]
+	AesContext const* InitialisedAesContext,  // [in]
+	uint8_t const       IV[AES_CBC_IV_SIZE]    // [in]
+)
 {
-    // Setup context values
-    Context->Aes = *InitialisedAesContext;
-    memcpy( Context->PreviousCipherBlock, IV, sizeof(Context->PreviousCipherBlock) );
+	// Setup context values
+	Context->Aes = *InitialisedAesContext;
+	memcpy(Context->PreviousCipherBlock, IV, sizeof(Context->PreviousCipherBlock));
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -89,25 +89,25 @@ void
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcInitialiseWithKey
-    (
-        AesCbcContext*      Context,                // [out]
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_CBC_IV_SIZE]    // [in]
-    )
+AesCbcInitialiseWithKey
+(
+	AesCbcContext* Context,                // [out]
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_CBC_IV_SIZE]    // [in]
+)
 {
-    AesContext aes;
+	AesContext aes;
 
-    // Initialise AES Context
-    if( 0 != AesInitialise( &aes, Key, KeySize ) )
-    {
-        return -1;
-    }
+	// Initialise AES Context
+	if (0 != AesInitialise(&aes, Key, KeySize))
+	{
+		return -1;
+	}
 
-    // Now set-up AesCbcContext
-    AesCbcInitialise( Context, &aes, IV );
-    return 0;
+	// Now set-up AesCbcContext
+	AesCbcInitialise(Context, &aes, IV);
+	return 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -121,39 +121,39 @@ int
 //  Returns 0 if successful, or -1 if Size is not a multiple of 16 bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcEncrypt
-    (
-        AesCbcContext*      Context,                // [in out]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            Size                    // [in]
-    )
+AesCbcEncrypt
+(
+	AesCbcContext* Context,                // [in out]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            Size                    // [in]
+)
 {
-    uint32_t    numBlocks = Size / AES_BLOCK_SIZE;
-    uint32_t    offset = 0;
-    uint32_t    i;
+	uint32_t    numBlocks = Size / AES_BLOCK_SIZE;
+	uint32_t    offset = 0;
+	uint32_t    i;
 
-    if( 0 != Size % AES_BLOCK_SIZE )
-    {
-        // Size not a multiple of AES block size (16 bytes).
-        return -1;
-    }
+	if (0 != Size % AES_BLOCK_SIZE)
+	{
+		// Size not a multiple of AES block size (16 bytes).
+		return -1;
+	}
 
-    for( i=0; i<numBlocks; i++ )
-    {
-        // XOR on the next block of data onto the previous cipher block
-        XorAesBlock( Context->PreviousCipherBlock, (uint8_t*)InBuffer + offset );
+	for (i = 0; i < numBlocks; i++)
+	{
+		// XOR on the next block of data onto the previous cipher block
+		XorAesBlock(Context->PreviousCipherBlock, (uint8_t*)InBuffer + offset);
 
-        // Encrypt to make new cipher block
-        AesEncryptInPlace( &Context->Aes, Context->PreviousCipherBlock );
+		// Encrypt to make new cipher block
+		AesEncryptInPlace(&Context->Aes, Context->PreviousCipherBlock);
 
-        // Output cipher block
-        memcpy( (uint8_t*)OutBuffer + offset, Context->PreviousCipherBlock, AES_BLOCK_SIZE );
+		// Output cipher block
+		memcpy((uint8_t*)OutBuffer + offset, Context->PreviousCipherBlock, AES_BLOCK_SIZE);
 
-        offset += AES_BLOCK_SIZE;
-    }
+		offset += AES_BLOCK_SIZE;
+	}
 
-    return 0;
+	return 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -165,41 +165,41 @@ int
 //  Returns 0 if successful, or -1 if Size is not a multiple of 16 bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcDecrypt
-    (
-        AesCbcContext*      Context,                // [in out]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            Size                    // [in]
-    )
+AesCbcDecrypt
+(
+	AesCbcContext* Context,                // [in out]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            Size                    // [in]
+)
 {
-    uint32_t    numBlocks = Size / AES_BLOCK_SIZE;
-    uint32_t    offset = 0;
-    uint32_t    i;
-    uint8_t     previousCipherBlock [AES_BLOCK_SIZE];
+	uint32_t    numBlocks = Size / AES_BLOCK_SIZE;
+	uint32_t    offset = 0;
+	uint32_t    i;
+	uint8_t     previousCipherBlock[AES_BLOCK_SIZE];
 
-    if( 0 != Size % AES_BLOCK_SIZE )
-    {
-        // Size not a multiple of AES block size (16 bytes).
-        return -1;
-    }
+	if (0 != Size % AES_BLOCK_SIZE)
+	{
+		// Size not a multiple of AES block size (16 bytes).
+		return -1;
+	}
 
-    for( i=0; i<numBlocks; i++ )
-    {
-        // Copy previous cipher block and place current one in context
-        memcpy( previousCipherBlock, Context->PreviousCipherBlock, AES_BLOCK_SIZE );
-        memcpy( Context->PreviousCipherBlock, (uint8_t*)InBuffer + offset, AES_BLOCK_SIZE );
+	for (i = 0; i < numBlocks; i++)
+	{
+		// Copy previous cipher block and place current one in context
+		memcpy(previousCipherBlock, Context->PreviousCipherBlock, AES_BLOCK_SIZE);
+		memcpy(Context->PreviousCipherBlock, (uint8_t*)InBuffer + offset, AES_BLOCK_SIZE);
 
-        // Decrypt cipher block
-        AesDecrypt( &Context->Aes, Context->PreviousCipherBlock, (uint8_t*)OutBuffer + offset );
+		// Decrypt cipher block
+		AesDecrypt(&Context->Aes, Context->PreviousCipherBlock, (uint8_t*)OutBuffer + offset);
 
-        // XOR on previous cipher block
-        XorAesBlock( (uint8_t*)OutBuffer + offset, previousCipherBlock );
+		// XOR on previous cipher block
+		XorAesBlock((uint8_t*)OutBuffer + offset, previousCipherBlock);
 
-        offset += AES_BLOCK_SIZE;
-    }
+		offset += AES_BLOCK_SIZE;
+	}
 
-    return 0;
+	return 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -211,26 +211,26 @@ int
 //  Returns 0 if successful, or -1 if invalid KeySize provided or BufferSize not a multiple of 16 bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcEncryptWithKey
-    (
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_CBC_IV_SIZE],   // [in]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            BufferSize              // [in]
-    )
+AesCbcEncryptWithKey
+(
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_CBC_IV_SIZE],   // [in]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            BufferSize              // [in]
+)
 {
-    int             error;
-    AesCbcContext   context;
+	int             error;
+	AesCbcContext   context;
 
-    error = AesCbcInitialiseWithKey( &context, Key, KeySize, IV );
-    if( 0 == error )
-    {
-        error = AesCbcEncrypt( &context, InBuffer, OutBuffer, BufferSize );
-    }
+	error = AesCbcInitialiseWithKey(&context, Key, KeySize, IV);
+	if (0 == error)
+	{
+		error = AesCbcEncrypt(&context, InBuffer, OutBuffer, BufferSize);
+	}
 
-    return error;
+	return error;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -242,24 +242,24 @@ int
 //  Returns 0 if successful, or -1 if invalid KeySize provided or BufferSize not a multiple of 16 bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcDecryptWithKey
-    (
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_CBC_IV_SIZE],   // [in]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            BufferSize              // [in]
-    )
+AesCbcDecryptWithKey
+(
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_CBC_IV_SIZE],   // [in]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            BufferSize              // [in]
+)
 {
-    int             error;
-    AesCbcContext   context;
+	int             error;
+	AesCbcContext   context;
 
-    error = AesCbcInitialiseWithKey( &context, Key, KeySize, IV );
-    if( 0 == error )
-    {
-        error = AesCbcDecrypt( &context, InBuffer, OutBuffer, BufferSize );
-    }
+	error = AesCbcInitialiseWithKey(&context, Key, KeySize, IV);
+	if (0 == error)
+	{
+		error = AesCbcDecrypt(&context, InBuffer, OutBuffer, BufferSize);
+	}
 
-    return error;
+	return error;
 }

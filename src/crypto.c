@@ -12,9 +12,6 @@
 #include "Nano PoS.h"
 #include "WJCrypt_Repo\lib\WjCryptLib_Sha512.h"
 
-
-
-
 /* Go through a complex mathematical need to create a 512
  * byte salt so that we an use later for our passwords.
  * OVer kill? You're damnright it is. And I am okay with that.
@@ -55,8 +52,6 @@ char* make_salt(void)
 
 	for (i = 0; i < 2048; i++)
 		ssalt[i] = '\0'; // Zero it out so we dont resuse it everytime.
-
-
 
 	// Take the plain text first, check if its valid.
 	//if (!plaintext)
@@ -120,14 +115,13 @@ char* make_salt(void)
 		v_table[i] = table[r];
 		v_table[i + 1] = '\0';
 	}
-	// Now, let's do 512 iterations, pulling from each table, making 512 bit 
+	// Now, let's do 512 iterations, pulling from each table, making 512 bit
 	// salt.
 	mode = 0;
 	seed_count = 0;
 	c = strlen(table) - 1;
 	for (i = 0; i < 512; i++)
 	{
-
 		r = rand() % ((c + 1) - 0) + 0; // Random number.
 		seed_count++;
 
@@ -240,19 +234,15 @@ char* make_salt(void)
 		}
 		default:
 			break;
-
-
 		}
 	}
 	LOG("Salt: %s", ssalt);
 	return ssalt;
-
 }
-
 
 char* hash_to_str(SHA512_HASH hash)
 {
-	static char str[SHA512_HASH_SIZE+20];
+	static char str[SHA512_HASH_SIZE + 20];
 	char t[100];
 	int i;
 
@@ -263,16 +253,16 @@ char* hash_to_str(SHA512_HASH hash)
 	{
 		sprintf(t, "%02x", hash.bytes[i]);
 		strcat(str, t);
-	//	str[i] = hash.bytes[i];
+		//	str[i] = hash.bytes[i];
 	}
-	str[SHA512_HASH_SIZE-1] = '\0';
+	str[SHA512_HASH_SIZE - 1] = '\0';
 	return str;
 }
 
 // We WILL modify the salt during this operation.
 // Do not send a copy of it. send the actual pointer
 // to the real buffer.
-char* crypt_password(char* plaintext, char* salt,CRYPTHASH *chash)
+char* crypt_password(char* plaintext, char* salt, CRYPTHASH* chash)
 {
 	int pwlen = 0;
 	int saltlen = 0;
@@ -283,8 +273,6 @@ char* crypt_password(char* plaintext, char* salt,CRYPTHASH *chash)
 	char r_salt[1024];
 
 	SHA512_HASH  hash;          // [in]
-
-
 
 	if (!plaintext || !salt)
 	{
@@ -304,7 +292,7 @@ char* crypt_password(char* plaintext, char* salt,CRYPTHASH *chash)
 	if (pwlen > 512)
 		saltlen = 512;
 	else
-		saltlen = (512-(pwlen+taglen));
+		saltlen = (512 - (pwlen + taglen));
 
 	if (saltlen < 0)
 		saltlen = 0;
@@ -313,12 +301,12 @@ char* crypt_password(char* plaintext, char* salt,CRYPTHASH *chash)
 
 	total_len = pwlen + saltlen + taglen;
 	// Create the new buffer for the pw + salt.
-	pwsalt = malloc(sizeof(char*) * ((total_len) + 10)); // Add ten just as a buffer.
+	pwsalt = malloc(sizeof(char*) * ((total_len)+10)); // Add ten just as a buffer.
 	if (!pwsalt)
 		GiveError("Unable to allocate memory for password encryption.", TRUE);
 
 	sprintf(r_salt, "%s", salt);
-	sprintf(pwsalt, "%s%s%s", plaintext, salt_tag,salt);
+	sprintf(pwsalt, "%s%s%s", plaintext, salt_tag, salt);
 	pwsalt[total_len] = '\0';
 
 	// We now have a password + salt that we can turn in to a hash.
@@ -326,15 +314,12 @@ char* crypt_password(char* plaintext, char* salt,CRYPTHASH *chash)
 
 	//LOG("Password: %s, Hash: %s",pwsalt, hash_to_str(hash));
 
-	sprintf(chash->hash ,"%s",  hash_to_str(hash));
+	sprintf(chash->hash, "%s", hash_to_str(hash));
 
 	sprintf(chash->password, "%s", plaintext);
 
-	sprintf(chash->salt, "%s",  r_salt);
+	sprintf(chash->salt, "%s", r_salt);
 	sprintf(chash->pw_salt, "%s", pwsalt);
-
-
-
 
 	//return crypt(pwsalt);
 }

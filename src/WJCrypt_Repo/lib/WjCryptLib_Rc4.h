@@ -21,9 +21,9 @@
 // Rc4Context - This must be initialised using Rc4Initialised. Do not modify the contents of this structure directly.
 typedef struct
 {
-    uint32_t     i;
-    uint32_t     j;
-    uint8_t      S[256];
+	uint32_t     i;
+	uint32_t     j;
+	uint8_t      S[256];
 } Rc4Context;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,13 +36,13 @@ typedef struct
 //  Initialises an RC4 cipher and discards the specified number of first bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Rc4Initialise
-    (
-        Rc4Context*     Context,        // [out]
-        void const*     Key,            // [in]
-        uint32_t        KeySize,        // [in]
-        uint32_t        DropN           // [in]
-    );
+Rc4Initialise
+(
+	Rc4Context* Context,        // [out]
+	void const* Key,            // [in]
+	uint32_t        KeySize,        // [in]
+	uint32_t        DropN           // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Rc4Output
@@ -50,12 +50,12 @@ void
 //  Outputs the requested number of bytes from the RC4 stream
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Rc4Output
-    (
-        Rc4Context*     Context,        // [in out]
-        void*           Buffer,         // [out]
-        uint32_t        Size            // [in]
-    );
+Rc4Output
+(
+	Rc4Context* Context,        // [in out]
+	void* Buffer,         // [out]
+	uint32_t        Size            // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Rc4Xor
@@ -64,13 +64,13 @@ void
 //  and decrypting data. InBuffer and OutBuffer can point to the same location for inplace encrypting/decrypting
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Rc4Xor
-    (
-        Rc4Context*     Context,        // [in out]
-        void const*     InBuffer,       // [in]
-        void*           OutBuffer,      // [out]
-        uint32_t        Size            // [in]
-    );
+Rc4Xor
+(
+	Rc4Context* Context,        // [in out]
+	void const* InBuffer,       // [in]
+	void* OutBuffer,      // [out]
+	uint32_t        Size            // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Rc4XorWithKey
@@ -80,12 +80,12 @@ void
 //  InBuffer and OutBuffer can point to the same location for inplace encrypting/decrypting
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Rc4XorWithKey
-    (
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint32_t            DropN,                  // [in]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            BufferSize              // [in]
-    );
+Rc4XorWithKey
+(
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint32_t            DropN,                  // [in]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            BufferSize              // [in]
+);

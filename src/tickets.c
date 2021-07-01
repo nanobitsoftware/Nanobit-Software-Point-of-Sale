@@ -10,20 +10,19 @@
 #include "Nano PoS.h"
 #include "NWC.h"
 
-TICKETDATA * new_ticket (void)
+TICKETDATA* new_ticket(void)
 {
-	TICKETDATA *tick;
+	TICKETDATA* tick;
 	int i;
 
-	tick = (TICKETDATA*) malloc(sizeof(*tick));
+	tick = (TICKETDATA*)malloc(sizeof(*tick));
 
 	if (!tick)
 	{
-		GiveError("Memory failed to allocate for a new ticket; program will now close. Try restarting.",1);
+		GiveError("Memory failed to allocate for a new ticket; program will now close. Try restarting.", 1);
 		return NULL;
 	}
 
-	
 	tick->ticket_id = 0;
 	tick->invoice_number = 0;
 	tick->notes_total = 0;
@@ -36,13 +35,13 @@ TICKETDATA * new_ticket (void)
 	tick->charged = FALSE;
 	tick->open = FALSE;
 	tick->service_writer = (char*)malloc(MSL * sizeof(char*));
-	tick->technician = (char*)malloc(MSL* sizeof(char*));
+	tick->technician = (char*)malloc(MSL * sizeof(char*));
 	tick->customer = NULL;
-	tick->notes = (NOTEDATA**) malloc(sizeof(*tick->notes) * MAX_ENTRY);
-	tick->parts = (PARTSDATA**) malloc(sizeof(*tick->parts) * MAX_ENTRY);
-	tick->labor = (LABORDATA**) malloc(sizeof(*tick->labor) * MAX_ENTRY);
+	tick->notes = (NOTEDATA**)malloc(sizeof(*tick->notes) * MAX_ENTRY);
+	tick->parts = (PARTSDATA**)malloc(sizeof(*tick->parts) * MAX_ENTRY);
+	tick->labor = (LABORDATA**)malloc(sizeof(*tick->labor) * MAX_ENTRY);
 
-	for (i=0;i<MAX_ENTRY;i++)
+	for (i = 0; i < MAX_ENTRY; i++)
 	{
 		tick->notes[i] = NULL;
 		tick->parts[i] = NULL;
@@ -51,6 +50,3 @@ TICKETDATA * new_ticket (void)
 
 	return tick;
 }
-
-
-

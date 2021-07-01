@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -11,22 +10,21 @@
 #include <malloc.h>
 #include "Nano PoS.h"
 
-
 #undef malloc // These stay in THIS scope.
 #undef free   //
 #undef realloc
 
-unsigned long int full_mem=0;
-unsigned long int malloc_calls=0;
-unsigned long int free_calls=0;
+unsigned long int full_mem = 0;
+unsigned long int malloc_calls = 0;
+unsigned long int free_calls = 0;
 unsigned long int total_alloc;
 const unsigned char uninit = 0x0; // Unitialized string to make sure memory is cleared before
 // It's passed off.
 typedef struct mem_heap HEAP;
 #define ALIGN 4
 
-unsigned long int alloced=0;
-unsigned long int unalloced=0;
+unsigned long int alloced = 0;
+unsigned long int unalloced = 0;
 
 #define MALLOC_MAGIC 0x00040000UL
 
@@ -37,29 +35,25 @@ struct mem_heap
 	size_t size;
 	char  file[100];
 	int    line;
-	HEAP * next;
-	HEAP * prev;
-	void * chunk;
+	HEAP* next;
+	HEAP* prev;
+	void* chunk;
 };
 
-HEAP *firstheap;
-HEAP *heaplist;
-HEAP *freeheap;
-HEAP *lastheap;
+HEAP* firstheap;
+HEAP* heaplist;
+HEAP* freeheap;
+HEAP* lastheap;
 
 BOOL ERRORS;
 
-
-
-
-HEAP * new_heap(void)
+HEAP* new_heap(void)
 {
 	static HEAP  h;
 
-	HEAP *ph;
+	HEAP* ph;
 	if (!IS_IN_DEBUGGING_MODE)
 		return NULL;
-
 
 	if (freeheap == NULL)
 		ph = malloc(sizeof(*ph));
@@ -75,15 +69,14 @@ HEAP * new_heap(void)
 	return ph;
 }
 
-void add_heap (HEAP *hp)
+void add_heap(HEAP* hp)
 {
 	char temp[5000];
 	int b_type = 0;
-	float t_total =0.0;
+	float t_total = 0.0;
 
 	temp[0] = '\0';
 	b_type = 0;
-
 
 	if (!IS_IN_DEBUGGING_MODE)
 		return;
@@ -108,11 +101,6 @@ void add_heap (HEAP *hp)
 			t_total = t_total / 1024;
 		}
 
-
-
-
-
-
 		LOG("--------------------------------------------------------------------------------------------------");
 		LOG("Allocation:");
 		LOG("Calling file: %s", hp->file);
@@ -133,23 +121,21 @@ void add_heap (HEAP *hp)
 
 	if (firstheap == NULL)
 		firstheap = hp;
-	alloced +=1;
+	alloced += 1;
 
 	return;
 }
 
 void show_heap(void)
 {
-	unsigned long int i=0;
+	unsigned long int i = 0;
 
 	long int size;
 	long int s_size;
 	char s[100];
 
-	HEAP *hp;
-	HEAP *last;
-	
-
+	HEAP* hp;
+	HEAP* last;
 
 	char dheap[1000];
 	char str[20];
@@ -163,7 +149,7 @@ void show_heap(void)
 	dheap[0] = '\0';
 	last = lastheap;
 
-	for (i=0,hp = firstheap;hp != last ;hp=hp->next,i++)
+	for (i = 0, hp = firstheap; hp != last; hp = hp->next, i++)
 	{
 		if (hp->chunk == NULL)
 		{
@@ -176,18 +162,15 @@ void show_heap(void)
 			memset(s, '\0', 100);
 			memcpy(s, (char*)hp->chunk, sizeof(double));
 			size = atoi(s);
-			
+
 			s_size = size;
 			//size = (*((int*)(hp->chunk - sizeof(double))) + sizeof(double));
 		}
-
-
 
 		if (size > 1024)
 		{
 			size = size / 1024;
 			sprintf(str, " KB");
-
 		}
 		if (size > 1024)
 		{
@@ -200,18 +183,17 @@ void show_heap(void)
 			sprintf(str, "GB");
 		}
 
-		if (i % 1000 == 0 )
+		if (i % 1000 == 0)
 		{
-//			nasty = FALSE;
-//			update_term();
+			//			nasty = FALSE;
+			//			update_term();
 
-//			nasty = TRUE;
+			//			nasty = TRUE;
 		}
 
+		sprintf(dheap, "%lu) Address: 0x%lx, File: %s, Line: %d Size(bit-stored): %ld%s", i, hp->m_add == 0 ? 0 : hp->m_add, hp->file == NULL ? "Undefined" : hp->file, hp->line, size, str[0] == '\0' ? " B" : str);
 
-		sprintf(dheap, "%lu) Address: 0x%lx, File: %s, Line: %d Size(bit-stored): %ld%s",i, hp->m_add == 0 ? 0 : hp->m_add, hp->file == NULL ? "Undefined" :hp->file,hp->line,size,str[0] == '\0' ? " B" : str);
-		
-//		realize_lines(dheap);
+		//		realize_lines(dheap);
 		dheap[0] = '\0';
 		str[0] = '\0';
 	}
@@ -221,75 +203,65 @@ void show_heap(void)
 
 void walk_heap(void)
 {
-
-	unsigned long int i=0;
-	unsigned long int count=0;
-	HEAP *hp;
+	unsigned long int i = 0;
+	unsigned long int count = 0;
+	HEAP* hp;
 
 	if (!IS_IN_DEBUGGING_MODE)
 		return;
-	for (i=0,hp=firstheap;hp;hp=hp->next,i++)
+	for (i = 0, hp = firstheap; hp; hp = hp->next, i++)
 	{
-		LOG("Walkheap: %d) m_add: 0x%x, file: %s, line: %d", i, hp->m_add == 0 ? 0 : hp->m_add, hp->file == NULL ? "Undefined" :hp->file,hp->line);
+		LOG("Walkheap: %d) m_add: 0x%x, file: %s, line: %d", i, hp->m_add == 0 ? 0 : hp->m_add, hp->file == NULL ? "Undefined" : hp->file, hp->line);
 		count += hp->size;
 	}
 	LOG("Walkheap: Total size unfreed: %d bytes", count);
-	LOG("Walkheap: Allocations called: %d. Deallocations called: %d, total: %d. (This number SHOULD be zero. \n\tIf not, then we got some problems.\n", alloced,unalloced,alloced-unalloced);
-
+	LOG("Walkheap: Allocations called: %d. Deallocations called: %d, total: %d. (This number SHOULD be zero. \n\tIf not, then we got some problems.\n", alloced, unalloced, alloced - unalloced);
 }
 
-void dump_heap (void)
+void dump_heap(void)
 {
-	unsigned long int i=0;
-	unsigned long int count=0;
-	unsigned long int total=0;
+	unsigned long int i = 0;
+	unsigned long int count = 0;
+	unsigned long int total = 0;
 	char buf[5000];
 
-	HEAP *hp;
-
+	HEAP* hp;
 
 	if (!IS_IN_DEBUGGING_MODE)
 		return;
 	buf[0] = '\0';
 
-	for (i=0,hp = firstheap;hp;hp=hp->next,i++)
+	for (i = 0, hp = firstheap; hp; hp = hp->next, i++)
 	{
 		count += hp->size;
 		total++;
 	}
 
-
-
-	LOG("Dumpheap: %d total allocations managed. %d bytes size total.\r\n", total,count);
+	LOG("Dumpheap: %d total allocations managed. %d bytes size total.\r\n", total, count);
 	//give_term_debug("Dumpheap: %d total allocations managed. %s size total.\r\n", total,commaize(count, buf));
 	return;
 }
 
-
-int count_heap (void)
+int count_heap(void)
 {
-
-	unsigned long int i=0;
-	HEAP *hp;
+	unsigned long int i = 0;
+	HEAP* hp;
 
 	if (!IS_IN_DEBUGGING_MODE)
 		return 0;
 
-	for (i=0,hp=firstheap;hp;hp=hp->next)
+	for (i = 0, hp = firstheap; hp; hp = hp->next)
 		i++;
 	return i;
 }
-void del_heap (unsigned long int m_add, int line, char*file)
+void del_heap(unsigned long int m_add, int line, char* file)
 {
-
-
-	HEAP *h;
+	HEAP* h;
 	char temp[5000];
 	int b_type = 0;
-	float t_total =0.0;
+	float t_total = 0.0;
 
-
-	BOOL found=FALSE;
+	BOOL found = FALSE;
 
 	temp[0] = '\0';
 	b_type = 0;
@@ -316,19 +288,15 @@ void del_heap (unsigned long int m_add, int line, char*file)
 			t_total = t_total / 1024;
 		}
 
-
-
-
 		LOG("--------------------------------------------------------------------------------------------------");
 		LOG("Deallocation:");
 		LOG("Calling file: %s", file);
 		LOG("Calling line: %d", line);
 	}
 
-
-	for (h = firstheap ; h ; h = h->next)
+	for (h = firstheap; h; h = h->next)
 	{
-		if (h->m_add ==  m_add)
+		if (h->m_add == m_add)
 
 		{
 			found = TRUE;
@@ -351,8 +319,8 @@ void del_heap (unsigned long int m_add, int line, char*file)
 			//free (h->m_add);
 			//free (h->file);
 			h->chunk = NULL;
-			free (h);
-			unalloced +=1;
+			free(h);
+			unalloced += 1;
 			break;
 		}
 	}
@@ -364,15 +332,13 @@ void del_heap (unsigned long int m_add, int line, char*file)
 	}
 
 	if (found == FALSE)
-		LOG("Del_heap: m_add does not match a heap we manage. m_add; 0x%x\n\tCalling file: %s, calling line: %d\n", m_add,file,line);
+		LOG("Del_heap: m_add does not match a heap we manage. m_add; 0x%x\n\tCalling file: %s, calling line: %d\n", m_add, file, line);
 
 	return;
 }
 
-
 BOOL own_heap(unsigned long int m_add)
 {
-
 	HEAP* h;
 
 	// Do we own the address we're trying to free?
@@ -386,27 +352,20 @@ BOOL own_heap(unsigned long int m_add)
 	{
 		if (h->m_add == m_add)
 			return TRUE;
-
-
 	}
 	return FALSE;
-
 }
 
-void *nano_malloc(size_t chunk, const char * file, int line)
+void* nano_malloc(size_t chunk, const char* file, int line)
 {
-
-
 	int upper_mult;
 	static  void* mem;
 
-	char * tail;
-
-
+	char* tail;
 
 	char madd[1000];
 
-	unsigned long int m_add =0;
+	unsigned long int m_add = 0;
 
 	extern char ERROR_STRING[5000];
 
@@ -418,28 +377,19 @@ void *nano_malloc(size_t chunk, const char * file, int line)
 	if (chunk < 0)
 		chunk = 1;
 
-
-
 	upper_mult = chunk;
 
-	while ((chunk ) % ALIGN != 0 )
+	while ((chunk) % ALIGN != 0)
 	{
-		
 		chunk++;
 	}
 
-	
-
-	
-
-
-
 	if (!(mem = malloc(chunk)))
 	{
-		sprintf(ERROR_STRING, "Memory failed to allocate! File: %s, line: %d,size: %d", file, line,chunk);
+		sprintf(ERROR_STRING, "Memory failed to allocate! File: %s, line: %d,size: %d", file, line, chunk);
 		LOG(ERROR_STRING);
 		ERRORS = TRUE;
-		GiveError(ERROR_STRING, TRUE); 
+		GiveError(ERROR_STRING, TRUE);
 		exit(1);
 		return NULL;
 	}
@@ -448,28 +398,21 @@ void *nano_malloc(size_t chunk, const char * file, int line)
 	total_alloc += chunk;
 
 	//chunk |= MALLOC_MAGIC;
-	
 
-
-	
 	//sprintf((char*)mem,  "%d", chunk);
-
-	
 
 	if (IS_IN_DEBUGGING_MODE)
 	{
-
-		HEAP *h;
+		HEAP* h;
 		sprintf(madd, "%p", mem);
 
-
-		m_add = strtoul(madd,&tail,16);
+		m_add = strtoul(madd, &tail, 16);
 
 		h = new_heap();
 		h->m_add = m_add;
 		h->size = chunk;
 
-		h->chunk = ((char*)mem );
+		h->chunk = ((char*)mem);
 		memcpy(h->file, file, strlen(file));
 		h->file[strlen(file)] = '\0';
 		h->line = line;
@@ -477,32 +420,25 @@ void *nano_malloc(size_t chunk, const char * file, int line)
 		madd[0] = '\0';
 	}
 
-
-
-
 	return mem;
 }
 
-void nano_free(void * seg, const char * file, int line)
+void nano_free(void* seg, const char* file, int line)
 {
-	
-
 	char madd[100];
 	unsigned long int m_add;
-	char *tail;
+	char* tail;
 
 	static char t_t;
 
-	
 	if (!seg)
 		return;
-	
+
 	fflush(NULL);
-	if (IS_IN_DEBUGGING_MODE==1)
+	if (IS_IN_DEBUGGING_MODE == 1)
 	{
-		
-		sprintf(madd,"%p", ((char*)seg));
-		m_add = strtoul(madd,&tail,16);
+		sprintf(madd, "%p", ((char*)seg));
+		m_add = strtoul(madd, &tail, 16);
 		if (!own_heap(m_add))
 		{
 			char str[1024];
@@ -510,62 +446,48 @@ void nano_free(void * seg, const char * file, int line)
 				m_add);
 			LOG(str);
 			return;
-
 		}
-		
-		del_heap(m_add,line,(char*)file);
+
+		del_heap(m_add, line, (char*)file);
 		madd[0] = '\0';
 	}
 
-
-	if (seg )
+	if (seg)
 	{
-		
 		if (!seg)
-			GiveError("Malloc Failure",1);
-		
-		
-		
+			GiveError("Malloc Failure", 1);
+
 		free(seg);
 
 		seg = NULL;
-
 	}
 	else
 	{
 		//LOG("Memory error: %p. (%s/%d)", seg, file,line);
-		GiveError("Memory Error",1);
+		GiveError("Memory Error", 1);
 	}
-	 
+
 	return;
 }
 
-void* nano_realloc(void *seg, size_t sz, const char * file, int line)
+void* nano_realloc(void* seg, size_t sz, const char* file, int line)
 {
-	
-	void * to_ret;
+	void* to_ret;
 	return NULL;
-	while ((sz+sizeof(double)) % ALIGN != 0 )
+	while ((sz + sizeof(double)) % ALIGN != 0)
 	{
 		sz++;
 	}
 
 	total_alloc -= (*((int*)seg - sizeof(double)));
 	(*(int*)seg) -= sizeof(double);
-	to_ret =   realloc(seg, sz);
+	to_ret = realloc(seg, sz);
 	*((DWORD*)seg) = sz;
 
 	total_alloc += sz;
 
-
-
-
 	return (void*)((*((int*)to_ret)) + sizeof(double));
-
 }
-
-
-
 
 void return_usage(void)
 {

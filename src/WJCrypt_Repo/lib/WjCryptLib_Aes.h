@@ -40,9 +40,9 @@
 // Do not modify the contents of this structure directly.
 typedef struct
 {
-    uint32_t        eK[60];
-    uint32_t        dK[60];
-    uint_fast32_t   Nr;
+	uint32_t        eK[60];
+	uint32_t        dK[60];
+	uint_fast32_t   Nr;
 } AesContext;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -56,12 +56,12 @@ typedef struct
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesInitialise
-    (
-        AesContext*         Context,                // [out]
-        void const*         Key,                    // [in]
-        uint32_t            KeySize                 // [in]
-    );
+AesInitialise
+(
+	AesContext* Context,                // [out]
+	void const* Key,                    // [in]
+	uint32_t            KeySize                 // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesEncrypt
@@ -71,12 +71,12 @@ int
 //  AesEncryptInPlace in this situation.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesEncrypt
-    (
-        AesContext const*   Context,                    // [in]
-        uint8_t const       Input [AES_BLOCK_SIZE],     // [in]
-        uint8_t             Output [AES_BLOCK_SIZE]     // [out]
-    );
+AesEncrypt
+(
+	AesContext const* Context,                    // [in]
+	uint8_t const       Input[AES_BLOCK_SIZE],     // [in]
+	uint8_t             Output[AES_BLOCK_SIZE]     // [out]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesDecrypt
@@ -86,12 +86,12 @@ void
 //  AesDecryptInPlace in this situation.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesDecrypt
-    (
-        AesContext const*   Context,                    // [in]
-        uint8_t const       Input [AES_BLOCK_SIZE],     // [in]
-        uint8_t             Output [AES_BLOCK_SIZE]     // [out]
-    );
+AesDecrypt
+(
+	AesContext const* Context,                    // [in]
+	uint8_t const       Input[AES_BLOCK_SIZE],     // [in]
+	uint8_t             Output[AES_BLOCK_SIZE]     // [out]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesEncryptInPlace
@@ -100,11 +100,11 @@ void
 //  AesInitialise[n]. The encryption is performed in place.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesEncryptInPlace
-    (
-        AesContext const*   Context,                    // [in]
-        uint8_t             Block [AES_BLOCK_SIZE]      // [in out]
-    );
+AesEncryptInPlace
+(
+	AesContext const* Context,                    // [in]
+	uint8_t             Block[AES_BLOCK_SIZE]      // [in out]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesDecryptInPlace
@@ -113,8 +113,8 @@ void
 //  AesInitialise[n]. The decryption is performed in place.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesDecryptInPlace
-    (
-        AesContext const*   Context,                    // [in]
-        uint8_t             Block [AES_BLOCK_SIZE]      // [in out]
-    );
+AesDecryptInPlace
+(
+	AesContext const* Context,                    // [in]
+	uint8_t             Block[AES_BLOCK_SIZE]      // [in out]
+);

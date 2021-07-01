@@ -19,17 +19,17 @@
 
 typedef struct
 {
-    uint64_t    length;
-    uint32_t    state[8];
-    uint32_t    curlen;
-    uint8_t     buf[64];
+	uint64_t    length;
+	uint32_t    state[8];
+	uint32_t    curlen;
+	uint8_t     buf[64];
 } Sha256Context;
 
 #define SHA256_HASH_SIZE           ( 256 / 8 )
 
 typedef struct
 {
-    uint8_t      bytes [SHA256_HASH_SIZE];
+	uint8_t      bytes[SHA256_HASH_SIZE];
 } SHA256_HASH;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,10 +42,10 @@ typedef struct
 //  Initialises a SHA256 Context. Use this to initialise/reset a context.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha256Initialise
-    (
-        Sha256Context*      Context         // [out]
-    );
+Sha256Initialise
+(
+	Sha256Context* Context         // [out]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Sha256Update
@@ -54,12 +54,12 @@ void
 //  calling this function until all the data has been added. Then call Sha256Finalise to calculate the hash.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha256Update
-    (
-        Sha256Context*      Context,        // [in out]
-        void const*         Buffer,         // [in]
-        uint32_t            BufferSize      // [in]
-    );
+Sha256Update
+(
+	Sha256Context* Context,        // [in out]
+	void const* Buffer,         // [in]
+	uint32_t            BufferSize      // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Sha256Finalise
@@ -68,11 +68,11 @@ void
 //  calling this, Sha256Initialised must be used to reuse the context.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha256Finalise
-    (
-        Sha256Context*      Context,        // [in out]
-        SHA256_HASH*        Digest          // [out]
-    );
+Sha256Finalise
+(
+	Sha256Context* Context,        // [in out]
+	SHA256_HASH* Digest          // [out]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Sha256Calculate
@@ -81,9 +81,9 @@ void
 //  buffer.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha256Calculate
-    (
-        void  const*        Buffer,         // [in]
-        uint32_t            BufferSize,     // [in]
-        SHA256_HASH*        Digest          // [in]
-    );
+Sha256Calculate
+(
+	void  const* Buffer,         // [in]
+	uint32_t            BufferSize,     // [in]
+	SHA256_HASH* Digest          // [in]
+);

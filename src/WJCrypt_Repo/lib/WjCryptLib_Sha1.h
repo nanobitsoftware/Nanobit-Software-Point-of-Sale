@@ -26,16 +26,16 @@
 // Sha1Context - This must be initialised using Sha1Initialised. Do not modify the contents of this structure directly.
 typedef struct
 {
-    uint32_t        State[5];
-    uint32_t        Count[2];
-    uint8_t         Buffer[64];
+	uint32_t        State[5];
+	uint32_t        Count[2];
+	uint8_t         Buffer[64];
 } Sha1Context;
 
 #define SHA1_HASH_SIZE           ( 160 / 8 )
 
 typedef struct
 {
-    uint8_t      bytes [SHA1_HASH_SIZE];
+	uint8_t      bytes[SHA1_HASH_SIZE];
 } SHA1_HASH;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -48,10 +48,10 @@ typedef struct
 //  Initialises an SHA1 Context. Use this to initialise/reset a context.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha1Initialise
-    (
-        Sha1Context*        Context         // [out]
-    );
+Sha1Initialise
+(
+	Sha1Context* Context         // [out]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Sha1Update
@@ -60,12 +60,12 @@ void
 //  calling this function until all the data has been added. Then call Sha1Finalise to calculate the hash.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha1Update
-    (
-        Sha1Context*        Context,        // [in out]
-        void const*         Buffer,         // [in]
-        uint32_t            BufferSize      // [in]
-    );
+Sha1Update
+(
+	Sha1Context* Context,        // [in out]
+	void const* Buffer,         // [in]
+	uint32_t            BufferSize      // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Sha1Finalise
@@ -74,11 +74,11 @@ void
 //  calling this, Sha1Initialised must be used to reuse the context.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha1Finalise
-    (
-        Sha1Context*        Context,        // [in out]
-        SHA1_HASH*          Digest          // [in]
-    );
+Sha1Finalise
+(
+	Sha1Context* Context,        // [in out]
+	SHA1_HASH* Digest          // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Sha1Calculate
@@ -86,9 +86,9 @@ void
 //  Combines Sha1Initialise, Sha1Update, and Sha1Finalise into one function. Calculates the SHA1 hash of the buffer.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Sha1Calculate
-    (
-        void  const*        Buffer,         // [in]
-        uint32_t            BufferSize,     // [in]
-        SHA1_HASH*          Digest          // [in]
-    );
+Sha1Calculate
+(
+	void  const* Buffer,         // [in]
+	uint32_t            BufferSize,     // [in]
+	SHA1_HASH* Digest          // [in]
+);

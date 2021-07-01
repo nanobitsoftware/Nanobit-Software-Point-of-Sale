@@ -34,11 +34,11 @@
 // Do not modify the contents of this structure directly.
 typedef struct
 {
-    AesContext      Aes;
-    uint8_t         IV [AES_CTR_IV_SIZE];
-    uint64_t        StreamIndex;
-    uint64_t        CurrentCipherBlockIndex;
-    uint8_t         CurrentCipherBlock [AES_BLOCK_SIZE];
+	AesContext      Aes;
+	uint8_t         IV[AES_CTR_IV_SIZE];
+	uint64_t        StreamIndex;
+	uint64_t        CurrentCipherBlockIndex;
+	uint8_t         CurrentCipherBlock[AES_BLOCK_SIZE];
 } AesCtrContext;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -52,12 +52,12 @@ typedef struct
 //  to change the IV without requiring the more length processes of reinitialising an AES key.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesCtrInitialise
-    (
-        AesCtrContext*      Context,                // [out]
-        AesContext const*   InitialisedAesContext,  // [in]
-        uint8_t const       IV [AES_CTR_IV_SIZE]    // [in]
-    );
+AesCtrInitialise
+(
+	AesCtrContext* Context,                // [out]
+	AesContext const* InitialisedAesContext,  // [in]
+	uint8_t const       IV[AES_CTR_IV_SIZE]    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCtrInitialiseWithKey
@@ -67,13 +67,13 @@ void
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCtrInitialiseWithKey
-    (
-        AesCtrContext*      Context,                // [out]
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_CTR_IV_SIZE]    // [in]
-    );
+AesCtrInitialiseWithKey
+(
+	AesCtrContext* Context,                // [out]
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_CTR_IV_SIZE]    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCtrSetStreamIndex
@@ -82,11 +82,11 @@ int
 //  subsequent output will start from this position
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesCtrSetStreamIndex
-    (
-        AesCtrContext*      Context,                // [in out]
-        uint64_t            StreamIndex             // [in]
-    );
+AesCtrSetStreamIndex
+(
+	AesCtrContext* Context,                // [in out]
+	uint64_t            StreamIndex             // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCtrXor
@@ -98,13 +98,13 @@ void
 //  InBuffer and OutBuffer can point to the same location for in-place encrypting/decrypting
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesCtrXor
-    (
-        AesCtrContext*      Context,                // [in out]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            Size                    // [in]
-    );
+AesCtrXor
+(
+	AesCtrContext* Context,                // [in out]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            Size                    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCtrOutput
@@ -113,12 +113,12 @@ void
 //  index by that number of bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesCtrOutput
-    (
-        AesCtrContext*      Context,                // [in out]
-        void*               Buffer,                 // [out]
-        uint32_t            Size                    // [in]
-    );
+AesCtrOutput
+(
+	AesCtrContext* Context,                // [in out]
+	void* Buffer,                 // [out]
+	uint32_t            Size                    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCtrXorWithKey
@@ -129,12 +129,12 @@ void
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCtrXorWithKey
-    (
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_CTR_IV_SIZE],   // [in]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            BufferSize              // [in]
-    );
+AesCtrXorWithKey
+(
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_CTR_IV_SIZE],   // [in]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            BufferSize              // [in]
+);

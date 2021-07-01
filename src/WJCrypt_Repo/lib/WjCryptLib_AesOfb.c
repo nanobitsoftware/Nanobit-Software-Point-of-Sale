@@ -43,20 +43,20 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 static
 void
-    XorBuffers
-    (
-        uint8_t const*      SourceBuffer1,          // [in]
-        uint8_t const*      SourceBuffer2,          // [in]
-        uint8_t*            DestinationBuffer,      // [out]
-        uint32_t            Amount                  // [in]
-    )
+XorBuffers
+(
+	uint8_t const* SourceBuffer1,          // [in]
+	uint8_t const* SourceBuffer2,          // [in]
+	uint8_t* DestinationBuffer,      // [out]
+	uint32_t            Amount                  // [in]
+)
 {
-    uint32_t    i;
+	uint32_t    i;
 
-    for( i=0; i<Amount; i++ )
-    {
-        DestinationBuffer[i] = SourceBuffer1[i] ^ SourceBuffer2[i];
-    }
+	for (i = 0; i < Amount; i++)
+	{
+		DestinationBuffer[i] = SourceBuffer1[i] ^ SourceBuffer2[i];
+	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -70,20 +70,20 @@ void
 //  to change the IV without requiring the more lengthy processes of reinitialising an AES key.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesOfbInitialise
-    (
-        AesOfbContext*      Context,                // [out]
-        AesContext const*   InitialisedAesContext,  // [in]
-        uint8_t const       IV [AES_OFB_IV_SIZE]    // [in]
-    )
+AesOfbInitialise
+(
+	AesOfbContext* Context,                // [out]
+	AesContext const* InitialisedAesContext,  // [in]
+	uint8_t const       IV[AES_OFB_IV_SIZE]    // [in]
+)
 {
-    // Setup context values
-    Context->Aes = *InitialisedAesContext;
-    memcpy( Context->CurrentCipherBlock, IV, sizeof(Context->CurrentCipherBlock) );
-    Context->IndexWithinCipherBlock = 0;
+	// Setup context values
+	Context->Aes = *InitialisedAesContext;
+	memcpy(Context->CurrentCipherBlock, IV, sizeof(Context->CurrentCipherBlock));
+	Context->IndexWithinCipherBlock = 0;
 
-    // Generate the first cipher block of the stream.
-    AesEncryptInPlace( &Context->Aes, Context->CurrentCipherBlock );
+	// Generate the first cipher block of the stream.
+	AesEncryptInPlace(&Context->Aes, Context->CurrentCipherBlock);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -94,25 +94,25 @@ void
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesOfbInitialiseWithKey
-    (
-        AesOfbContext*      Context,                // [out]
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_OFB_IV_SIZE]    // [in]
-    )
+AesOfbInitialiseWithKey
+(
+	AesOfbContext* Context,                // [out]
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_OFB_IV_SIZE]    // [in]
+)
 {
-    AesContext aes;
+	AesContext aes;
 
-    // Initialise AES Context
-    if( 0 != AesInitialise( &aes, Key, KeySize ) )
-    {
-        return -1;
-    }
+	// Initialise AES Context
+	if (0 != AesInitialise(&aes, Key, KeySize))
+	{
+		return -1;
+	}
 
-    // Now set-up AesOfbContext
-    AesOfbInitialise( Context, &aes, IV );
-    return 0;
+	// Now set-up AesOfbContext
+	AesOfbInitialise(Context, &aes, IV);
+	return 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -125,54 +125,54 @@ int
 //  InBuffer and OutBuffer can point to the same location for in-place encrypting/decrypting
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesOfbXor
-    (
-        AesOfbContext*      Context,                // [in out]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            Size                    // [in]
-    )
+AesOfbXor
+(
+	AesOfbContext* Context,                // [in out]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            Size                    // [in]
+)
 {
-    uint32_t    amountLeft = Size;
-    uint32_t    outputOffset = 0;
-    uint32_t    chunkSize;
-    uint32_t    amountAvailableInBlock;
+	uint32_t    amountLeft = Size;
+	uint32_t    outputOffset = 0;
+	uint32_t    chunkSize;
+	uint32_t    amountAvailableInBlock;
 
-    // First determine how much is available in the current block.
-    amountAvailableInBlock = AES_BLOCK_SIZE - Context->IndexWithinCipherBlock;
+	// First determine how much is available in the current block.
+	amountAvailableInBlock = AES_BLOCK_SIZE - Context->IndexWithinCipherBlock;
 
-    // Determine how much of the current block we will take, either all that is available, or less
-    // if the amount requested is smaller.
-    chunkSize = MIN( amountAvailableInBlock, amountLeft );
+	// Determine how much of the current block we will take, either all that is available, or less
+	// if the amount requested is smaller.
+	chunkSize = MIN(amountAvailableInBlock, amountLeft);
 
-    // XOR the bytes from the cipher block
-    XorBuffers( InBuffer, Context->CurrentCipherBlock + (AES_BLOCK_SIZE - amountAvailableInBlock), OutBuffer, chunkSize );
+	// XOR the bytes from the cipher block
+	XorBuffers(InBuffer, Context->CurrentCipherBlock + (AES_BLOCK_SIZE - amountAvailableInBlock), OutBuffer, chunkSize);
 
-    amountLeft -= chunkSize;
-    outputOffset += chunkSize;
-    Context->IndexWithinCipherBlock += chunkSize;
+	amountLeft -= chunkSize;
+	outputOffset += chunkSize;
+	Context->IndexWithinCipherBlock += chunkSize;
 
-    // Now start generating new cipher blocks as required.
-    while( amountLeft > 0 )
-    {
-        // Generate new cipher block
-        AesEncryptInPlace( &Context->Aes, Context->CurrentCipherBlock );
+	// Now start generating new cipher blocks as required.
+	while (amountLeft > 0)
+	{
+		// Generate new cipher block
+		AesEncryptInPlace(&Context->Aes, Context->CurrentCipherBlock);
 
-        // Determine how much of the current block we need and XOR it out onto the buffer
-        chunkSize = MIN( amountLeft, AES_BLOCK_SIZE );
-        XorBuffers( (uint8_t*)InBuffer + outputOffset, Context->CurrentCipherBlock, (uint8_t*)OutBuffer + outputOffset, chunkSize );
+		// Determine how much of the current block we need and XOR it out onto the buffer
+		chunkSize = MIN(amountLeft, AES_BLOCK_SIZE);
+		XorBuffers((uint8_t*)InBuffer + outputOffset, Context->CurrentCipherBlock, (uint8_t*)OutBuffer + outputOffset, chunkSize);
 
-        amountLeft -= chunkSize;
-        outputOffset += chunkSize;
-        Context->IndexWithinCipherBlock = chunkSize;    // Note: Not incremented
-    }
+		amountLeft -= chunkSize;
+		outputOffset += chunkSize;
+		Context->IndexWithinCipherBlock = chunkSize;    // Note: Not incremented
+	}
 
-    // If we ended up completely reading the last cipher block we need to generate a new one for next time.
-    if( AES_BLOCK_SIZE == chunkSize )
-    {
-        AesEncryptInPlace( &Context->Aes, Context->CurrentCipherBlock );
-        Context->IndexWithinCipherBlock = 0;
-    }
+	// If we ended up completely reading the last cipher block we need to generate a new one for next time.
+	if (AES_BLOCK_SIZE == chunkSize)
+	{
+		AesEncryptInPlace(&Context->Aes, Context->CurrentCipherBlock);
+		Context->IndexWithinCipherBlock = 0;
+	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -182,15 +182,15 @@ void
 //  index by that number of bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesOfbOutput
-    (
-        AesOfbContext*      Context,                // [in out]
-        void*               Buffer,                 // [out]
-        uint32_t            Size                    // [in]
-    )
+AesOfbOutput
+(
+	AesOfbContext* Context,                // [in out]
+	void* Buffer,                 // [out]
+	uint32_t            Size                    // [in]
+)
 {
-    memset( Buffer, 0, Size );
-    AesOfbXor( Context, Buffer, Buffer, Size );
+	memset(Buffer, 0, Size);
+	AesOfbXor(Context, Buffer, Buffer, Size);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -203,24 +203,24 @@ void
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesOfbXorWithKey
-    (
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_OFB_IV_SIZE],   // [in]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            BufferSize              // [in]
-    )
+AesOfbXorWithKey
+(
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_OFB_IV_SIZE],   // [in]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            BufferSize              // [in]
+)
 {
-    int             error;
-    AesOfbContext   context;
+	int             error;
+	AesOfbContext   context;
 
-    error = AesOfbInitialiseWithKey( &context, Key, KeySize, IV );
-    if( 0 == error )
-    {
-        AesOfbXor( &context, InBuffer, OutBuffer, BufferSize );
-    }
+	error = AesOfbInitialiseWithKey(&context, Key, KeySize, IV);
+	if (0 == error)
+	{
+		AesOfbXor(&context, InBuffer, OutBuffer, BufferSize);
+	}
 
-    return error;
+	return error;
 }

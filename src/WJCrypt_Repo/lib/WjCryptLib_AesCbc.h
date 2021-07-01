@@ -35,8 +35,8 @@
 // Do not modify the contents of this structure directly.
 typedef struct
 {
-    AesContext      Aes;
-    uint8_t         PreviousCipherBlock [AES_BLOCK_SIZE];
+	AesContext      Aes;
+	uint8_t         PreviousCipherBlock[AES_BLOCK_SIZE];
 } AesCbcContext;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -50,12 +50,12 @@ typedef struct
 //  to change the IV without requiring the more lengthy processes of reinitialising an AES key.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    AesCbcInitialise
-    (
-        AesCbcContext*      Context,                // [out]
-        AesContext const*   InitialisedAesContext,  // [in]
-        uint8_t const       IV [AES_CBC_IV_SIZE]    // [in]
-    );
+AesCbcInitialise
+(
+	AesCbcContext* Context,                // [out]
+	AesContext const* InitialisedAesContext,  // [in]
+	uint8_t const       IV[AES_CBC_IV_SIZE]    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCbcInitialiseWithKey
@@ -65,13 +65,13 @@ void
 //  Returns 0 if successful, or -1 if invalid KeySize provided
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcInitialiseWithKey
-    (
-        AesCbcContext*      Context,                // [out]
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_CBC_IV_SIZE]    // [in]
-    );
+AesCbcInitialiseWithKey
+(
+	AesCbcContext* Context,                // [out]
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_CBC_IV_SIZE]    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCbcEncrypt
@@ -84,13 +84,13 @@ int
 //  Returns 0 if successful, or -1 if Size is not a multiple of 16 bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcEncrypt
-    (
-        AesCbcContext*      Context,                // [in out]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            Size                    // [in]
-    );
+AesCbcEncrypt
+(
+	AesCbcContext* Context,                // [in out]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            Size                    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCbcDecrypt
@@ -101,13 +101,13 @@ int
 //  Returns 0 if successful, or -1 if Size is not a multiple of 16 bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcDecrypt
-    (
-        AesCbcContext*      Context,                // [in out]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            Size                    // [in]
-    );
+AesCbcDecrypt
+(
+	AesCbcContext* Context,                // [in out]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            Size                    // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCbcEncryptWithKey
@@ -118,15 +118,15 @@ int
 //  Returns 0 if successful, or -1 if invalid KeySize provided or BufferSize not a multiple of 16 bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcEncryptWithKey
-    (
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_CBC_IV_SIZE],   // [in]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            BufferSize              // [in]
-    );
+AesCbcEncryptWithKey
+(
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_CBC_IV_SIZE],   // [in]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            BufferSize              // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  AesCbcDecryptWithKey
@@ -137,12 +137,12 @@ int
 //  Returns 0 if successful, or -1 if invalid KeySize provided or BufferSize not a multiple of 16 bytes.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int
-    AesCbcDecryptWithKey
-    (
-        uint8_t const*      Key,                    // [in]
-        uint32_t            KeySize,                // [in]
-        uint8_t const       IV [AES_CBC_IV_SIZE],   // [in]
-        void const*         InBuffer,               // [in]
-        void*               OutBuffer,              // [out]
-        uint32_t            BufferSize              // [in]
-    );
+AesCbcDecryptWithKey
+(
+	uint8_t const* Key,                    // [in]
+	uint32_t            KeySize,                // [in]
+	uint8_t const       IV[AES_CBC_IV_SIZE],   // [in]
+	void const* InBuffer,               // [in]
+	void* OutBuffer,              // [out]
+	uint32_t            BufferSize              // [in]
+);

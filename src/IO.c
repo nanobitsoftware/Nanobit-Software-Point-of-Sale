@@ -11,12 +11,9 @@
 #include <errno.h>
 #include "Nano PoS.h"
 
-
-
-
-void write_buffer(const char *str)
+void write_buffer(const char* str)
 {
-	FILE *fp;
+	FILE* fp;
 
 	if (str == NULL)
 		return;
@@ -28,74 +25,54 @@ void write_buffer(const char *str)
 	}
 
 	fprintf(fp, "%s\n", str);
-	fclose (fp); 
+	fclose(fp);
 }
-void LOG (char *fmt, ...)
+void LOG(char* fmt, ...)
 {
-
 	char buf[200000];
 	va_list args;
-	va_start (args, fmt);
-	vsprintf (buf, fmt, args);
-	va_end (args);
+	va_start(args, fmt);
+	vsprintf(buf, fmt, args);
+	va_end(args);
 	write_buffer(buf);
-
-
 }
 
-
-
-int read_string (char buf[], FILE *fp)
+int read_string(char buf[], FILE* fp)
 {
-
 	int c;
-	int len=0;
+	int len = 0;
 	int f;
 	if (fp == NULL)
 		return -1;
 	len = 0;
-	f=0;
+	f = 0;
 	while (!feof(fp))
 	{
 		f++;
 
-
-
-
 		c = getc(fp);
 
-
-		
 		if (c == '\0')
 			return len;
 		if (c == '\n')
 			return len;
-		
+
 		if (c == '\r')
 			return len;
 		buf[len++] = c;
-		//              
+		//
 		//		if (f >= 100)
-		//return len;        
-
-
-
+		//return len;
 	}
 	return EOF;
 }
 
-
-
-
-char * load_file (void)
+char* load_file(void)
 {
 	OPENFILENAME filename;
 	static char str[1024];
 
-
-
 	memset(&filename, 0, sizeof(filename));
-
 
 	filename.lStructSize = sizeof(filename);
 	filename.hwndOwner = NULL;
@@ -103,30 +80,24 @@ char * load_file (void)
 	filename.lpstrFile = str;
 	filename.lpstrFile[0] = '\0';
 	filename.nMaxFile = sizeof(str);
-	filename.Flags =  OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
+	filename.Flags = OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
 	filename.lpstrDefExt = "txt";
 	filename.lpstrInitialDir = NULL;
-	filename.nFilterIndex =1;
-
-
+	filename.nFilterIndex = 1;
 
 	if ((GetOpenFileName(&filename)) == 0)
 	{
 		return NULL;
 	}
 
-	return str;					  
-
+	return str;
 }
-char * save_file (char *filter)
+char* save_file(char* filter)
 {
 	OPENFILENAME filename;
 	static char str[1024];
 
-
-
 	memset(&filename, 0, sizeof(filename));
-
 
 	filename.lStructSize = sizeof(filename);
 	filename.hwndOwner = NULL;
@@ -134,12 +105,10 @@ char * save_file (char *filter)
 	filename.lpstrFile = str;
 	filename.lpstrFile[0] = '\0';
 	filename.nMaxFile = sizeof(str);
-	filename.Flags =  OFN_FILEMUSTEXIST | OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT;
+	filename.Flags = OFN_FILEMUSTEXIST | OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT;
 	filename.lpstrDefExt = "txt";
 	filename.lpstrInitialDir = NULL;
-	filename.nFilterIndex =1;
-
-	
+	filename.nFilterIndex = 1;
 
 	if ((GetSaveFileName(&filename)) == 0)
 	{
@@ -147,27 +116,23 @@ char * save_file (char *filter)
 	}
 
 	return str;
-
 }
 
-
-
-void GiveError(char * wrong, BOOL KillProcess)
+void GiveError(char* wrong, BOOL KillProcess)
 {
 	if (wrong == NULL)
 	{
-		MessageBox(NULL, "An unknown error has occured, please restart Nano PoS and try again.", "Nano PoS Error", MB_TASKMODAL|MB_ICONSTOP | MB_OK);
+		MessageBox(NULL, "An unknown error has occured, please restart Nano PoS and try again.", "Nano PoS Error", MB_TASKMODAL | MB_ICONSTOP | MB_OK);
 		if (KillProcess)
 			exit(0);
 		else
 			return;
 	}
 
-	MessageBox(NULL, wrong, "Nano PoS Error",MB_TASKMODAL| MB_ICONSTOP | MB_OK);
+	MessageBox(NULL, wrong, "Nano PoS Error", MB_TASKMODAL | MB_ICONSTOP | MB_OK);
 
 	if (KillProcess)
 		exit(0);
 	else
 		return;
 }
-

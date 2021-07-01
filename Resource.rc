@@ -1,8 +1,6 @@
 // Microsoft Visual C++ generated resource script.
 //
 
-
-
 #ifndef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -13,4 +11,3 @@ CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Nano Point of Sale.exe.manifest"
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
-

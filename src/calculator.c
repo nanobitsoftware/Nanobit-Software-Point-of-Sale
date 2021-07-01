@@ -12,7 +12,6 @@
 
 #include "NWC.h"
 
-
 #define MAX_CALC_NUMBER 0xFFFFFF // Max allowed number that we can calculate. Smaller than most due to float.
 #define MAX_NEST_CALC 256 // Max number of calculations we're allowed to do in a nest.
 
@@ -37,9 +36,7 @@ double divide_quote(void)
 		return 0.00f;
 	}
 	return fround(LEFT_CALC / RIGHT_CALC);
-
 }
-
 
 double multiply_quote(void)
 {
@@ -66,9 +63,7 @@ double get_minus_percent(double total, float percent)
 	if (percent <= 0.00f)
 		return total;
 
-
 	return fround(total - get_percent(total, percent));
-
 }
 
 double get_add_percent(double total, float percent)

@@ -23,21 +23,21 @@
 // Md5Context - This must be initialised using Md5Initialised. Do not modify the contents of this structure directly.
 typedef struct
 {
-    uint32_t     lo;
-    uint32_t     hi;
-    uint32_t     a;
-    uint32_t     b;
-    uint32_t     c;
-    uint32_t     d;
-    uint8_t      buffer[64];
-    uint32_t     block[16];
+	uint32_t     lo;
+	uint32_t     hi;
+	uint32_t     a;
+	uint32_t     b;
+	uint32_t     c;
+	uint32_t     d;
+	uint8_t      buffer[64];
+	uint32_t     block[16];
 } Md5Context;
 
 #define MD5_HASH_SIZE           ( 128 / 8 )
 
 typedef struct
 {
-    uint8_t      bytes [MD5_HASH_SIZE];
+	uint8_t      bytes[MD5_HASH_SIZE];
 } MD5_HASH;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -50,10 +50,10 @@ typedef struct
 //  Initialises an MD5 Context. Use this to initialise/reset a context.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Md5Initialise
-    (
-        Md5Context*         Context         // [out]
-    );
+Md5Initialise
+(
+	Md5Context* Context         // [out]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Md5Update
@@ -62,12 +62,12 @@ void
 //  calling this function until all the data has been added. Then call Md5Finalise to calculate the hash.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Md5Update
-    (
-        Md5Context*         Context,        // [in out]
-        void const*         Buffer,         // [in]
-        uint32_t            BufferSize      // [in]
-    );
+Md5Update
+(
+	Md5Context* Context,        // [in out]
+	void const* Buffer,         // [in]
+	uint32_t            BufferSize      // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Md5Finalise
@@ -76,11 +76,11 @@ void
 //  calling this, Md5Initialised must be used to reuse the context.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Md5Finalise
-    (
-        Md5Context*         Context,        // [in out]
-        MD5_HASH*           Digest          // [in]
-    );
+Md5Finalise
+(
+	Md5Context* Context,        // [in out]
+	MD5_HASH* Digest          // [in]
+);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  Md5Calculate
@@ -88,9 +88,9 @@ void
 //  Combines Md5Initialise, Md5Update, and Md5Finalise into one function. Calculates the MD5 hash of the buffer.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void
-    Md5Calculate
-    (
-        void  const*        Buffer,         // [in]
-        uint32_t            BufferSize,     // [in]
-        MD5_HASH*           Digest          // [in]
-    );
+Md5Calculate
+(
+	void  const* Buffer,         // [in]
+	uint32_t            BufferSize,     // [in]
+	MD5_HASH* Digest          // [in]
+);

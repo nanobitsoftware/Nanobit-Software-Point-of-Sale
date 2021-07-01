@@ -12,25 +12,18 @@
 #include "NWC.h"
 #include "sqlite3.h"
 
-
 extern int total_customers;
 
-
-CSDATA  * new_customer(void)
+CSDATA* new_customer(void)
 {
-	CSDATA * cs;
+	CSDATA* cs;
 	static CSDATA c_null;
 
-
-	
-
-	
-
-	cs = (CSDATA*) malloc(sizeof(*cs));
+	cs = (CSDATA*)malloc(sizeof(*cs));
 
 	if (!cs)
 	{
-		GiveError("Memory failed to allocate for customer creation. Closing program; please restart.",1);
+		GiveError("Memory failed to allocate for customer creation. Closing program; please restart.", 1);
 		return NULL;
 	}
 	*cs = c_null;
@@ -44,24 +37,24 @@ CSDATA  * new_customer(void)
 	cs->open_tickets = 0;
 	cs->total_tickets = 0;
 	cs->total_spent = 0.0;
-	cs->last_seen = (char*) malloc(30 * sizeof(char*));
-	cs->cs_since = (char*) malloc(30 * sizeof(char*));
-	cs->first_name = (char*) malloc(MSL * sizeof(char*));
-	
-	cs->last_name =  (char*) malloc(MSL * sizeof(char*));
+	cs->last_seen = (char*)malloc(30 * sizeof(char*));
+	cs->cs_since = (char*)malloc(30 * sizeof(char*));
+	cs->first_name = (char*)malloc(MSL * sizeof(char*));
 
-	cs->corporate_accountant = (char*) malloc(MSL * sizeof(char*));
-	cs->st_address  = (char*) malloc(MSL * sizeof(char*));
-	cs->city = (char*) malloc(MSL * sizeof(char*));
-	cs->phone = (char*) malloc(MSL * sizeof(char*));
-	cs->phone_cell = (char*) malloc(MSL * sizeof(char*));
-	cs->phone_home = (char*) malloc(MSL * sizeof(char*));
-	cs->phone_office = (char*) malloc(MSL * sizeof(char*));
-	cs->phone_spouce = (char*) malloc(MSL * sizeof(char*));
-	cs->phone_fax = (char*) malloc(MSL * sizeof(char*));
-	cs->notes = (char*) malloc(MAXNOTE * sizeof(char*));
-	cs->sirname = (char*) malloc(25 * sizeof(char*));
-	cs->state = (char*) malloc(25 * sizeof(char*));
+	cs->last_name = (char*)malloc(MSL * sizeof(char*));
+
+	cs->corporate_accountant = (char*)malloc(MSL * sizeof(char*));
+	cs->st_address = (char*)malloc(MSL * sizeof(char*));
+	cs->city = (char*)malloc(MSL * sizeof(char*));
+	cs->phone = (char*)malloc(MSL * sizeof(char*));
+	cs->phone_cell = (char*)malloc(MSL * sizeof(char*));
+	cs->phone_home = (char*)malloc(MSL * sizeof(char*));
+	cs->phone_office = (char*)malloc(MSL * sizeof(char*));
+	cs->phone_spouce = (char*)malloc(MSL * sizeof(char*));
+	cs->phone_fax = (char*)malloc(MSL * sizeof(char*));
+	cs->notes = (char*)malloc(MAXNOTE * sizeof(char*));
+	cs->sirname = (char*)malloc(25 * sizeof(char*));
+	cs->state = (char*)malloc(25 * sizeof(char*));
 	cs->has_credit = FALSE;
 	cs->deny_work = FALSE;
 	cs->tax_free = FALSE;
@@ -70,7 +63,7 @@ CSDATA  * new_customer(void)
 	cs->accept_check = TRUE;
 	cs->accept_creditcard = TRUE;
 	cs->next = NULL;
-	
+
 	lastcs = get_last_cs();
 	if (lastcs != NULL)
 	{
@@ -78,46 +71,35 @@ CSDATA  * new_customer(void)
 	}
 
 	lastcs = cs;
-	
-	
-	total_customers +=1;
-	 //LOG("Total CS: %d", total_customers);
-	return cs;
 
+	total_customers += 1;
+	//LOG("Total CS: %d", total_customers);
+	return cs;
 }
 
-CSDATA * get_last_cs(void)
+CSDATA* get_last_cs(void)
 {
-	CSDATA *cs;
-	CSDATA *cf;
+	CSDATA* cs;
+	CSDATA* cf;
 
 	cs = cf = NULL;
 
-	for (cs = cslist;cs;cs=cs->next)
+	for (cs = cslist; cs; cs = cs->next)
 		cf = cs;
 	return cf;
 }
 
-
-
-
-
-
-int add_cs_db (void *NotUsed, int argc, char **argv, char **azColName)
+int add_cs_db(void* NotUsed, int argc, char** argv, char** azColName)
 {
 	int i;
-	CSDATA *cc;
+	CSDATA* cc;
 	BOOL Alloced = FALSE;
-	NotUsed =0;
-	
-
-	
+	NotUsed = 0;
 
 	cc = new_customer();
-		
-	for (i=0;i<argc;i++)
+
+	for (i = 0; i < argc; i++)
 	{
-		
 		if (!strcmp(azColName[i], "id"))
 			cc->cs_id = argv[i] == NULL ? 0 : atoi(argv[i]);
 		if (!strcmp(azColName[i], "LastName"))
@@ -183,10 +165,8 @@ int add_cs_db (void *NotUsed, int argc, char **argv, char **azColName)
 			cc->accept_creditcard = argv[i] == NULL ? 0 : atoi(argv[i]);
 		if (!strcmp(azColName[i], "AcceptCheck"))
 			cc->accept_check = argv[i] == NULL ? 0 : atoi(argv[i]);
-
 	}
 
-	
 	if (cslist == NULL)
 		cslist = cc;
 
@@ -195,29 +175,28 @@ int add_cs_db (void *NotUsed, int argc, char **argv, char **azColName)
 	return 0;
 }
 
-BOOL is_customer(CSDATA *c)
+BOOL is_customer(CSDATA* c)
 {
-	CSDATA *cs;
+	CSDATA* cs;
 
 	if (!c)
 		return FALSE;
 
-	for (cs = cslist;cs;cs=cs->next)
+	for (cs = cslist; cs; cs = cs->next)
 	{
 		if ((!strcmp(cs->last_name, c->last_name)) && (!strcmp(cs->first_name, c->first_name)) && (!strcmp(cs->phone, c->phone)))
 		{
-
 			return TRUE;
 		}
 	}
 	return FALSE;
 }
 
-CSDATA * get_cs_by_id (int i)
+CSDATA* get_cs_by_id(int i)
 {
-	CSDATA *cs;
+	CSDATA* cs;
 
-	for (cs = cslist;cs;cs=cs->next)
+	for (cs = cslist; cs; cs = cs->next)
 	{
 		if (cs->cs_id == i)
 			return cs;
