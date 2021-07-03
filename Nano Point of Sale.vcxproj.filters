@@ -16,7 +16,7 @@
     <Filter Include="Source Files\WjCrypt Library">
       <UniqueIdentifier>{32dfdd48-cf7a-46a8-a7c5-56c7baf1acd7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\NPOSSoure">
+    <Filter Include="Source Files\NPOSSource">
       <UniqueIdentifier>{2ce03fd8-06ad-4f27-9959-48975240d2e3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -59,72 +59,72 @@
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClCompile>
     <ClCompile Include="src\calculator.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\computers gui.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\crypto.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\customer_gui.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\customers.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\db.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\inventory gui.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\inventory.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\IO.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\nano Memory.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\NWC_Main.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\printer.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\reports.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\setup GUI.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\sqlite3.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\strings.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\tickets gui.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\tickets.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\zipcodes.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
     <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.c">
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClCompile>
     <ClCompile Include="src\Nano PoS.c">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nano PoS.h">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
     <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.h">
       <Filter>Source Files\WjCrypt Library</Filter>
@@ -154,19 +154,19 @@
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClInclude>
     <ClInclude Include="src\NWC.h">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
     <ClInclude Include="src\resource.h">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
     <ClInclude Include="src\resource1.h">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
     <ClInclude Include="src\sqlite3.h">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
     <ClInclude Include="src\sqlite3ext.h">
-      <Filter>Source Files\NPOSSoure</Filter>
+      <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
