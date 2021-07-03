@@ -158,7 +158,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance,
 			"Window_pos_y, INT, Window_width INT, Window_Height INT, Auto_DB_Backup INT,  Text1 TEXT, Text2 TEXT, Text3 TEXT, Text4 TEXT, Text5 TEXT, "
 			"Text6 TEXT, Text7 TEXT, Text8 TEXT, Text9 TEXT, Text10 TEXT, Number1 INT, Number2 INT, Number3 INT, Number4 INT, Number5 INT, Number6 INT, Number7 INT"
 			"Number8 INT, Number9 INT, Number10 INT, Logo BLOB);"
-			"CREATE TABLE Payments (id INTEGER PRIMARY KEY, Refkey INT, PaymentType CHAR, PaymentAmount DECIMAL(18,2), Authkey CHAR, CheckNumber CHAR, PayDate CHAR, csid INT, Invoice INT, TaxFree INT);");
+			"CREATE TABLE Payments (id INTEGER PRIMARY KEY, Refkey INT, PaymentType CHAR, PaymentAmount DECIMAL(18,2), PaymentTax DECIMAL(18,2), PaymentTotal DECIMAL(18,2), PaymentPreTax Decimal(28,2), CCCCV TEXT, CCEXPDAT TEXT, CCZIPCODE TEXT, Authkey CHAR, CheckNumber CHAR, PayDate CHAR, csid INT, Invoice INT, TaxFree INT);");
 
 		sqlite3_exec(db, SQLString, NULL, NULL, &err);
 
