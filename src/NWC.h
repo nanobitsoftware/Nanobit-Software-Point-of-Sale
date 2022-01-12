@@ -18,7 +18,7 @@ typedef struct NWC_Child_attr NWC_CHILD_ATTR;
 typedef struct window_controls NWC_CTRL;
 
 NWC_PARENT** parents;
-int current_parents;			   
+int current_parents;			    
 int max_parents;
 
 struct NWC_Parent

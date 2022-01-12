@@ -92,7 +92,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance,
 
 	db = NULL;
 	csfree = NULL;
-	cslist = NULL;
+	cslist = NULL;					 
 	mainwindow = NULL;
 	cswindow = NULL;
 	csfind = NULL;

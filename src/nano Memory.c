@@ -28,7 +28,7 @@ unsigned long int unalloced = 0;
 
 #define MALLOC_MAGIC 0x00040000UL
 
-struct mem_heap
+struct mem_heap										   
 {
 	//char m_add[20];
 	unsigned long int m_add;
