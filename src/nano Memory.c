@@ -30,7 +30,6 @@ unsigned long int unalloced = 0;
 #define MALLOC_MAGIC 0x00040000UL
 
 
-
 /* Don't ask. This is just a way to make some form of OOP coding in C. I only want 'self' usage. So I made a
  * little subsystem that pushes and pops a type, and the function calling. For some checks.
  */
@@ -47,8 +46,7 @@ typedef struct my_own_self SELF;
 
 SELF self_list;
 
-
-struct mem_heap
+struct mem_heap										   
 {
 	//char m_add[20];
 	unsigned long int m_add;
