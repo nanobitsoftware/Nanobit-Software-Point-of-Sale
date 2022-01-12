@@ -60,13 +60,9 @@ static int cscallback(void* NotUsed, int argc, char** argv, char** azColName)
 		LOG("%s:%s", azColName[i], argv[i] ? argv[i] : "NULL");
 	}
 	return 0;
+
 }
-
-int WINAPI WinMain(HINSTANCE hThisInstance,
-	HINSTANCE hPrevInstance,
-	LPSTR lpszArgument,
-	int nFunsterStil)
-
+int WINAPI WinMain(HINSTANCE hThisInstance,HINSTANCE hPrevInstance,	LPSTR lpszArgument,	int nFunsterStil)
 {
 	MSG messages; // Message buffer for windows
 

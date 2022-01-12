@@ -147,7 +147,7 @@ HDC get_printer_dc(void)
 void draw_text_line(char* str)
 {
 	char* point;
-	char buf[1024];
+	char buf[1024]="";
 	int i;
 
 	i = 0;
@@ -202,7 +202,7 @@ void print_work_order(int inv, char* order)
 	char* point;
 	int line;
 
-	char buf[1024];
+	char buf[1024]="";
 	static DOCINFO    di;
 
 	char sstr[1024];
@@ -255,7 +255,7 @@ void print_work_order(int inv, char* order)
 			hf = CreateFont(40 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Courier New");
 			SelectObject(prndc, hf);
 
-			sprintf(sstr, "-Work Order-", inv);
+			sprintf(sstr, "-Work Order-");// inv);
 			TextOut(prndc, (r.right / 2 - (strlen(sstr) * 8)) * x_offset, (r.top + (2)) * y_offset, sstr, strlen(sstr));
 
 			DeleteObject(hf);
@@ -285,7 +285,7 @@ void print_work_order(int inv, char* order)
 					hf = CreateFont(40 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Courier New");
 					SelectObject(prndc, hf);
 
-					sprintf(sstr, "-Work Order-", inv);
+					sprintf(sstr, "-Work Order-");// , inv);
 					TextOut(prndc, (r.right / 2 - (strlen(sstr) * 8)) * x_offset, (r.top + (2)) * y_offset, sstr, strlen(sstr));
 
 					DeleteObject(hf);
@@ -343,7 +343,8 @@ void print_work_order(int inv, char* order)
 
 void print_report(char* report)
 {
-	RECT r, pr;
+	RECT r;
+		RECT pr;
 
 	HPEN oldpen;
 
@@ -352,10 +353,10 @@ void print_report(char* report)
 	char* point;
 	int line;
 
-	char buf[1024];
+	char buf[1024]="";
 	static DOCINFO    di = { sizeof(DOCINFO), TEXT("Nano POS Report") };
 
-	char sstr[1024];
+	char sstr[1024]="";
 	line = 0;
 
 	GetClientRect(NULL, &r);
@@ -534,7 +535,8 @@ void draw_inv_header(HDC dc, RECT r, int x_offset, int y_offset, int invoice)
 
 void print_invoice(char* str, int copies)
 {
-	RECT r, pr;
+	RECT r;
+	RECT pr;
 
 	HPEN oldpen;
 
@@ -543,7 +545,7 @@ void print_invoice(char* str, int copies)
 	char* point;
 	HDC dc;
 	int line;
-	char buf[1024];
+	char buf[1024]="";
 	BOOL movecol1;
 	BOOL movecol2;
 	BOOL bold;
@@ -768,7 +770,8 @@ void print_invoice(char* str, int copies)
 
 void DrawInvoiceBox(HDC dc, char* str)
 {
-	RECT r, pr;
+	RECT r; 
+	RECT pr;
 
 	HPEN oldpen;
 
@@ -776,7 +779,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 
 	char* point;
 	int line;
-	char buf[1024];
+	char buf[1024]="";
 	BOOL movecol1;
 	BOOL movecol2;
 	BOOL bold;
@@ -1196,6 +1199,7 @@ BOOL create_print_preview(char* str)
 	WNDCLASS wnd;
 
 	HDC dc;
+	wnd.style = CS_HREDRAW | CS_VREDRAW;
 
 	if (!printpreview)
 	{

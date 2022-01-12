@@ -89,7 +89,7 @@ HEAP* new_heap(void)
 
 void add_heap(HEAP* hp)
 {
-	char temp[5000];
+	char temp[5000]="";
 	int b_type = 0;
 	float t_total = 0.0;
 
@@ -155,8 +155,8 @@ void show_heap(void)
 	HEAP* hp;
 	HEAP* last;
 
-	char dheap[1000];
-	char str[20];
+	char dheap[1000]="";
+	char str[200]="";
 
 	return;
 	if (!IS_IN_DEBUGGING_MODE)
@@ -241,7 +241,7 @@ void dump_heap(void)
 	unsigned long int i = 0;
 	unsigned long int count = 0;
 	unsigned long int total = 0;
-	char buf[5000];
+	char buf[5000]="";
 
 	HEAP* hp;
 
@@ -275,7 +275,7 @@ int count_heap(void)
 void del_heap(unsigned long int m_add, int line, char* file)
 {
 	HEAP* h;
-	char temp[5000];
+	char temp[5000]="";
 	int b_type = 0;
 	float t_total = 0.0;
 
@@ -385,6 +385,7 @@ void* nano_malloc(size_t chunk, const char* file, int line)
 
 	unsigned long int m_add = 0;
 
+
 	extern char ERROR_STRING[5000];
 
 	ERROR_STRING[0] = '\0';
@@ -404,7 +405,7 @@ void* nano_malloc(size_t chunk, const char* file, int line)
 
 	if (!(mem = malloc(chunk)))
 	{
-		sprintf(ERROR_STRING, "Memory failed to allocate! File: %s, line: %d,size: %d", file, line, chunk);
+		sprintf(ERROR_STRING, "Memory failed to allocate! File: %s, line: %d,size: %zd", file, line, chunk);
 		LOG(ERROR_STRING);
 		ERRORS = TRUE;
 		GiveError(ERROR_STRING, TRUE);
@@ -447,7 +448,6 @@ void nano_free(void* seg, const char* file, int line)
 	unsigned long int m_add;
 	char* tail;
 
-	static char t_t;
 
 	if (!seg)
 		return;

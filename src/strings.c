@@ -155,8 +155,10 @@ int str_ret(const char* str)
 void strip_junk(char* str)
 {
 	const char* point;
-	char fleh[8000];
+	char fleh[8000]="";
+
 	char* buf;
+	
 	buf = fleh;
 
 	if (str == NULL)
@@ -294,7 +296,7 @@ char* commaize(unsigned long long int x, char buf[]) // Turn a ULONG_INT into a 
 	buf[0] = '\0';
 
 	temp[0] = '\0';
-	sprintf(temp, "%lu", x); // Yes yes, it's a hack.
+	sprintf(temp, "%llu", x); // Yes yes, it's a hack.
 
 	to_ret = temp;
 
@@ -400,7 +402,7 @@ char* get_date_notime(void)
 char* make_to_col(char* str)
 {
 	char* tmp_str;
-	int i;
+	unsigned long int i;
 	int i_space;
 	int x;
 	char* point;
@@ -413,8 +415,15 @@ char* make_to_col(char* str)
 		return str;
 
 	i = strlen(str);
+	
+	i = (i + (i / 2));
 
-	tmp_str = malloc(sizeof(char*) * (i + (i / 2)));
+
+	if (i < 1)
+		i = 2;
+	if (i > strlen(str))
+		i = (strlen(str)*2);
+	tmp_str = malloc(sizeof(char*) * i);
 
 	last_space = NULL;
 	i = 0;
@@ -474,7 +483,7 @@ char* make_to_col(char* str)
 char* make_to_page(char* str)
 {
 	char* tmp_str;
-	int i;
+	unsigned long int i;
 	int i_space;
 	int x;
 	char* point;
@@ -487,8 +496,14 @@ char* make_to_page(char* str)
 		return str;
 
 	i = strlen(str);
+	i = (i + (i / 2));
 
-	tmp_str = malloc(sizeof(char*) * (i + (i / 2)));
+
+	if (i < 1)
+		i = 2;
+	if (i > strlen(str))
+		i = (strlen(str) *2);
+	tmp_str = malloc(sizeof(char*) *i);
 
 	last_space = NULL;
 	i = 0;
