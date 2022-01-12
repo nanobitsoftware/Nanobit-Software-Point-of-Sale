@@ -30,8 +30,7 @@ int current_gui; // Total windows, children, widgets, etc.
 unsigned long int nwc_memory_used;
 
 
-
-struct NWC_Parent
+struct NWC_Parent		    
 {
 	BOOL on_top;
 	BOOL created;
@@ -131,7 +130,7 @@ BOOL AddCheck_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, 
 BOOL AddRadio_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, int height, HWND handle, DWORD id, DWORD style, BOOL show);
 BOOL AddEdit_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, int height, HWND handle, DWORD id, DWORD style, BOOL show);
 BOOL AddRichedit_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, int height, HWND handle, DWORD id, DWORD style, BOOL show);
-void CTRL_Resize(NWC_PARENT* p_window, char* name, int x, int y, int width, int height);
+void CTRL_Resize(NWC_PARENT* p_window, char* name, int x, int y, int width, int height)
 NWC_CTRL* get_control(NWC_PARENT* p_window, char* name);
 char* CTRL_gettext(NWC_PARENT* p_window, char* name);
 void CTRL_ChangeFont(NWC_PARENT* p_window, char* name, char* fontname);
@@ -169,8 +168,10 @@ int get_max_control_heigth(NWC_PARENT* p);
 int get_max_control_width(NWC_PARENT* p);
 NWC_CTRL* get_control_by_id(NWC_PARENT* p_window, DWORD id);
 
-void* nwc_widget_create_entry(NWC_PARENT* self);
+void *nwc_widget_create_entry(NWC_PARENT* self);
 
 void* check_self(void* func);
 void push_self(void* func, void* self);
 void pop_self(void* func, void* self);
+void* nwc_widget_create_entry(NWC_PARENT* self);
+

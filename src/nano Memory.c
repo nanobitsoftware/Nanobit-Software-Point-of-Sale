@@ -9,6 +9,7 @@
 #include <assert.h>
 #include <malloc.h>
 #include "Nano PoS.h"
+#include "NWC.h"
 
 #undef malloc // These stay in THIS scope.
 #undef free   //
@@ -27,6 +28,23 @@ unsigned long int alloced = 0;
 unsigned long int unalloced = 0;
 
 #define MALLOC_MAGIC 0x00040000UL
+
+
+/* Don't ask. This is just a way to make some form of OOP coding in C. I only want 'self' usage. So I made a
+ * little subsystem that pushes and pops a type, and the function calling. For some checks.
+ */
+
+
+struct my_own_self
+{
+	void* self; // We'll cast here.
+	void* func; // What function we're sending to, so we can check to make sure they're correct (threading checks basically)
+	time_t tick; // Time keeping
+};
+
+typedef struct my_own_self SELF;
+
+SELF self_list;
 
 struct mem_heap										   
 {
@@ -497,4 +515,63 @@ void return_usage(void)
 unsigned long int get_memory_usage()
 {
 	return total_alloc;
+}
+
+
+
+
+void push_self(void* func, void* self)
+{
+
+	if (!self || !func)
+		return;
+
+	self_list.func = func;
+	self_list.self = self;
+	self_list.tick = GetTickCount();
+
+}
+
+void* check_self(void* func)
+{
+	void* old_self;
+	void* old_func;
+	time_t old_tick;
+	if (!func)
+		return NULL;
+
+	if (self_list.func == func)
+	{
+		old_self = self_list.self;
+		old_func = self_list.func;
+		old_tick = self_list.tick;
+
+
+		return (void*)old_self;
+
+	}
+
+	if (self_list.tick - GetTickCount() > 1000)
+	{
+		// are we greate than 1 second? Surely something went wrong. Let's clear the self list.
+		self_list.self = self_list.func = NULL;
+		self_list.tick = 0;
+
+	}
+	return NULL;
+}
+
+void pop_self(void* func, void* self)
+{
+	if (!self || !func)
+		return;
+
+	if (self_list.self == self && self_list.func == func)
+	{
+		self_list.self = self_list.func = NULL;
+		self_list.tick = 0;
+
+	}
+	return;
+
 }
