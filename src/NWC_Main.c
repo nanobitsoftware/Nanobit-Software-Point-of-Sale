@@ -12,6 +12,11 @@
 #include "Nano PoS.h"
 #include "NWC.h"
 
+
+/* Nomenclature is bound to change in the naer future (parent moving to simply 'window' and the like)
+ * so do not keep too much stock in the current names. */
+
+
 int IDX;
 BOOL INITIALIZED;
 
@@ -63,10 +68,12 @@ NWC_PARENT* parent_initialize(void)
 	}
 
 	p_window->name = NULL;
+	p_window->self = p_window;
 	p_window->child = NULL;
 	p_window->children = 0;
 	p_window->control_proc = NULL;
 	p_window->create_child = NULL;
+	p_window->create_widget = (void*)nwc_widget_create_entry(p_window);
 	p_window->destroy_child = NULL;
 	p_window->destroy_self = NULL;
 	p_window->heigth = 0;
@@ -1877,4 +1884,132 @@ int get_max_control_heigth(NWC_PARENT* p)
 	}
 	cur_height = cur_height + (count * 2);
 	return cur_height;
+}
+
+
+struct collate_ctrls
+{
+	char* parent_name;
+	int x;
+	int y;
+	bool visible;
+	int type;
+	int ctrl_num;
+	DWORD flags;
+	NWC_CTRL* ctrl;
+
+};
+
+struct collate_window 
+{
+	char* name;
+	int x;
+	int y;
+	int ctrl_count;
+	bool ontop;
+
+	NWC_PARENT* parent;
+	struct collate_ctrls** ctrls;
+	 
+};
+
+
+struct collate_window *new_collate_window(void)
+{
+	struct collate_window *cwin;
+
+	cwin = malloc(sizeof(struct collate_window));
+	if (!cwin)
+		exit(1);
+
+	return cwin;
+}
+
+struct collate_ctrls* new_collate_ctrl(void)
+{
+	struct collate_ctrls* ctrl;
+
+	ctrl = malloc(sizeof(struct collate_ctrls));
+	if (!ctrl)
+		exit(1);
+
+	return ctrl;
+}
+
+/* Go through all the parents and children, turning them in to a 
+ * list that we can print out or view as a user to see what our
+ * layouts are, without viewing the windows. Has no real use outside
+  * of bookkeeping or showing off to others.
+  */
+void collate_windows(void)
+{
+	NWC_PARENT* p;
+	NWC_CHILD* c;
+	NWC_CTRL* ctrl;
+	struct collate_window** window_list;
+	struct collate_window *t_win;
+	struct collate_ctrls t_ctrl;
+
+
+	int pcount=0, ccount = 0;	  
+	int i, j = 0;
+
+	window_list = (struct collate_window**)malloc(sizeof(struct collate_window*) * (current_parents+10));
+	
+	t_win = new_collate_window();
+
+	t_win->ctrls = NULL;
+	t_win->ctrl_count = 0;
+	t_win->name = NULL;
+	t_win->ontop = FALSE;
+	t_win->parent = NULL;
+	t_win->x = t_win->y = 0;
+
+
+	for (i = 0; i <= max_parents; i++)
+	{
+		// Sort through the parents first. THen we'll go to each child of each parent, then each control of each child.
+
+		if (parents[i] == NULL)
+			continue;
+		if (!parents[i])
+			continue;
+		p = parents[i]; // We have a parent. Let's collate its info. Using the structure above that we can sort by...stuff.
+
+		window_list[pcount] = t_win;
+
+		pcount++;
+		
+		if (pcount > max_parents)
+			break;
+		
+		window_list[pcount] = NULL;
+
+		t_win->name = str_dup(p->name);
+		t_win->parent = p;
+		t_win->x = p->x;
+		t_win->y = p->y;
+		t_win->ontop = p->on_top;
+		t_win->ctrl_count = p->control_count;
+		if (t_win->ctrls == NULL)
+		{
+			t_win->ctrls = (struct collate_ctrls**)malloc(sizeof(struct collate_ctrls*) * (t_win->ctrl_count + 10));
+			for (j = 0; j < t_win->ctrl_count; j++)
+				t_win->ctrls[j] = NULL;
+		}
+
+
+
+	//	p->
+	}
+}
+
+#define nwc_create_widget() ()
+void* nwc_widget_create_entry(NWC_PARENT *self)
+{
+
+
+	
+	return NULL;
+
 }
