@@ -997,7 +997,7 @@ LRESULT APIENTRY CSWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 	}
 	}
 
-	default:
+	default:						    
 	{
 		return DefWindowProc(hwnd, msg, wparam, lparam);
 		break;

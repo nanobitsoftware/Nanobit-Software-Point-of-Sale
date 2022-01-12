@@ -55,7 +55,7 @@ void initialize_windows(void)
 
 NWC_PARENT* parent_initialize(void)
 {
-	NWC_PARENT* p_window;
+	NWC_PARENT* p_window;				    
 	p_window = (NWC_PARENT*)malloc(sizeof(*p_window));
 	if (!p_window)
 	{
