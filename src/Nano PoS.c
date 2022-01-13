@@ -28,6 +28,8 @@
 #define ID_FIND_INVOICE	     4002
 #define WIP_LIST 1008
 
+
+
 extern NWC_PARENT* CS_window;
 extern NWC_PARENT* FD_window;
 extern NWC_PARENT* INV_add;

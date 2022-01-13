@@ -1,4 +1,5 @@
 #include "sqlite3.h"
+#include "nano_memory.h"
 
 #define IS_IN_DEBUGGING_MODE 0
 #define REPORT_DEALLOCATION 0
@@ -25,6 +26,8 @@
 #define UPPER(c)        ((c) >= 'a' && (c) <= 'z' ? (c)+'A'-'a' : (c))
 #define FALSE 0
 #define TRUE 1
+
+
 HINSTANCE g_hInst;
 #define strcmp string_compare
 
@@ -373,3 +376,6 @@ BOOL is_date(char* range);
 void print_report(char* report);
 void SetFocusInternal(HWND h);
 #define SetFocus(x) SetFocusInternal(x)
+
+
+

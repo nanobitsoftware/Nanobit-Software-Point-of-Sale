@@ -85,9 +85,6 @@
     <ClCompile Include="src\IO.c">
       <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
-    <ClCompile Include="src\nano Memory.c">
-      <Filter>Source Files\NPOSSource</Filter>
-    </ClCompile>
     <ClCompile Include="src\NWC_Main.c">
       <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
@@ -119,6 +116,9 @@
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClCompile>
     <ClCompile Include="src\Nano PoS.c">
+      <Filter>Source Files\NPOSSource</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nano Memory.c">
       <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
   </ItemGroup>
@@ -166,6 +166,9 @@
       <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
     <ClInclude Include="src\sqlite3ext.h">
+      <Filter>Source Files\NPOSSource</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nano_memory.h">
       <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
   </ItemGroup>

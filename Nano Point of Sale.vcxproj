@@ -161,7 +161,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling>false</ExceptionHandling>
       <CompileAs>CompileAsC</CompileAs>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard_C>Default</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -227,6 +227,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nano PoS.h" />
+    <ClInclude Include="src\nano_memory.h" />
     <ClInclude Include="src\NWC.h" />
     <ClInclude Include="src\resource.h" />
     <ClInclude Include="src\resource1.h" />
