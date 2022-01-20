@@ -2013,3 +2013,19 @@ void* nwc_widget_create_entry(NWC_PARENT *self)
 	return NULL;
 
 }
+
+
+
+void NWC_BoundBox(NWC_PARENT *p,unsigned int x, unsigned int y)
+{
+	NWC_WIDGET* w;
+
+	if (!p)
+		return;
+
+	if (p->control_count < 1)
+		return; // Why bother?
+
+	
+
+}
