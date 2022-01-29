@@ -1750,8 +1750,8 @@ void DestroyParent(NWC_PARENT* p_window)
 			parents[i] = NULL;
 	}
 
-	free(p_window->controls);
-	free(p_window->name);
+	//free(p_window->controls);
+	//free(p_window->name);
 	//DestroyWindow(p_window->window_pointer);
 	free(p_window);
 	p_window = NULL;
@@ -2015,10 +2015,26 @@ void* nwc_widget_create_entry(NWC_PARENT *self)
 }
 
 
+/* Take a window group, loop through all the widgets 
+   and bind them to a 'bounding box' of pixels of the window
+   For example -- 4x 20y  -- Any widget that is n the X line of the
+   Parent, will be bumped up 4 pixels. Any widget on the
+   y bounding line will be down 20 pixels. These are for the 
+   left and top. For bottom and right, they will be pushed left
+   and up, respectfully. Making all widgest align perfectly on 
+   the bounding box you set for the window. Best to call this
+   after creating the window, before showing it. But you can call
+   it any time you wish. It -does- force a repaint. So be confident
+   you're ready for that window to be painted. Really good to call after
+   a resize if you need to maintain some pretty-ness*/
 
-void NWC_BoundBox(NWC_PARENT *p,unsigned int x, unsigned int y)
+void NWC_BoundBox(NWC_PARENT *p,int x,int y)						    
 {
 	NWC_WIDGET* w;
+	int i;
+	BOOL move;
+
+	move = FALSE;
 
 	if (!p)
 		return;
@@ -2026,6 +2042,48 @@ void NWC_BoundBox(NWC_PARENT *p,unsigned int x, unsigned int y)
 	if (p->control_count < 1)
 		return; // Why bother?
 
+	if (  (p->width <= x          || p->heigth <= y)		   ||
+		  (p->width - x <= 0      || p->heigth - y <= 0)	   ||
+		  ((p->x + x) >= p->width || (p->y + y) >= p->heigth))
+				
+	{
+		// We have a little issue here.
+		// We've got a weird ass window and some weird ass coords at this point. Nogo.
+		return;
+	}
+	for (i = 0; i < p->control_count; i++)
+	{
+		if (!p->controls[i])
+			break; // Get out.
+		
+		w = p->controls[i];
+
+		if (!w)
+			break; // Sanity is missing noiw days.
+
+		if (w->x < x)
+		{
+			w->x = x;
+
+			
+		}
+		//else
+			w->x += x;
+
+		if (w->y < y)
+		{
+
+			w->y = y;
+
+		}
+		//else
+			w->y += y;
+
+
+			MoveWindow(w->handle, w->x, w->y, w->width, w->height, TRUE);
+
+		
+	}
 	
 
 }

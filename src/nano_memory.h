@@ -3,7 +3,7 @@
 
 
 
-#define MAX_STRINGS 4096;
+#define MAX_STRINGS 4096;										 
 
 
 

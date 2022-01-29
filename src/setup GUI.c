@@ -45,6 +45,10 @@ void create_setup_window(void)
 	AddEdit_Parent(Setup, "motto", 130, 20, 300, 20, 0, 0, 0, TRUE);
 	AddStatic_Parent(Setup, "Sreet Address:", 0, 40, 130, 20, 0, 0, 0, TRUE);
 	AddEdit_Parent(Setup, "street", 130, 40, 300, 20, 0, 0, 0, TRUE);
+	
+	AddStatic_Parent(Setup, "Store Number:", 300, 80,100, 20, 0, 0, 0, TRUE);
+	AddEdit_Parent(Setup, "storenumber", 400, 80, 30, 20, 0, 0, ES_NUMBER, TRUE);
+
 	AddStatic_Parent(Setup, "City:", 0, 60, 50, 20, 0, 0, 0, TRUE);
 	AddEdit_Parent(Setup, "city", 50, 60, 140, 20, 0, 0, 0, TRUE);
 	AddStatic_Parent(Setup, "State:", 200, 60, 60, 20, 0, 0, 0, TRUE);
@@ -107,6 +111,8 @@ void create_setup_window(void)
 	SendMessage(get_control(Setup, "mu3")->handle, EM_LIMITTEXT, 2, 0);
 	SendMessage(get_control(Setup, "mu4")->handle, EM_LIMITTEXT, 2, 0);
 	SendMessage(get_control(Setup, "mu5")->handle, EM_LIMITTEXT, 2, 0);
+	SendMessage(get_control(Setup, "storenumber")->handle, EM_LIMITTEXT, 3, 0);
+
 	SendMessage(get_control(Setup, "warranty")->handle, EM_LIMITTEXT, MAXNOTE, 0);
 	SendMessage(get_control(Setup, "phone")->handle, EM_LIMITTEXT, 12, 0);
 	SendMessage(get_control(Setup, "tax")->handle, EM_LIMITTEXT, 2, 0);
@@ -116,7 +122,7 @@ void create_setup_window(void)
 	ShowWindow(setupwindow, SW_SHOW);
 
 	sprintf(sql, "SELECT CompanyName, CompanyMotto, CompanyAddress, CompanyZip, CompanyState, WarrantyInfo, CompanyPhone, MU1, MU2, MU3, MU4, MU5,"
-		"Tax, Pay1, Pay2, Pay3, Pay4, Pay5, Pay6, Pay7, Pay8, Pay9, Pay10, CompanyCity, Tax_Labor, Tax_Parts FROM POS Where id='1';");
+		"Tax, Pay1, Pay2, Pay3, Pay4, Pay5, Pay6, Pay7, Pay8, Pay9, Pay10, CompanyCity, Tax_Labor, Tax_Parts, StoreNumber FROM POS Where id='1';");
 
 	sr = sqlite3_prepare(db, sql, -1, &stmt, 0);
 
@@ -172,6 +178,9 @@ void create_setup_window(void)
 				CTRL_SetText(Setup, "pay10", "%s", (char*)sqlite3_column_text(stmt, 22));
 			if ((char*)sqlite3_column_text(stmt, 23))
 				CTRL_SetText(Setup, "city", "%s", (char*)sqlite3_column_text(stmt, 23));
+			if ((char*)sqlite3_column_text(stmt, 26))
+				CTRL_SetText(Setup, "storenumber", "%s", (char*)sqlite3_column_text(stmt, 26));
+
 			if (sqlite3_column_int(stmt, 24))
 			{
 				if (sqlite3_column_int(stmt, 24) == 0)
@@ -200,6 +209,7 @@ LRESULT APIENTRY SetupWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpa
 	char* name, * motto, * street, * city, * state, * zip, * pay1, * pay2, * pay3;
 	char* pay4, * pay5, * pay6, * pay7, * pay8, * pay9, * pay10, * mu1, * mu2, * mu3, * mu4;
 	char* mu5, * warranty, * phone, * tax;
+	char* storenumber;
 
 	char sql[25000];
 	char* err;
@@ -253,6 +263,7 @@ LRESULT APIENTRY SetupWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpa
 			warranty = CTRL_gettext(Setup, "warranty");
 			phone = CTRL_gettext(Setup, "phone");
 			tax = CTRL_gettext(Setup, "tax");
+			storenumber = CTRL_gettext(Setup, "storenumber");
 			if (check_get_status(Setup, "Tax Labor  :"))
 			{
 				tax_labor = TRUE;
@@ -266,11 +277,19 @@ LRESULT APIENTRY SetupWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpa
 			else
 				tax_parts = FALSE;
 
+			if (!storenumber || atoi(storenumber) < 1)
+			{
+				GiveError("Store number MUST be set, even if multiple stores are not used.", FALSE);
+				return 0;
+			}
+
+
+
 			sqlite3_snprintf(24999, sql, "UPDATE POS SET Pay1='%s', Pay2='%s', Pay3='%s', Pay4='%s', Pay5='%s', Pay6='%s', Pay7='%s', Pay8='%s', Pay9='%s',"
 				"Pay10='%s', CompanyName='%s', CompanyMotto='%q', CompanyAddress='%s', CompanyZip='%s', CompanyState='%s', WarrantyInfo='%s', CompanyPhone='%s',"
-				"MU1='%s', MU2='%s', MU3='%s', MU4='%s', MU5='%s', Tax='%s', CompanyCity='%s', Tax_Labor=%d, Tax_Parts=%d WHERE id='1';",
-				pay1, pay2, pay3, pay4, pay5, pay6, pay7, pay8, pay9, pay10, name, motto, street, zip, state, make_to_page(warranty), phone, mu1, mu2, mu3, mu4, mu5, tax, city, tax_labor ? 1 : 0, tax_parts ? 1 : 0);
-
+				"MU1='%s', MU2='%s', MU3='%s', MU4='%s', MU5='%s', Tax='%s', CompanyCity='%s', Tax_Labor=%d, Tax_Parts=%d, StoreNumber='%s' WHERE id='1';",
+				pay1, pay2, pay3, pay4, pay5, pay6, pay7, pay8, pay9, pay10, name, motto, street, zip, state, make_to_page(warranty),
+				phone, mu1, mu2, mu3, mu4, mu5, tax, city, tax_labor ? 1 : 0, tax_parts ? 1 : 0, storenumber);
 			sqlite3_exec(db, sql, NULL, NULL, &err);
 			if (err)
 				GiveError(err, 0);
@@ -304,4 +323,4 @@ LRESULT APIENTRY SetupWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpa
 	}
 	}
 	return DefWindowProc(hwnd, msg, wparam, lparam);
-}
+}										    

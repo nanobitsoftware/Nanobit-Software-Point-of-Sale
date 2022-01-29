@@ -560,7 +560,7 @@ void* check_self(void* func)
 
 	}
 	return NULL;
-}
+}															 
 
 void pop_self(void* func, void* self)
 {

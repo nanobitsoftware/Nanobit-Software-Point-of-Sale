@@ -655,7 +655,7 @@ void print_invoice(char* str, int copies)
 							line++;
 							continue;
 						}
-
+												   
 						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
 						if (bold == TRUE)
 						{

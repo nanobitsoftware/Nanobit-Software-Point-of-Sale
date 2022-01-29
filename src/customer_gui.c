@@ -741,7 +741,7 @@ LRESULT APIENTRY FDWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 	case WM_DESTROY:
 	{
 		DestroyParent(FD_window);
-		DestroyWindow(csfind);
+//		DestroyWindow(csfind);
 
 		csfind = NULL;
 
@@ -1003,5 +1003,5 @@ LRESULT APIENTRY CSWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 		break;
 	}
 	}
-	return DefWindowProc(hwnd, msg, wparam, lparam);
+	return DefWindowProc(hwnd, msg, wparam, lparam);	 
 }

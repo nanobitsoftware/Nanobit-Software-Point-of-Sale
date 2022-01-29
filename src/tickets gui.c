@@ -1927,7 +1927,7 @@ LRESULT APIENTRY TKWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 				switch (nm->idFrom)
 				{
 				case TK_LABOR:
-				{
+				{							    
 					i = 0;
 					idx = -1;
 					idx_labor = SendMessage(get_control(TK_window, "laborlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);

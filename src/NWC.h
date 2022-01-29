@@ -43,7 +43,7 @@ struct NWC_Parent
 	int y;
 
 	int control_count;
-	int max_controls;
+	int max_controls;						   
 
 	char* name;
 
@@ -175,3 +175,4 @@ void push_self(void* func, void* self);
 void pop_self(void* func, void* self);
 void* nwc_widget_create_entry(NWC_PARENT* self);
 
+void NWC_BoundBox(NWC_PARENT* p, int x, int y);

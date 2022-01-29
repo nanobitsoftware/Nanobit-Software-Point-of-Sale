@@ -14,7 +14,7 @@
 char str_empty[1];
 char* string_space;
 char* top_string;
-#undef strdup
+#undef strdup								    
 
 #define MAX_BUF 512
 

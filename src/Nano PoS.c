@@ -75,7 +75,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance,HINSTANCE hPrevInstance,	LPSTR lpszAr
 	sqlite3_stmt* stmt;
 	int sr;
 
-	char* err;
+	char* err;							   
 
 	srand(time(NULL));
 
@@ -115,48 +115,98 @@ int WINAPI WinMain(HINSTANCE hThisInstance,HINSTANCE hPrevInstance,	LPSTR lpszAr
 			GiveError("Unable to open DB.", TRUE);
 		}
 
-		sprintf(SQLString, "CREATE TABLE Customers(id INTEGER PRIMARY KEY AUTOINCREMENT, LastName CHAR, FirstName CHAR, CorporateAccountant CHAR, Street CHAR, City CHAR, State CHAR, Phone CHAR,"
-			"PhoneCell CHAR, PhoneHome CHAR, PhoneOffice CHAR, PhoneSpouce CHAR, PhoneFax CHAR, Notes CHAR, Sirname CHAR, Zip INT, TimesVisited INT, CorporateID INT,"
-			"TaxID INT, OpenTickets INT, TotalTickets INT, LastSeen CHAR, UnpaidDue DECIMAL(18,2), TotalSpent DECIMAL(18,2), HasCredit INT, DenyWork INT, TaxFree INT,"
-			"CorporateAccount INT, CashOnly INT, AcceptCredit INT, AcceptCheck INT, Cssince CHAR);");
+		sprintf(SQLString, 
+			"CREATE TABLE Customers(id INTEGER PRIMARY KEY AUTOINCREMENT, LastName CHAR, FirstName CHAR, "
+			"CorporateAccountant CHAR, Street CHAR, City CHAR, State CHAR, Phone CHAR, PhoneCell CHAR, "
+			"PhoneHome CHAR, PhoneOffice CHAR, PhoneSpouce CHAR, PhoneFax CHAR, Notes CHAR, Sirname CHAR, "
+			"Zip INT, TimesVisited INT, CorporateID INT, TaxID INT, OpenTickets INT, TotalTickets INT, "
+			"LastSeen CHAR, UnpaidDue DECIMAL(18,2), TotalSpent DECIMAL(18,2), HasCredit INT, DenyWork INT, "
+			"TaxFree INT, CorporateAccount INT, CashOnly INT, AcceptCredit INT, AcceptCheck INT, Cssince CHAR);");
 
 		sqlite3_exec(db, SQLString, NULL, NULL, &err);
 		if (err)
 			GiveError(err, 0);
 
-		sprintf(SQLString, "CREATE TABLE Tickets(id INTEGER PRIMARY KEY,Locked INT, Invoice INT, RefID INTEGER, NotesTotal INT, Subtotal DECIMAL(18,2), DiscountLabor DECIMAL(18,2), DiscountParts DECIMAL(18,2),"
-			"DiscountType INT, TicketWritten CHAR, TicketCompleted CHAR, TickedBilled CHAR, Charged INT, Open INT, ServiceWriter CHAR, CSID INT, Computer INT, DeviceID INT, Invoiced INT, Notes CHAR,"
+		sprintf(SQLString,	
+			"CREATE TABLE Tickets(id INTEGER PRIMARY KEY,Locked INT, Invoice INT, RefID INTEGER, "
+			"NotesTotal INT, Subtotal DECIMAL(18,2), DiscountLabor DECIMAL(18,2), DiscountParts DECIMAL(18,2),"
+			"DiscountType INT, TicketWritten CHAR, TicketCompleted CHAR, TickedBilled CHAR, Charged INT, "
+			"Open INT, ServiceWriter CHAR, CSID INT, Computer INT, DeviceID INT, Invoiced INT, Notes CHAR,"
 			"DiscountTotal DECIMAL(18,2), DiscLabor DECIMAL(18,2), DiscParts DECIMAL(18,2));"
-			"CREATE TABLE Users (id INTEGER PRIMARY KEY, Name STRING, Password TEXT, Hash TEXT, Admin INT, Created INT, Enabled INT, LastUsed INT, TotalSales DECIMAL(18,2), TotalRefunds DECIMAL(18,2), TotalVoids DECIMAL(18,2), "
-			"CustomersCreated INT, InvoicesCreated INT, InvoicesPaidOut INT, CanRefund INT, CanCreate INT, CanDeleteTicket INT, UserLevel INT);"
-			"CREATE TABLE Telemetry(id INTEGER PRIMARY KEY, Startup INT, Shutdown INT, User STRING, FreeMem INT, Duplicate INT);"
-			"CREATE TABLE Inventory(id INTEGER PRIMARY KEY, Type INT, Count INT, TotalSold CHAR, LastSold INT, Cost DECIMAL(18,2),"
-			"Retail DECIMAL(18,2), Discount DECIMAL(18,2), OnDiscount INT, Make CHAR, Model CHAR, Desc CHAR, InvID CHAR UNIQUE, Supplier CHAR);"
-			"CREATE TABLE DeviceType (id INTEGER PRIMARY KEY, Name CHAR, RefID INT, Phone INT, Computer INT, Laptop INT, AIO INT, TV INT, Console INT, Tablet INT, Other INT);");
+
+
+			"CREATE TABLE Users (id INTEGER PRIMARY KEY, Name STRING, Password TEXT, Hash TEXT, Admin INT, "
+			"Created INT, Enabled INT, LastUsed INT, TotalSales DECIMAL(18,2), TotalRefunds DECIMAL(18,2), "
+			"TotalVoids DECIMAL(18,2), CustomersCreated INT, InvoicesCreated INT, InvoicesPaidOut INT, "
+			"CanRefund INT, CanCreate INT, CanDeleteTicket INT, UserLevel INT);"
+
+							
+			"CREATE TABLE Telemetry(id INTEGER PRIMARY KEY, Startup INT, Shutdown INT, User STRING, "
+			"FreeMem INT, Duplicate INT); "
+
+							
+			"CREATE TABLE Inventory(id INTEGER PRIMARY KEY, Type INT, Count INT, TotalSold CHAR, "
+			"LastSold INT, Cost DECIMAL(18,2), Retail DECIMAL(18,2), Discount DECIMAL(18,2), "
+			"OnDiscount INT, Make CHAR, Model CHAR, Desc CHAR, InvID CHAR UNIQUE, Supplier CHAR); "
+
+
+			"CREATE TABLE DeviceType (id INTEGER PRIMARY KEY, Name CHAR, RefID INT, Phone INT, "
+			"Computer INT, Laptop INT, AIO INT, TV INT, Console INT, Tablet INT, Other INT);");
+
+
 		sqlite3_exec(db, SQLString, NULL, NULL, &err);
 		if (err)
 			GiveError(err, 0);
 
-		sprintf(SQLString, "CREATE TABLE Employees(id INTEGER PRIMARY KEY, Zipcode INT, Sales DECIMAL(18,2), Name CHAR, Phone CHAR, PhoneCell CHAR, PhoneHome CHAR, PhoneSpouce CHAR,"
+		sprintf(SQLString, 
+			"CREATE TABLE Employees(id INTEGER PRIMARY KEY, Zipcode INT, Sales DECIMAL(18,2), "
+			"Name CHAR, Phone CHAR, PhoneCell CHAR, PhoneHome CHAR, PhoneSpouce CHAR,"
 			"Address CHAR, City CHAR, CurrentlyEmployeed INT);"
-			"CREATE TABLE Invoiceref(refkey INTEGER PRIMARY KEY, RefID INT, TicketID INT, LaborDesc CHAR, LaborCost DECIMAL(18,2), LaborHours INT, PartInvID INT, PartDesc CHAR,"
+
+
+			"CREATE TABLE Invoiceref(refkey INTEGER PRIMARY KEY, RefID INT, TicketID INT, "
+			"LaborDesc CHAR, LaborCost DECIMAL(18,2), LaborHours INT, PartInvID INT, PartDesc CHAR,"
 			"PartCost DECIMAL(18,2), PartRealcost DECIMAL(18,2), csid INT, Pos INT, Quantity INT);");
+
+
 		sqlite3_exec(db, SQLString, NULL, NULL, &err);
 		if (err)
 			GiveError(err, 0);
 
-		sprintf(SQLString, "CREATE TABLE Computer(id INTEGER PRIMARY KEY, csid INT, DeviceID INT, Make CHAR, Model CHAR, Ram CHAR, cSpeed CHAR, Windows CHAR, Notes CHAR, TicketTotal INT, Type CHAR, Total_Spent DECIMAL (18,2), Last_Invoice INT);"
-			"CREATE TABLE Device   (id INTEGER PRIMARY KEY, csid INT, DeviceID INT, Make CHAR, Model CHAR, Ram CHAR, Screen_Size CHAR, Bit INT, cSpeed CHAR, Submodel CHAR, Color CHAR, Notes CHAR, TicketTotal INT, Type CHAR, Total_Spent DECIMAL (18,2), Last_Invoice INT);"
+		sprintf(SQLString, 
+			"CREATE TABLE Computer(id INTEGER PRIMARY KEY, csid INT, DeviceID INT, Make CHAR, "
+			"Model CHAR, Ram CHAR, cSpeed CHAR, Windows CHAR, Notes CHAR, TicketTotal INT, "
+			"Type CHAR, Total_Spent DECIMAL (18,2), Last_Invoice INT);"
+			
+			
+			"CREATE TABLE Device   (id INTEGER PRIMARY KEY, csid INT, DeviceID INT, Make CHAR, "
+			"Model CHAR, Ram CHAR, Screen_Size CHAR, Bit INT, cSpeed CHAR, Submodel CHAR, "
+			"Color CHAR, Notes CHAR, TicketTotal INT, Type CHAR, Total_Spent DECIMAL (18,2), "
+			"Last_Invoice INT);"
+			
+			
 			"CREATE TABLE WIP (id INTEGER PRIMARY KEY, csid INT, InvoiceID INT, Started CHAR);"
-			"CREATE TABLE POS (id INTEGER PRIMARY KEY, Pay1 CHAR, Pay2 CHAR, Pay3 CHAR, Pay4 CHAR, Pay5 CHAR, Pay6 CHAR, Pay7 CHAR, Pay8 CHAR, Pay9 CHAR, Pay10 CHAR,"
-			"CompanyName CHAR, CompanyMotto CHAR, CompanyAddress CHAR, CompanyZiP CHAR, CompanyState CHAR, WarrantyInfo CHAR, CompanyPhone CHAR, "
-			"MU1 INT, MU2 INT, MU3 INT, MU4 INT, MU5 INT, Tax INT, CompanyCity CHAR, Tax_Labor INT, Tax_Parts INT, Store_ID INT, Enable_Refunds INT, "
-			"Password_Refunds INT, Enable_Discounts INT, Max_Discount_Dollar INT, Max_Discount_Percent INT, DB_Version TEXT, Allow_Markup_Override INT, "
-			"Admin_Password TEXT, Refund_Password TEXT, Discount_Password TEXT, Check_For_Updates INT, Debug_Enabled INT, Text_Logging INT, Window_pos_x INT, "
-			"Window_pos_y, INT, Window_width INT, Window_Height INT, Auto_DB_Backup INT,  Text1 TEXT, Text2 TEXT, Text3 TEXT, Text4 TEXT, Text5 TEXT, "
-			"Text6 TEXT, Text7 TEXT, Text8 TEXT, Text9 TEXT, Text10 TEXT, Number1 INT, Number2 INT, Number3 INT, Number4 INT, Number5 INT, Number6 INT, Number7 INT"
-			"Number8 INT, Number9 INT, Number10 INT, Logo BLOB);"
-			"CREATE TABLE Payments (id INTEGER PRIMARY KEY, Refkey INT, PaymentType CHAR, PaymentAmount DECIMAL(18,2), PaymentTax DECIMAL(18,2), PaymentTotal DECIMAL(18,2), PaymentPreTax Decimal(28,2), CCCCV TEXT, CCEXPDAT TEXT, CCZIPCODE TEXT, Authkey CHAR, CheckNumber CHAR, PayDate CHAR, csid INT, Invoice INT, TaxFree INT);");
+			
+			
+			"CREATE TABLE POS (id INTEGER PRIMARY KEY, Pay1 CHAR, Pay2 CHAR, Pay3 CHAR, Pay4 CHAR, "
+			"Pay5 CHAR, Pay6 CHAR, Pay7 CHAR, Pay8 CHAR, Pay9 CHAR, Pay10 CHAR, StoreNumber INT, "
+			"CompanyName CHAR, CompanyMotto CHAR, CompanyAddress CHAR, CompanyZiP CHAR, "
+			"CompanyState CHAR, WarrantyInfo CHAR, CompanyPhone CHAR, MU1 INT, MU2 INT, MU3 INT, "
+			"MU4 INT, MU5 INT, Tax INT, CompanyCity CHAR, Tax_Labor INT, Tax_Parts INT, Store_ID INT, "
+			"Enable_Refunds INT, Password_Refunds INT, Enable_Discounts INT, Max_Discount_Dollar INT, "
+			"Max_Discount_Percent INT, DB_Version TEXT, Allow_Markup_Override INT, Admin_Password TEXT, "
+			"Refund_Password TEXT, Discount_Password TEXT, Check_For_Updates INT, Debug_Enabled INT, "
+			"Text_Logging INT, Window_pos_x INT, Window_pos_y, INT, Window_width INT, Window_Height INT, "
+			"Auto_DB_Backup INT,  Text1 TEXT, Text2 TEXT, Text3 TEXT, Text4 TEXT, Text5 TEXT, Text6 TEXT, "
+			"Text7 TEXT, Text8 TEXT, Text9 TEXT, Text10 TEXT, Number1 INT, Number2 INT, Number3 INT, "
+			"Number4 INT, Number5 INT, Number6 INT, Number7 INT Number8 INT, Number9 INT, Number10 INT, "
+			"Logo BLOB);"
+			
+			
+			"CREATE TABLE Payments (id INTEGER PRIMARY KEY, Refkey INT, PaymentType CHAR, "
+			"PaymentAmount DECIMAL(18,2), PaymentTax DECIMAL(18,2), PaymentTotal DECIMAL(18,2), "
+			"PaymentPreTax Decimal(28,2), CCCCV TEXT, CCEXPDAT TEXT, CCZIPCODE TEXT, "
+			"Authkey CHAR, CheckNumber CHAR, PayDate CHAR, csid INT, Invoice INT, TaxFree INT);");
 
 		sqlite3_exec(db, SQLString, NULL, NULL, &err);
 
@@ -838,13 +888,17 @@ LRESULT APIENTRY POS_MainWindow(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpara
 		}
 		case ID_POS_BTN_BROWSER:
 		{
-			ShellExecute(NULL, "open", "http://www.nanobit.net", NULL, NULL, SW_SHOWNORMAL);
+			//ShellExecute(NULL, "open", "http://www.nanobit.net", NULL, NULL, SW_SHOWNORMAL);
+	//		NWC_BoundBox(POS_parent, 5,0);
+		//	UpdateWindow(POS_parent->window_pointer);
+			
 
 			break;
 		}
 		case ID_POS_BTN_SETUP:
 		{
 			create_setup_window();
+
 			break;
 		}
 		case ID_FILE_EXIT:
