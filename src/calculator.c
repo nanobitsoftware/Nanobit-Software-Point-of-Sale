@@ -19,15 +19,19 @@ double CALC_TOTAL; // Total calculated during calc functions.
 double LEFT_CALC; // Left side of quotent.
 double RIGHT_CALC; // Right side of quotent.
 
+
+
 inline double add_quote(void)
 {
 	return fround(LEFT_CALC + RIGHT_CALC);
 }
 
+
 inline double subtract_quote(void)
 {
-	return fround(LEFT_CALC - RIGHT_CALC);
+	return (CALC_TOTAL = fround(LEFT_CALC - RIGHT_CALC));
 }
+
 
 double divide_quote(void)
 {
@@ -35,7 +39,7 @@ double divide_quote(void)
 	{
 		return 0.00f;
 	}
-	return fround(LEFT_CALC / RIGHT_CALC);
+	return (CALC_TOTAL =fround(LEFT_CALC / RIGHT_CALC));
 }
 
 double multiply_quote(void)
@@ -43,7 +47,7 @@ double multiply_quote(void)
 	if (RIGHT_CALC == 0.00f || LEFT_CALC == 0.00f)
 		return 0.00f;
 
-	return fround(LEFT_CALC * RIGHT_CALC);
+	return (CALC_TOTAL = fround(LEFT_CALC * RIGHT_CALC));
 }
 
 double get_percent(double total, float percent)
@@ -57,14 +61,14 @@ double get_percent(double total, float percent)
 
 	return answer;
 }
-
 double get_minus_percent(double total, float percent)
 {
 	if (percent <= 0.00f)
 		return total;
 
-	return fround(total - get_percent(total, percent));
+	return  fround(total - get_percent(total, percent));
 }
+
 
 double get_add_percent(double total, float percent)
 {
@@ -72,4 +76,11 @@ double get_add_percent(double total, float percent)
 		return total;
 
 	return fround(total + get_percent(total, percent));
+}
+
+double tax_quote()
+{
+	if (CALC_TOTAL == 0.00f || !TAX)
+		return 0.00f;
+	return (CALC_TOTAL = (get_add_percent(CALC_TOTAL, TAX)));
 }

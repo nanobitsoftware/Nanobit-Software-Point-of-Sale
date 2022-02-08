@@ -195,6 +195,7 @@
     <Manifest Include="Nano Point of Sale.exe.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\calcuator_gui.c" />
     <ClCompile Include="src\calculator.c" />
     <ClCompile Include="src\computers gui.c" />
     <ClCompile Include="src\crypto.c" />
@@ -226,6 +227,7 @@
     <ClCompile Include="src\zipcodes.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\calculator.h" />
     <ClInclude Include="src\Nano PoS.h" />
     <ClInclude Include="src\nano_memory.h" />
     <ClInclude Include="src\NWC.h" />

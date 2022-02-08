@@ -121,11 +121,11 @@
     <ClCompile Include="src\nano Memory.c">
       <Filter>Source Files\NPOSSource</Filter>
     </ClCompile>
+    <ClCompile Include="src\calcuator_gui.c">
+      <Filter>Source Files\NPOSSource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Nano PoS.h">
-      <Filter>Source Files\NPOSSource</Filter>
-    </ClInclude>
     <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.h">
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClInclude>
@@ -156,20 +156,26 @@
     <ClInclude Include="src\NWC.h">
       <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
-    <ClInclude Include="src\resource.h">
-      <Filter>Source Files\NPOSSource</Filter>
-    </ClInclude>
-    <ClInclude Include="src\resource1.h">
-      <Filter>Source Files\NPOSSource</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sqlite3.h">
-      <Filter>Source Files\NPOSSource</Filter>
-    </ClInclude>
     <ClInclude Include="src\sqlite3ext.h">
       <Filter>Source Files\NPOSSource</Filter>
     </ClInclude>
+    <ClInclude Include="src\calculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\nano_memory.h">
-      <Filter>Source Files\NPOSSource</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sqlite3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nano PoS.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
