@@ -40,6 +40,7 @@ extern NWC_PARENT* Pay_window;
 extern NWC_PARENT* payments;
 extern NWC_PARENT* Refund;
 extern NWC_PARENT* Daily;
+extern NWC_PARENT* CALC_window;
 extern double MU1, MU2, MU3, MU4, MU5;
 
 NWC_PARENT* POS_parent; // Main window for NanoPOS
@@ -389,6 +390,28 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 					create_cs_find_window();
 				}
 			}
+			if ((GetAsyncKeyState(VK_F1) & 0x80000000) && (!(GetAsyncKeyState(VK_MENU) & 0x80000000)))
+			{
+				if (parent_has_focus(CALC_window))
+				{
+					TranslateMessage(&messages);
+					DispatchMessage(&messages);
+					continue;
+				}
+
+				//	if (cswindow)
+					//	clist_clear_list(CS_window, "computer");
+
+				if (calcwindow != NULL)
+				{
+					SetFocus(calcwindow);
+				}
+				else
+				{
+					create_calc_window();
+				}
+			}
+
 			if (GetAsyncKeyState(VK_F4) & 0x80000000 && (!(GetAsyncKeyState(VK_MENU) & 0x80000000)))
 			{
 				if (parent_has_focus(CS_window))

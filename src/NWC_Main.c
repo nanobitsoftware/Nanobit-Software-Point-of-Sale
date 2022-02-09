@@ -82,7 +82,8 @@ NWC_PARENT* parent_initialize(void)
 	p_window->window_control = 0;
 	p_window->created = FALSE;
 	p_window->control_count = 0;
-	p_window->controls = NULL;
+	p_window->controls = (NWC_WIDGET**)malloc(sizeof(*p_window->controls) * MAX_CONTROLS);
+	p_window->controls[0] = NULL;
 
 	return p_window;
 }
@@ -502,6 +503,9 @@ BOOL parent_has_focus(NWC_PARENT* p_window)
 {
 	int i;
 	if (!p_window)
+		return FALSE;
+
+	if (!p_window->controls)
 		return FALSE;
 
 	if (GetFocus() == p_window->window_control)
@@ -974,6 +978,10 @@ char* CTRL_gettext(NWC_PARENT* p_window, char* name)
 
 	for (i = 0; i < p_window->max_controls; i++)
 	{
+		if (!p_window->controls)
+			continue;
+		if (!p_window->controls[i])
+			continue;
 		if (p_window->controls[i] == NULL)
 			continue;
 

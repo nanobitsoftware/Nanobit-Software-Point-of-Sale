@@ -923,6 +923,7 @@ LRESULT APIENTRY CSWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 		case ID_CS_BTN_TICKET:
 		{
 			i = 0;
+			cmpid = 0;
 			csid = CTRL_gettext(CS_window, "csid");
 			if (!strcmp(csid, "0"))
 			{

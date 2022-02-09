@@ -1,7 +1,7 @@
 #include "sqlite3.h"
 #include "nano_memory.h"
 
-#define IS_IN_DEBUGGING_MODE 0
+#define IS_IN_DEBUGGING_MODE 1
 #define REPORT_DEALLOCATION 0
 #define REPORT_ALLOCATION 0
 #define DEBUG_FILE "debug.txt"
@@ -80,6 +80,7 @@ HWND paywindow;
 HWND paytotal;
 HWND refundwindow;
 HWND dailywindow;
+HWND calcwindow;
 
 char Company_Name[1024];
 char Company_Motto[1024];
@@ -375,3 +376,6 @@ BOOL is_date(char* range);
 void print_report(char* report);
 void SetFocusInternal(HWND h);
 #define SetFocus(x) SetFocusInternal(x)
+void create_calc_window(void);
+
+LRESULT APIENTRY CALCwindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
