@@ -147,7 +147,7 @@ HDC get_printer_dc(void)
 void draw_text_line(char* str)
 {
 	char* point;
-	char buf[1024]="";
+	char buf[1024] = "";
 	int i;
 
 	i = 0;
@@ -202,7 +202,7 @@ void print_work_order(int inv, char* order)
 	char* point;
 	int line;
 
-	char buf[1024]="";
+	char buf[1024] = "";
 	static DOCINFO    di;
 
 	char sstr[1024];
@@ -344,7 +344,7 @@ void print_work_order(int inv, char* order)
 void print_report(char* report)
 {
 	RECT r;
-		RECT pr;
+	RECT pr;
 
 	HPEN oldpen;
 
@@ -353,10 +353,10 @@ void print_report(char* report)
 	char* point;
 	int line;
 
-	char buf[1024]="";
+	char buf[1024] = "";
 	static DOCINFO    di = { sizeof(DOCINFO), TEXT("Nano POS Report") };
 
-	char sstr[1024]="";
+	char sstr[1024] = "";
 	line = 0;
 
 	GetClientRect(NULL, &r);
@@ -545,7 +545,7 @@ void print_invoice(char* str, int copies)
 	char* point;
 	HDC dc;
 	int line;
-	char buf[1024]="";
+	char buf[1024] = "";
 	BOOL movecol1;
 	BOOL movecol2;
 	BOOL bold;
@@ -655,7 +655,7 @@ void print_invoice(char* str, int copies)
 							line++;
 							continue;
 						}
-												   
+
 						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
 						if (bold == TRUE)
 						{
@@ -770,7 +770,7 @@ void print_invoice(char* str, int copies)
 
 void DrawInvoiceBox(HDC dc, char* str)
 {
-	RECT r; 
+	RECT r;
 	RECT pr;
 
 	HPEN oldpen;
@@ -779,7 +779,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 
 	char* point;
 	int line;
-	char buf[1024]="";
+	char buf[1024] = "";
 	BOOL movecol1;
 	BOOL movecol2;
 	BOOL bold;

@@ -14,7 +14,7 @@
 char str_empty[1];
 char* string_space;
 char* top_string;
-#undef strdup								    
+#undef strdup
 
 #define MAX_BUF 512
 
@@ -155,10 +155,10 @@ int str_ret(const char* str)
 void strip_junk(char* str)
 {
 	const char* point;
-	char fleh[8000]="";
+	char fleh[8000] = "";
 
 	char* buf;
-	
+
 	buf = fleh;
 
 	if (str == NULL)
@@ -415,14 +415,13 @@ char* make_to_col(char* str)
 		return str;
 
 	i = strlen(str);
-	
-	i = (i + (i / 2));
 
+	i = (i + (i / 2));
 
 	if (i < 1)
 		i = 2;
 	if (i > strlen(str))
-		i = (strlen(str)*2);
+		i = (strlen(str) * 2);
 	tmp_str = malloc(sizeof(char*) * i);
 
 	last_space = NULL;
@@ -498,12 +497,11 @@ char* make_to_page(char* str)
 	i = strlen(str);
 	i = (i + (i / 2));
 
-
 	if (i < 1)
 		i = 2;
 	if (i > strlen(str))
-		i = (strlen(str) *2);
-	tmp_str = malloc(sizeof(char*) *i);
+		i = (strlen(str) * 2);
+	tmp_str = malloc(sizeof(char*) * i);
 
 	last_space = NULL;
 	i = 0;

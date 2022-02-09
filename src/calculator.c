@@ -19,19 +19,15 @@ double CALC_TOTAL; // Total calculated during calc functions.
 double LEFT_CALC; // Left side of quotent.
 double RIGHT_CALC; // Right side of quotent.
 
-
-
 inline double add_quote(void)
 {
 	return fround(LEFT_CALC + RIGHT_CALC);
 }
 
-
 inline double subtract_quote(void)
 {
 	return (CALC_TOTAL = fround(LEFT_CALC - RIGHT_CALC));
 }
-
 
 double divide_quote(void)
 {
@@ -39,7 +35,7 @@ double divide_quote(void)
 	{
 		return 0.00f;
 	}
-	return (CALC_TOTAL =fround(LEFT_CALC / RIGHT_CALC));
+	return (CALC_TOTAL = fround(LEFT_CALC / RIGHT_CALC));
 }
 
 double multiply_quote(void)
@@ -68,7 +64,6 @@ double get_minus_percent(double total, float percent)
 
 	return  fround(total - get_percent(total, percent));
 }
-
 
 double get_add_percent(double total, float percent)
 {

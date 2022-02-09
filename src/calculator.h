@@ -1,27 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 double tax_quote();
 double get_add_percent(double total, float percent);
 double get_minus_percent(double total, float percent);

@@ -11,7 +11,6 @@
 #include "Nano PoS.h"
 #include "NWC.h"
 
-
 #undef malloc // These stay in THIS scope.
 #undef free   //
 #undef realloc
@@ -30,11 +29,9 @@ unsigned long int unalloced = 0;
 
 #define MALLOC_MAGIC 0x00040000UL
 
-
 /* Don't ask. This is just a way to make some form of OOP coding in C. I only want 'self' usage. So I made a
  * little subsystem that pushes and pops a type, and the function calling. For some checks.
  */
-
 
 struct my_own_self
 {
@@ -47,7 +44,7 @@ typedef struct my_own_self SELF;
 
 SELF self_list;
 
-struct mem_heap										   
+struct mem_heap
 {
 	//char m_add[20];
 	unsigned long int m_add;
@@ -90,7 +87,7 @@ HEAP* new_heap(void)
 
 void add_heap(HEAP* hp)
 {
-	char temp[5000]="";
+	char temp[5000] = "";
 	int b_type = 0;
 	float t_total = 0.0;
 
@@ -156,8 +153,8 @@ void show_heap(void)
 	HEAP* hp;
 	HEAP* last;
 
-	char dheap[1000]="";
-	char str[200]="";
+	char dheap[1000] = "";
+	char str[200] = "";
 
 	return;
 	if (!IS_IN_DEBUGGING_MODE)
@@ -242,7 +239,7 @@ void dump_heap(void)
 	unsigned long int i = 0;
 	unsigned long int count = 0;
 	unsigned long int total = 0;
-	char buf[5000]="";
+	char buf[5000] = "";
 
 	HEAP* hp;
 
@@ -276,7 +273,7 @@ int count_heap(void)
 void del_heap(unsigned long int m_add, int line, char* file)
 {
 	HEAP* h;
-	char temp[5000]="";
+	char temp[5000] = "";
 	int b_type = 0;
 	float t_total = 0.0;
 
@@ -386,7 +383,6 @@ void* nano_malloc(size_t chunk, const char* file, int line)
 
 	unsigned long int m_add = 0;
 
-
 	extern char ERROR_STRING[5000];
 
 	ERROR_STRING[0] = '\0';
@@ -448,7 +444,6 @@ void nano_free(void* seg, const char* file, int line)
 	char madd[100];
 	unsigned long int m_add;
 	char* tail;
-
 
 	if (!seg)
 		return;
@@ -518,19 +513,14 @@ unsigned long int get_memory_usage()
 	return total_alloc;
 }
 
-
-
-
 void push_self(void* func, void* self)
 {
-
 	if (!self || !func)
 		return;
 
 	self_list.func = func;
 	self_list.self = self;
 	self_list.tick = GetTickCount();
-
 }
 
 void* check_self(void* func)
@@ -547,9 +537,7 @@ void* check_self(void* func)
 		old_func = self_list.func;
 		old_tick = self_list.tick;
 
-
 		return (void*)old_self;
-
 	}
 
 	if (self_list.tick - GetTickCount() > 1000)
@@ -557,10 +545,9 @@ void* check_self(void* func)
 		// are we greate than 1 second? Surely something went wrong. Let's clear the self list.
 		self_list.self = self_list.func = NULL;
 		self_list.tick = 0;
-
 	}
 	return NULL;
-}															 
+}
 
 void pop_self(void* func, void* self)
 {
@@ -571,8 +558,6 @@ void pop_self(void* func, void* self)
 	{
 		self_list.self = self_list.func = NULL;
 		self_list.tick = 0;
-
 	}
 	return;
-
 }

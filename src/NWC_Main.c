@@ -12,10 +12,8 @@
 #include "Nano PoS.h"
 #include "NWC.h"
 
-
 /* Nomenclature is bound to change in the naer future (parent moving to simply 'window' and the like)
  * so do not keep too much stock in the current names. */
-
 
 int IDX;
 BOOL INITIALIZED;
@@ -60,7 +58,7 @@ void initialize_windows(void)
 
 NWC_PARENT* parent_initialize(void)
 {
-	NWC_PARENT* p_window;				    
+	NWC_PARENT* p_window;
 	p_window = (NWC_PARENT*)malloc(sizeof(*p_window));
 	if (!p_window)
 	{
@@ -1886,7 +1884,6 @@ int get_max_control_heigth(NWC_PARENT* p)
 	return cur_height;
 }
 
-
 struct collate_ctrls
 {
 	char* parent_name;
@@ -1897,10 +1894,9 @@ struct collate_ctrls
 	int ctrl_num;
 	DWORD flags;
 	NWC_CTRL* ctrl;
-
 };
 
-struct collate_window 
+struct collate_window
 {
 	char* name;
 	int x;
@@ -1910,13 +1906,11 @@ struct collate_window
 
 	NWC_PARENT* parent;
 	struct collate_ctrls** ctrls;
-	 
 };
 
-
-struct collate_window *new_collate_window(void)
+struct collate_window* new_collate_window(void)
 {
-	struct collate_window *cwin;
+	struct collate_window* cwin;
 
 	cwin = malloc(sizeof(struct collate_window));
 	if (!cwin)
@@ -1936,7 +1930,7 @@ struct collate_ctrls* new_collate_ctrl(void)
 	return ctrl;
 }
 
-/* Go through all the parents and children, turning them in to a 
+/* Go through all the parents and children, turning them in to a
  * list that we can print out or view as a user to see what our
  * layouts are, without viewing the windows. Has no real use outside
   * of bookkeeping or showing off to others.
@@ -1947,15 +1941,14 @@ void collate_windows(void)
 	NWC_CHILD* c;
 	NWC_CTRL* ctrl;
 	struct collate_window** window_list;
-	struct collate_window *t_win;
+	struct collate_window* t_win;
 	struct collate_ctrls t_ctrl;
 
-
-	int pcount=0, ccount = 0;	  
+	int pcount = 0, ccount = 0;
 	int i, j = 0;
 
-	window_list = (struct collate_window**)malloc(sizeof(struct collate_window*) * (current_parents+10));
-	
+	window_list = (struct collate_window**)malloc(sizeof(struct collate_window*) * (current_parents + 10));
+
 	t_win = new_collate_window();
 
 	t_win->ctrls = NULL;
@@ -1964,7 +1957,6 @@ void collate_windows(void)
 	t_win->ontop = FALSE;
 	t_win->parent = NULL;
 	t_win->x = t_win->y = 0;
-
 
 	for (i = 0; i <= max_parents; i++)
 	{
@@ -1979,10 +1971,10 @@ void collate_windows(void)
 		window_list[pcount] = t_win;
 
 		pcount++;
-		
+
 		if (pcount > max_parents)
 			break;
-		
+
 		window_list[pcount] = NULL;
 
 		t_win->name = str_dup(p->name);
@@ -1998,37 +1990,30 @@ void collate_windows(void)
 				t_win->ctrls[j] = NULL;
 		}
 
-
-
-	//	p->
+		//	p->
 	}
 }
 
 #define nwc_create_widget() ()
-void* nwc_widget_create_entry(NWC_PARENT *self)
+void* nwc_widget_create_entry(NWC_PARENT* self)
 {
-
-
-	
 	return NULL;
-
 }
 
-
-/* Take a window group, loop through all the widgets 
+/* Take a window group, loop through all the widgets
    and bind them to a 'bounding box' of pixels of the window
    For example -- 4x 20y  -- Any widget that is n the X line of the
    Parent, will be bumped up 4 pixels. Any widget on the
-   y bounding line will be down 20 pixels. These are for the 
+   y bounding line will be down 20 pixels. These are for the
    left and top. For bottom and right, they will be pushed left
-   and up, respectfully. Making all widgest align perfectly on 
+   and up, respectfully. Making all widgest align perfectly on
    the bounding box you set for the window. Best to call this
    after creating the window, before showing it. But you can call
    it any time you wish. It -does- force a repaint. So be confident
    you're ready for that window to be painted. Really good to call after
    a resize if you need to maintain some pretty-ness*/
 
-void NWC_BoundBox(NWC_PARENT *p,int x,int y)						    
+void NWC_BoundBox(NWC_PARENT* p, int x, int y)
 {
 	NWC_WIDGET* w;
 	int i;
@@ -2042,10 +2027,10 @@ void NWC_BoundBox(NWC_PARENT *p,int x,int y)
 	if (p->control_count < 1)
 		return; // Why bother?
 
-	if (  (p->width <= x          || p->heigth <= y)		   ||
-		  (p->width - x <= 0      || p->heigth - y <= 0)	   ||
-		  ((p->x + x) >= p->width || (p->y + y) >= p->heigth))
-				
+	if ((p->width <= x || p->heigth <= y) ||
+		(p->width - x <= 0 || p->heigth - y <= 0) ||
+		((p->x + x) >= p->width || (p->y + y) >= p->heigth))
+
 	{
 		// We have a little issue here.
 		// We've got a weird ass window and some weird ass coords at this point. Nogo.
@@ -2055,7 +2040,7 @@ void NWC_BoundBox(NWC_PARENT *p,int x,int y)
 	{
 		if (!p->controls[i])
 			break; // Get out.
-		
+
 		w = p->controls[i];
 
 		if (!w)
@@ -2064,26 +2049,17 @@ void NWC_BoundBox(NWC_PARENT *p,int x,int y)
 		if (w->x < x)
 		{
 			w->x = x;
-
-			
 		}
 		//else
-			w->x += x;
+		w->x += x;
 
 		if (w->y < y)
 		{
-
 			w->y = y;
-
 		}
 		//else
-			w->y += y;
+		w->y += y;
 
-
-			MoveWindow(w->handle, w->x, w->y, w->width, w->height, TRUE);
-
-		
+		MoveWindow(w->handle, w->x, w->y, w->width, w->height, TRUE);
 	}
-	
-
 }

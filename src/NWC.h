@@ -1,4 +1,3 @@
-
 #define NWC_MAX_GUI 2048 // Max total items; windows, controls, children, etc.
 
 #define MAX_CHILDREN 1024
@@ -26,11 +25,10 @@ NWC_PARENT** parents; // List of parent windows.
 #define nwc_window_list  parents // Just an alias for parents. To make nomenclature easier with the changes to make it easier to read. Will be moot after all changes.
 int current_parents;
 int max_parents;
-int current_gui; // Total windows, children, widgets, etc. 
+int current_gui; // Total windows, children, widgets, etc.
 unsigned long int nwc_memory_used;
 
-
-struct NWC_Parent		    
+struct NWC_Parent
 {
 	BOOL on_top;
 	BOOL created;
@@ -43,7 +41,7 @@ struct NWC_Parent
 	int y;
 
 	int control_count;
-	int max_controls;						   
+	int max_controls;
 
 	char* name;
 
@@ -105,10 +103,7 @@ struct window_controls
 	DWORD  id;
 	HWND   handle;
 	NWC_PARENT* parent;
-
 };
-
-
 
 NWC_CHILD* create_child(NWC_PARENT* p_window, char* name);
 BOOL set_parent_config(NWC_PARENT* p_window, HWND hwnd, LRESULT* proc, int x, int y, int width, int heigth, HINSTANCE instance, BOOL on_top, unsigned long int window_options, unsigned long int style_options);
@@ -168,7 +163,7 @@ int get_max_control_heigth(NWC_PARENT* p);
 int get_max_control_width(NWC_PARENT* p);
 NWC_CTRL* get_control_by_id(NWC_PARENT* p_window, DWORD id);
 
-void *nwc_widget_create_entry(NWC_PARENT* self);
+void* nwc_widget_create_entry(NWC_PARENT* self);
 
 void* check_self(void* func);
 void push_self(void* func, void* self);

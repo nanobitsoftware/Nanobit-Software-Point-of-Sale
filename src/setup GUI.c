@@ -45,8 +45,8 @@ void create_setup_window(void)
 	AddEdit_Parent(Setup, "motto", 130, 20, 300, 20, 0, 0, 0, TRUE);
 	AddStatic_Parent(Setup, "Sreet Address:", 0, 40, 130, 20, 0, 0, 0, TRUE);
 	AddEdit_Parent(Setup, "street", 130, 40, 300, 20, 0, 0, 0, TRUE);
-	
-	AddStatic_Parent(Setup, "Store Number:", 300, 80,100, 20, 0, 0, 0, TRUE);
+
+	AddStatic_Parent(Setup, "Store Number:", 300, 80, 100, 20, 0, 0, 0, TRUE);
 	AddEdit_Parent(Setup, "storenumber", 400, 80, 30, 20, 0, 0, ES_NUMBER, TRUE);
 
 	AddStatic_Parent(Setup, "City:", 0, 60, 50, 20, 0, 0, 0, TRUE);
@@ -283,8 +283,6 @@ LRESULT APIENTRY SetupWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpa
 				return 0;
 			}
 
-
-
 			sqlite3_snprintf(24999, sql, "UPDATE POS SET Pay1='%s', Pay2='%s', Pay3='%s', Pay4='%s', Pay5='%s', Pay6='%s', Pay7='%s', Pay8='%s', Pay9='%s',"
 				"Pay10='%s', CompanyName='%s', CompanyMotto='%q', CompanyAddress='%s', CompanyZip='%s', CompanyState='%s', WarrantyInfo='%s', CompanyPhone='%s',"
 				"MU1='%s', MU2='%s', MU3='%s', MU4='%s', MU5='%s', Tax='%s', CompanyCity='%s', Tax_Labor=%d, Tax_Parts=%d, StoreNumber='%s' WHERE id='1';",
@@ -323,4 +321,4 @@ LRESULT APIENTRY SetupWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpa
 	}
 	}
 	return DefWindowProc(hwnd, msg, wparam, lparam);
-}										    
+}
