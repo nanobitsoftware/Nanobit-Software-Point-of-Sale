@@ -83,13 +83,14 @@ void create_calc_window(void)
 
 
 	CALC_window = create_parent("NanoCalculator");
-	set_parent_config(CALC_window, (HWND)0, (LRESULT*)CALCwindow_proc, 0, 0, CALC_X, CALC_Y,
-		0, CALC_ONTOP, 0, WS_TABSTOP | DS_3DLOOK |   WS_CLIPCHILDREN );
+	set_parent_config(CALC_window, (HWND)0, (LRESULT*)CALCwindow_proc,0, 0, CALC_X, CALC_Y,
+		0, CALC_ONTOP, 0,0);
 
 	calcwindow = CALC_window->window_control;
-
 	ShowWindow(calcwindow, SW_SHOW);
+	CenterWindow(calcwindow, mainwindow);
 
+	SetFocus(calcwindow);
 
 }
 
@@ -97,6 +98,16 @@ LRESULT APIENTRY CALCwindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpar
 {
 	switch (msg)
 	{
+	case WM_CLOSE:
+	{
+		
+			DestroyWindow(calcwindow);
+			calcwindow = NULL;
+	
+		break;
+	}
+
+	
 
 	default: {
 		return DefWindowProc(hwnd, msg, wparam, lparam);
