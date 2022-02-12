@@ -137,7 +137,7 @@ void add_heap(HEAP* hp)
 
 	if (firstheap == NULL)
 		firstheap = hp;
-	alloced += 1;
+	alloced += 1;				      
 
 	return;
 }
