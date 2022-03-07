@@ -21,6 +21,9 @@ BOOL INITIALIZED;
 NWC_PARENT* fake_window; // So we never return NULL
 NWC_CTRL* fake_control; // So we never return NULL
 
+static HANDLE hDevMode, hDevNames;
+
+
 #undef SetFocus
 
 void SetFocusInternal(HWND h)
@@ -84,6 +87,8 @@ NWC_PARENT* parent_initialize(void)
 	p_window->control_count = 0;
 	p_window->controls = (NWC_WIDGET**)malloc(sizeof(*p_window->controls) * MAX_CONTROLS);
 	p_window->controls[0] = NULL;
+	ZeroMemory(&p_window->pr, sizeof(p_window->pr));
+
 
 	return p_window;
 }
@@ -2070,4 +2075,42 @@ void NWC_BoundBox(NWC_PARENT* p, int x, int y)
 
 		MoveWindow(w->handle, w->x, w->y, w->width, w->height, TRUE);
 	}
+}
+
+
+bool  NWC_Getprinter(NWC_PARENT *p)
+{
+	PRINTDLG pd;
+	PAGESETUPDLG ps;
+	ZeroMemory(&ps, sizeof ps);
+
+
+	if ( !p )
+		return FALSE;
+
+
+	ps.lStructSize = sizeof ps;
+	ps.Flags = PSD_RETURNDEFAULT;
+
+	PageSetupDlg(&ps);
+	//CopyRect(&rcMargin, &ps.rtMargin);
+
+	hDevMode = ps.hDevMode;
+	hDevNames = ps.hDevNames;
+
+	
+
+	pd = p->pr;
+
+	pd.lStructSize = sizeof(pd); 
+	pd.hInstance = p->instance;
+	pd.hwndOwner = p->window_control;
+	pd.hDevMode = hDevMode;
+	pd.hDevNames = hDevNames;
+	pd.Flags = PD_ALLPAGES | PD_HIDEPRINTTOFILE | PD_NOPAGENUMS | PD_RETURNDC;
+	pd.nCopies = 1;
+	if ( !PrintDlg(&pd) )
+		return FALSE;
+
+
 }

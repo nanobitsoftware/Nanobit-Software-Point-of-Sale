@@ -675,17 +675,38 @@ LRESULT APIENTRY FDWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 				{
 					for (cs = cslist; cs; cs = cs->next)
 					{
-						if ((last[0] != '\0' && !strprefix(cs->last_name, last)) || (phone == NULL ? 0 : phone[0] != '\0' && strstr(cs->phone, phone == NULL ? "" : phone)))
+						if ( !last && !phone )
+							continue;
+						if ( last ) // check for last name
 						{
-							if (i == idx)
+							if (last && last[0] != '\0' && !strprefix(cs->last_name, last) )
 							{
-								fill_cs(cs);
-								DestroyWindow(csfind);
-								//return the csdata
-								break;
+								if ( i == idx )
+								{
+									fill_cs(cs);
+									DestroyWindow(csfind);
+									break;
+								}
+									
+								i++;
 							}
-							i++;
 						}
+						if ( phone )
+						{
+							if ( strstr(cs->phone, phone) )
+							{
+								if ( i == idx )
+								{
+									fill_cs(cs);
+									DestroyWindow(csfind);
+									break;
+								}
+								i++;
+							}
+						}
+
+
+						
 					}
 				}
 				break;
@@ -712,19 +733,38 @@ LRESULT APIENTRY FDWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 
 			for (cs = cslist; cs; cs = cs->next)
 			{
-				if ((last[0] != '\0' && !strprefix(cs->last_name, last)) || (phone == NULL ? 0 : phone[0] != '\0' && strstr(cs->phone, phone == NULL ? "" : phone)))
+				if ( !last && !phone )
+					continue;
+
+				if (last &&   last[0] != '\0' && !strprefix(cs->last_name, last) )
 				{
-					if (i == idx)
+					if ( i == idx )
 					{
 						DestroyWindow(csfind);
-						if (!cswindow)
+						if ( !cswindow )
 							create_cs_window();
 						fill_cs(cs);
 						//return the csdata
 						break;
 					}
 					i++;
+
 				}
+				if ( strstr(cs->phone, phone) )
+				{
+					if ( i == idx )
+					{
+						DestroyWindow(csfind);
+						if ( !cswindow )
+							create_cs_window();
+						fill_cs(cs);
+						//return the csdata
+						break;
+					}
+					i++;
+
+				}
+				
 			}
 			break;
 		}

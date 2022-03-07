@@ -107,30 +107,37 @@ HDC get_printer_dc(void)
 	HDC hdc;
 	PRINTDLG pd;
 	HWND hwnd;
+	hdc = 0;
+	pinfo = 0;
 
-	if (prndc != NULL)
-		return GetDC(mainwindow);
+	//if (prndc != NULL)
+	//	return GetDC(mainwindow);
 
-	/*ZeroMemory(&pd, sizeof(pd));
+	ZeroMemory(&pd, sizeof(pd));
 	pd.lStructSize = sizeof(pd);
 	pd.hwndOwner = mainwindow;
+	pd.hInstance = g_hInst;
 	pd.hDevMode = NULL;     // Don't forget to free or store hDevMode.
 	pd.hDevNames = NULL;     // Don't forget to free or store hDevNames.
-	pd.Flags = PD_USEDEVMODECOPIESANDCOLLATE | PD_RETURNDC;
+	pd.Flags = PD_USEDEVMODECOPIES | PD_ALLPAGES | PD_RETURNDC;
 	pd.nCopies = 1;
-	pd.nFromPage = 0xFFFF;
-	pd.nToPage = 0xFFFF;
+	pd.nFromPage =1;
+	pd.nToPage = 1;
 	pd.nMinPage = 1;
-	pd.nMaxPage = 0xFFFF;*/
+	pd.nMaxPage = 0xFFFFU;
+	pd.hDC = 0;
+
 	//
-	EnumPrinters(PRINTER_ENUM_LOCAL, NULL, 4, NULL, 0, &n, &r);
-	pinfo = malloc(n);
-	EnumPrinters(PRINTER_ENUM_LOCAL, NULL, 4, (PBYTE)pinfo, n, &n, &r);
-	GiveError(pinfo->pPrinterName, 0);
-	hdc = CreateDC("WINSPOOL", pinfo->pPrinterName, NULL, NULL);
-	// hdc =- CreateDCA (NULL, "WINSPOOL", NULL,
-	/*if (PrintDlg(&pd) == TRUE)
+	/**/
+	//EnumPrinters(PRINTER_ENUM_LOCAL, NULL, 4, NULL, 0, &n, &r);
+	//pinfo = malloc(n);
+	//EnumPrinters(PRINTER_ENUM_LOCAL, NULL, 4, (PBYTE)pinfo, n, &n, &r);
+	
+	 //hdc = CreateDC("WINSPOOL", pinfo->pPrinterName, NULL, NULL);	
+	 //hdc =- CreateDCA (NULL, "WINSPOOL", NULL,
+	if (PrintDlg(&pd) == TRUE)
 		{
+		
 			prndc = pd.hDC;
 			return pd.hDC;
 		}
@@ -138,7 +145,8 @@ HDC get_printer_dc(void)
 		{
 			prndc = NULL;
 			GiveError("No printer selected.", FALSE);
-		}*/
+
+		}
 	prndc = hdc;
 	free(pinfo);
 	return hdc;
@@ -149,9 +157,15 @@ void draw_text_line(char* str)
 	char* point;
 	char buf[1024] = "";
 	int i;
+	static DOCINFO    di;
 
+
+	di.cbSize = sizeof(DOCINFO);
+	di.lpszDocName = L"POS PRINT";
+	//di.lpszOutput = L"RAW";
+	di.lpszDatatype = L"RAW";
 	i = 0;
-	if (StartDoc(pdc, 0) > 0)
+	if (StartDoc(pdc, &di) > 0)
 		if (StartPage(pdc) > 0);
 	for (point = str; *point; point++)
 	{
@@ -186,8 +200,9 @@ void draw_text_line(char* str)
 		buf[0] = '\0';
 		cur_line++;
 	}
-	//if (EndPage(pdc)>0)
-		//if (EndDoc(pdc)>0)
+	if ( EndPage(pdc) > 0 )
+		if ( EndDoc(pdc) > 0 )
+			pdc = pdc;
 				//exit(1);
 }
 
@@ -204,13 +219,21 @@ void print_work_order(int inv, char* order)
 
 	char buf[1024] = "";
 	static DOCINFO    di;
+	
+	di.cbSize = sizeof(DOCINFO);
+	di.lpszDocName = L"POS PRINT";
+	//di.lpszOutput = L"RAW";
+	di.lpszDatatype = L"RAW";
 
+
+	
+	
 	char sstr[1024];
 	line = 0;
 
 	GetClientRect(NULL, &r);
 
-	//di.lpszOutput = "wo2.xps";
+	
 
 	if (!prndc)
 		prndc = get_printer_dc();
@@ -245,8 +268,8 @@ void print_work_order(int inv, char* order)
 
 	x_offset = 7;
 	y_offset = 7;
-	if (!prndc)
-		prndc = get_printer_dc();
+	//if (!prndc)
+	//	prndc = get_printer_dc();
 	if (StartDoc(prndc, &di) > 0)
 		if (StartPage(prndc) > 0)
 		{
@@ -354,11 +377,16 @@ void print_report(char* report)
 	int line;
 
 	char buf[1024] = "";
-	static DOCINFO    di = { sizeof(DOCINFO), TEXT("Nano POS Report") };
+	static DOCINFO    di;
+
+
+	di.cbSize = sizeof(DOCINFO);
+	di.lpszDocName = L"POS PRINT";
+	//di.lpszOutput = L"RAW";
+	di.lpszDatatype = L"RAW";
 
 	char sstr[1024] = "";
 	line = 0;
-
 	GetClientRect(NULL, &r);
 
 	if (!prndc)
@@ -379,7 +407,7 @@ void print_report(char* report)
 
 	pr.bottom = GetDeviceCaps(prndc, PHYSICALHEIGHT);
 
-	GetClientRect(printpreview, &r);
+	GetClientRect(prndc, &r);
 
 	r.left = pr.left / 7;
 	r.top = 1;
@@ -394,9 +422,9 @@ void print_report(char* report)
 
 	buf[0] = '\0';
 	sstr[0] = '\0';
-	if (!prndc)
-		prndc = get_printer_dc();
-	if (StartDoc(prndc, 0) > 0)
+	//if (!prndc)
+	//	prndc = get_printer_dc();
+	if (StartDoc(prndc, &di) > 0)
 		if (StartPage(prndc) > 0)
 		{
 			oldpen = SelectObject(prndc, CreatePen(PS_SOLID, 8, RGB(0, 0, 0)));
@@ -550,6 +578,13 @@ void print_invoice(char* str, int copies)
 	BOOL movecol2;
 	BOOL bold;
 
+	static DOCINFO    di;
+
+
+	di.cbSize = sizeof(DOCINFO);
+	di.lpszDocName = L"POS PRINT";
+	//di.lpszOutput = L"RAW";
+	di.lpszDatatype = L"RAW";
 	extern int cur_invoice;
 	int c;
 
@@ -576,7 +611,8 @@ void print_invoice(char* str, int copies)
 	//	GetDeviceCaps (prndc, LOGPIXELSY) ;
 		//-GetDeviceCaps (prndc, PHYSICALOFFSETY) ;
 
-	GetClientRect(printpreview, &r);
+	//GetClientRect(printpreview, &r);
+	GetClientRect(prndc, &r);
 
 	r.left = pr.left / 7;
 	r.top = 1;
@@ -593,7 +629,7 @@ void print_invoice(char* str, int copies)
 	cur_pages = (count_lines(str) / 45) + 1;
 	cur_page = 1;
 
-	if (StartDoc(prndc, 0) > 0)
+	if (StartDoc(prndc, &di) > 0)
 		for (c = 0; c < copies; c++)
 		{
 			cur_page = 1;
@@ -783,6 +819,15 @@ void DrawInvoiceBox(HDC dc, char* str)
 	BOOL movecol1;
 	BOOL movecol2;
 	BOOL bold;
+
+	static DOCINFO    di;
+
+
+	di.cbSize = sizeof(DOCINFO);
+	di.lpszDocName = L"POS PRINT";
+	//di.lpszOutput = L"RAW";
+	di.lpszDatatype = L"RAW";
+
 
 	extern int cur_invoice;
 
@@ -1018,7 +1063,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 	cur_pages = (count_lines(str) / 45) + 1;
 	cur_page = 1;
 
-	if (StartDoc(prndc, 0) > 0)
+	if (StartDoc(prndc, &di) > 0)
 		if (StartPage(prndc) > 0)
 		{
 			dc = prndc;
@@ -1187,7 +1232,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 		if (EndDoc(prndc) > 0)
 		{
 			DestroyWindow(printpreview);
-			printpreview = NULL;
+	printpreview = NULL;
 			//exit(1);
 		}
 
@@ -1199,8 +1244,9 @@ BOOL create_print_preview(char* str)
 	WNDCLASS wnd;
 
 	HDC dc;
-	wnd.style = CS_HREDRAW | CS_VREDRAW;
 
+	
+	wnd.style = CS_HREDRAW | CS_VREDRAW;
 	if (!printpreview)
 	{
 		wnd.style = CS_HREDRAW | CS_VREDRAW;
@@ -1235,7 +1281,7 @@ BOOL create_print_preview(char* str)
 
 	DrawInvoiceBox(dc, str);
 	cur_line = 0;
-	DeleteDC(dc);
+	//DeleteDC(dc);
 	cur_pages = 0;
 	cur_page = 0;
 	return TRUE;

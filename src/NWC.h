@@ -55,6 +55,9 @@ struct NWC_Parent
 
 	HWND window_control;
 	HWND window_pointer;
+	HDC* print_dc;
+
+	PRINTDLG pr;
 
 	HINSTANCE instance;
 	LRESULT* control_proc;
