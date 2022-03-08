@@ -102,11 +102,11 @@ int pages_col(char* str)
 
 HDC get_printer_dc(void)
 {
-	DWORD n, r;
+	//DWORD n, r;
 	PRINTER_INFO_4* pinfo;
 	HDC hdc;
 	PRINTDLG pd;
-	HWND hwnd;
+	//HWND hwnd;
 	hdc = 0;
 	pinfo = 0;
 
@@ -161,9 +161,9 @@ void draw_text_line(char* str)
 
 
 	di.cbSize = sizeof(DOCINFO);
-	di.lpszDocName = L"POS PRINT";
+	di.lpszDocName = "POS PRINT";
 	//di.lpszOutput = L"RAW";
-	di.lpszDatatype = L"RAW";
+	di.lpszDatatype = "RAW";
 	i = 0;
 	if (StartDoc(pdc, &di) > 0)
 		if (StartPage(pdc) > 0);
@@ -171,7 +171,7 @@ void draw_text_line(char* str)
 	{
 		if (*point == '\n')
 		{
-			TextOut(pdc, (r.left + 20) * x_offset, ((cur_line * (13 * y_offset)) + r.top + 200) * y_offset, buf, strlen(buf));
+			TextOut(pdc, (r.left + 20) * x_offset, ((cur_line * (13 * y_offset)) + r.top + 200) * y_offset, buf, (int)(int) strlen(buf));
 
 			buf[0] = '\0';
 			cur_line++;
@@ -181,9 +181,9 @@ void draw_text_line(char* str)
 
 		buf[i] = *point;
 		buf[i + 1] = '\0';
-		if (strlen(buf) >= 76)
+		if ((int) strlen(buf) >= 76)
 		{
-			TextOut(pdc, (r.left + 20) * x_offset, ((cur_line * (13 * y_offset)) + r.top + 200) * y_offset, buf, strlen(buf));
+			TextOut(pdc, (r.left + 20) * x_offset, ((cur_line * (13 * y_offset)) + r.top + 200) * y_offset, buf,(int) strlen(buf));
 
 			buf[0] = '\0';
 			cur_line++;
@@ -195,7 +195,7 @@ void draw_text_line(char* str)
 	}
 	if (buf[0] != '\0')
 	{
-		TextOut(pdc, (r.left + 20) * x_offset, ((cur_line * (13 * y_offset)) + r.top + 200) * y_offset, buf, strlen(buf));
+		TextOut(pdc, (r.left + 20) * x_offset, ((cur_line * (13 * y_offset)) + r.top + 200) * y_offset, buf,(int) strlen(buf));
 
 		buf[0] = '\0';
 		cur_line++;
@@ -221,9 +221,9 @@ void print_work_order(int inv, char* order)
 	static DOCINFO    di;
 	
 	di.cbSize = sizeof(DOCINFO);
-	di.lpszDocName = L"POS PRINT";
+	di.lpszDocName = "POS PRINT";
 	//di.lpszOutput = L"RAW";
-	di.lpszDatatype = L"RAW";
+	di.lpszDatatype = "RAW";
 
 
 	
@@ -279,7 +279,7 @@ void print_work_order(int inv, char* order)
 			SelectObject(prndc, hf);
 
 			sprintf(sstr, "-Work Order-");// inv);
-			TextOut(prndc, (r.right / 2 - (strlen(sstr) * 8)) * x_offset, (r.top + (2)) * y_offset, sstr, strlen(sstr));
+			TextOut(prndc, (r.right / 2 - ((int)(int) strlen(sstr) * 8)) * x_offset, (r.top + (2)) * y_offset, sstr, (int)(int) strlen(sstr));
 
 			DeleteObject(hf);
 			hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Courier New");
@@ -287,12 +287,12 @@ void print_work_order(int inv, char* order)
 			SelectObject(prndc, hf);
 
 			Rectangle(prndc, (r.right - (120)) * x_offset, r.top * y_offset, r.right * x_offset, (r.top + (25)) * y_offset);
-
+			 
 			sprintf(sstr, "Invoice: %6.6d", inv);
-			TextOut(prndc, (r.right - (118)) * x_offset, (r.top + (2)) * y_offset, sstr, strlen(sstr));
+			TextOut(prndc, (r.right - (118)) * x_offset, (r.top + (2)) * y_offset, sstr, (int)(int) strlen(sstr));
 
 			sprintf(sstr, "Page: %d of %d", cur_page, cur_pages);
-			TextOut(prndc, (r.left) * x_offset, (r.top) * y_offset, sstr, strlen(sstr));
+			TextOut(prndc, (r.left) * x_offset, (r.top) * y_offset, sstr, (int) strlen(sstr));
 
 			i = 0;
 
@@ -309,7 +309,7 @@ void print_work_order(int inv, char* order)
 					SelectObject(prndc, hf);
 
 					sprintf(sstr, "-Work Order-");// , inv);
-					TextOut(prndc, (r.right / 2 - (strlen(sstr) * 8)) * x_offset, (r.top + (2)) * y_offset, sstr, strlen(sstr));
+					TextOut(prndc, (r.right / 2 - ((int) strlen(sstr) * 8)) * x_offset, (r.top + (2)) * y_offset, sstr, (int) strlen(sstr));
 
 					DeleteObject(hf);
 					hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "Courier New");
@@ -319,16 +319,16 @@ void print_work_order(int inv, char* order)
 					Rectangle(prndc, (r.right - (120)) * x_offset, r.top * y_offset, r.right * x_offset, (r.top + (25)) * y_offset);
 
 					sprintf(sstr, "Invoice: %6.6d", inv);
-					TextOut(prndc, (r.right - (118)) * x_offset, (r.top + (2)) * y_offset, sstr, strlen(sstr));
+					TextOut(prndc, (r.right - (118)) * x_offset, (r.top + (2)) * y_offset, sstr, (int) strlen(sstr));
 
 					sprintf(sstr, "Page: %d of %d", cur_page, cur_pages);
-					TextOut(prndc, (r.left) * x_offset, (r.top) * y_offset, sstr, strlen(sstr));
+					TextOut(prndc, (r.left) * x_offset, (r.top) * y_offset, sstr, (int) strlen(sstr));
 					line = 0;
 				}
 
 				if (*point == '\n')
 				{
-					TextOut(prndc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 40) * y_offset, buf, strlen(buf));
+					TextOut(prndc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 40) * y_offset, buf, (int) strlen(buf));
 
 					buf[0] = '\0';
 					i = 0;
@@ -346,7 +346,7 @@ void print_work_order(int inv, char* order)
 			}
 			if (buf[0] != '\0')
 			{
-				TextOut(prndc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 40) * y_offset, buf, strlen(buf));
+				TextOut(prndc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 40) * y_offset, buf, (int) strlen(buf));
 				buf[0] = '\0';
 				i = 0;
 				line++;
@@ -381,9 +381,9 @@ void print_report(char* report)
 
 
 	di.cbSize = sizeof(DOCINFO);
-	di.lpszDocName = L"POS PRINT";
+	di.lpszDocName = "POS PRINT";
 	//di.lpszOutput = L"RAW";
-	di.lpszDatatype = L"RAW";
+	di.lpszDatatype = "RAW";
 
 	char sstr[1024] = "";
 	line = 0;
@@ -407,7 +407,7 @@ void print_report(char* report)
 
 	pr.bottom = GetDeviceCaps(prndc, PHYSICALHEIGHT);
 
-	GetClientRect(prndc, &r);
+	GetClientRect((HWND)prndc, &r);
 
 	r.left = pr.left / 7;
 	r.top = 1;
@@ -435,7 +435,7 @@ void print_report(char* report)
 			SelectObject(prndc, hf);
 
 			sprintf(sstr, "Page: %d of %d", cur_page, cur_pages);
-			TextOut(prndc, (r.left) * x_offset, (r.top) * y_offset, sstr, strlen(sstr));
+			TextOut(prndc, (r.left) * x_offset, (r.top) * y_offset, sstr, (int) strlen(sstr));
 
 			i = 0;
 
@@ -449,13 +449,13 @@ void print_report(char* report)
 
 					sprintf(sstr, "Page: %d of %d", cur_page, cur_pages);
 
-					TextOut(prndc, (r.left) * x_offset, (r.top) * y_offset, sstr, strlen(sstr));
+					TextOut(prndc, (r.left) * x_offset, (r.top) * y_offset, sstr, (int) strlen(sstr));
 					line = 0;
 				}
 
 				if (*point == '\n')
 				{
-					TextOut(prndc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 10) * y_offset, buf, strlen(buf));
+					TextOut(prndc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 10) * y_offset, buf, (int) strlen(buf));
 
 					buf[0] = '\0';
 					i = 0;
@@ -473,7 +473,7 @@ void print_report(char* report)
 			}
 			if (buf[0] != '\0')
 			{
-				TextOut(prndc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 10) * y_offset, buf, strlen(buf));
+				TextOut(prndc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 10) * y_offset, buf, (int) strlen(buf));
 				buf[0] = '\0';
 				i = 0;
 				line++;
@@ -494,7 +494,7 @@ void draw_inv_footer(HDC dc, RECT r, int x_offset, int y_offset)
 	i = 0;
 
 	sprintf(buf, "Signature:_____________________________ Date:____/____/____");
-	TextOut(dc, (r.left + 20) * x_offset, ((48 * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+	TextOut(dc, (r.left + 20) * x_offset, ((48 * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 
 	line = 49;
 	LOG("Warranty \"%s\"", Company_Warranty);
@@ -502,7 +502,7 @@ void draw_inv_footer(HDC dc, RECT r, int x_offset, int y_offset)
 	{
 		if (*point == '\n')
 		{
-			TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+			TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 
 			buf[0] = '\0';
 			i = 0;
@@ -516,7 +516,7 @@ void draw_inv_footer(HDC dc, RECT r, int x_offset, int y_offset)
 	}
 	if (buf[0] != '\0')
 	{
-		TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+		TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 		buf[0] = '\0';
 		i = 0;
 		line++;
@@ -529,36 +529,36 @@ void draw_inv_header(HDC dc, RECT r, int x_offset, int y_offset, int invoice)
 	char csz[1024];
 
 	sprintf(sstr, "INVOICE");
-	TextOut(dc, (r.right / 2 - (strlen(sstr) * 8)) * x_offset, (r.top + (2)) * y_offset, sstr, strlen(sstr));
+	TextOut(dc, (r.right / 2 - ((int) strlen(sstr) * 8)) * x_offset, (r.top + (2)) * y_offset, sstr, (int) strlen(sstr));
 
 	DeleteObject(hf);
 	hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, PROOF_QUALITY, 0, "Courier New");
 	SelectObject(dc, hf);
 
-	TextOut(dc, (r.right / 2 - (strlen(Company_Name) * 4)) * x_offset, ((3 * (13)) + r.top + 20) * y_offset, Company_Name, strlen(Company_Name));
-	TextOut(dc, (r.right / 2 - (strlen(Company_Motto) * 4)) * x_offset, ((4 * (13)) + r.top + 20) * y_offset, Company_Motto, strlen(Company_Motto));
-	TextOut(dc, (r.right / 2 - (strlen(Company_Address) * 4)) * x_offset, ((5 * (13)) + r.top + 20) * y_offset, Company_Address, strlen(Company_Address));
+	TextOut(dc, (r.right / 2 - ((int) strlen(Company_Name) * 4)) * x_offset, ((3 * (13)) + r.top + 20) * y_offset, Company_Name, (int) strlen(Company_Name));
+	TextOut(dc, (r.right / 2 - ((int) strlen(Company_Motto) * 4)) * x_offset, ((4 * (13)) + r.top + 20) * y_offset, Company_Motto, (int) strlen(Company_Motto));
+	TextOut(dc, (r.right / 2 - ((int) strlen(Company_Address) * 4)) * x_offset, ((5 * (13)) + r.top + 20) * y_offset, Company_Address, (int) strlen(Company_Address));
 	sprintf(csz, "%s, %s %s", Company_City, Company_State, Company_Zip);
-	TextOut(dc, (r.right / 2 - (strlen(csz) * 4)) * x_offset, ((6 * (13)) + r.top + 20) * y_offset, csz, strlen(csz));
+	TextOut(dc, (r.right / 2 - ((int) strlen(csz) * 4)) * x_offset, ((6 * (13)) + r.top + 20) * y_offset, csz, (int) strlen(csz));
 	sprintf(csz, "Tel: %s", Company_Phone);
-	TextOut(dc, (r.right / 2 - (strlen(csz) * 4)) * x_offset, ((7 * (13)) + r.top + 20) * y_offset, csz, strlen(csz));
+	TextOut(dc, (r.right / 2 - ((int) strlen(csz) * 4)) * x_offset, ((7 * (13)) + r.top + 20) * y_offset, csz, (int) strlen(csz));
 
 	sprintf(sstr, "Invoice: %6.6d", invoice);
 
 	Rectangle(dc, (r.right - (120)) * x_offset, r.top * y_offset, r.right * x_offset, (r.top + (25)) * y_offset);
-	TextOut(dc, (r.right - (118)) * x_offset, (r.top + (2)) * y_offset, sstr, strlen(sstr));
+	TextOut(dc, (r.right - (118)) * x_offset, (r.top + (2)) * y_offset, sstr, (int) strlen(sstr));
 
 	sprintf(sstr, "Page %d of %d", cur_page, cur_pages);
-	TextOut(dc, (r.left + 0) * x_offset, ((1 * (13)) + r.top) * y_offset, sstr, strlen(sstr));
+	TextOut(dc, (r.left + 0) * x_offset, ((1 * (13)) + r.top) * y_offset, sstr, (int) strlen(sstr));
 
 	Rectangle(dc, (r.left + 10) * x_offset, (r.top + 200) * y_offset, (r.right - 10) * x_offset, (r.bottom - 100) * y_offset);
 	Rectangle(dc, (r.left + 550) * x_offset, (r.top + 200) * y_offset, (r.right - 90) * x_offset, (r.bottom - 100) * y_offset);
 
 	sprintf(sstr, "Created %s, Printed %s", invoice_created_date, get_date());
-	TextOut(dc, (r.left + 0) * x_offset, ((r.top + 180)) * y_offset, sstr, strlen(sstr));
+	TextOut(dc, (r.left + 0) * x_offset, ((r.top + 180)) * y_offset, sstr, (int) strlen(sstr));
 
 	sprintf(sstr, "  Qty.    Price");
-	TextOut(dc, (r.left + 550) * x_offset, ((r.top + 180)) * y_offset, sstr, strlen(sstr));
+	TextOut(dc, (r.left + 550) * x_offset, ((r.top + 180)) * y_offset, sstr, (int) strlen(sstr));
 }
 
 void print_invoice(char* str, int copies)
@@ -582,9 +582,9 @@ void print_invoice(char* str, int copies)
 
 
 	di.cbSize = sizeof(DOCINFO);
-	di.lpszDocName = L"POS PRINT";
+	di.lpszDocName = "POS PRINT";
 	//di.lpszOutput = L"RAW";
-	di.lpszDatatype = L"RAW";
+	di.lpszDatatype = "RAW";
 	extern int cur_invoice;
 	int c;
 
@@ -612,7 +612,7 @@ void print_invoice(char* str, int copies)
 		//-GetDeviceCaps (prndc, PHYSICALOFFSETY) ;
 
 	//GetClientRect(printpreview, &r);
-	GetClientRect(prndc, &r);
+	GetClientRect((HWND)prndc, &r);
 
 	r.left = pr.left / 7;
 	r.top = 1;
@@ -674,7 +674,7 @@ void print_invoice(char* str, int copies)
 
 						if (movecol1 == TRUE)
 						{
-							TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+							TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 							movecol1 = FALSE;
 							buf[0] = '\0';
 							i = 0;
@@ -684,7 +684,7 @@ void print_invoice(char* str, int copies)
 						}
 						if (movecol2 == TRUE)
 						{
-							TextOut(dc, (r.right - 85) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+							TextOut(dc, (r.right - 85) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 							movecol2 = FALSE;
 							buf[0] = '\0';
 							i = 0;
@@ -692,7 +692,7 @@ void print_invoice(char* str, int copies)
 							continue;
 						}
 
-						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 						if (bold == TRUE)
 						{
 							hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, PROOF_QUALITY, 0, "Courier New");
@@ -709,7 +709,7 @@ void print_invoice(char* str, int copies)
 					{
 						if (buf[0] != '\0')
 						{
-							TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+							TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 							if (bold == TRUE)
 							{
 								hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, PROOF_QUALITY, 0, "Courier New");
@@ -730,7 +730,7 @@ void print_invoice(char* str, int copies)
 						{
 							if (movecol1 == TRUE)
 							{
-								TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+								TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 								movecol1 = FALSE;
 								buf[0] = '\0';
 								i = 0;
@@ -738,7 +738,7 @@ void print_invoice(char* str, int copies)
 								continue;
 							}
 
-							TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+							TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 							if (bold == TRUE)
 							{
 								hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, PROOF_QUALITY, 0, "Courier New");
@@ -757,10 +757,10 @@ void print_invoice(char* str, int copies)
 					{
 						bold = TRUE;
 						if (buf[0] != '\0')
-						{
+						{ 
 							if (movecol1 == TRUE)
 							{
-								TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+								TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 								movecol1 = FALSE;
 								buf[0] = '\0';
 								bold = TRUE;
@@ -769,7 +769,7 @@ void print_invoice(char* str, int copies)
 								continue;
 							}
 
-							TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+							TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 
 							buf[0] = '\0';
 							i = 0;
@@ -785,7 +785,7 @@ void print_invoice(char* str, int copies)
 				}
 				if (buf[0] != '\0')
 				{
-					TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+					TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 					buf[0] = '\0';
 					i = 0;
 					line++;
@@ -824,9 +824,9 @@ void DrawInvoiceBox(HDC dc, char* str)
 
 
 	di.cbSize = sizeof(DOCINFO);
-	di.lpszDocName = L"POS PRINT";
+	di.lpszDocName = "POS PRINT";
 	//di.lpszOutput = L"RAW";
-	di.lpszDatatype = L"RAW";
+	di.lpszDatatype = "RAW";
 
 
 	extern int cur_invoice;
@@ -913,7 +913,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 
 			if (movecol1 == TRUE)
 			{
-				TextOut(dc, (r.left + 555) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+				TextOut(dc, (r.left + 555) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 				movecol1 = FALSE;
 				buf[0] = '\0';
 				i = 0;
@@ -923,7 +923,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 			}
 			if (movecol2 == TRUE)
 			{
-				TextOut(dc, (r.right - 85) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+				TextOut(dc, (r.right - 85) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 				movecol2 = FALSE;
 				buf[0] = '\0';
 				i = 0;
@@ -931,7 +931,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 				continue;
 			}
 
-			TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+			TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 			if (bold == TRUE)
 			{
 				DeleteObject(hf);
@@ -949,7 +949,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 		{
 			if (buf[0] != '\0')
 			{
-				TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+				TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 				if (bold == TRUE)
 				{
 					DeleteObject(hf);
@@ -971,7 +971,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 			{
 				if (movecol1 == TRUE)
 				{
-					TextOut(dc, (r.left + 555) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+					TextOut(dc, (r.left + 555) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 					movecol1 = FALSE;
 					buf[0] = '\0';
 					i = 0;
@@ -979,7 +979,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 					continue;
 				}
 
-				TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+				TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 				if (bold == TRUE)
 				{
 					DeleteObject(hf);
@@ -1002,7 +1002,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 			{
 				if (movecol1 == TRUE)
 				{
-					TextOut(dc, (r.left + 555) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+					TextOut(dc, (r.left + 555) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 					movecol1 = FALSE;
 					buf[0] = '\0';
 					bold = TRUE;
@@ -1011,7 +1011,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 					continue;
 				}
 
-				TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+				TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 
 				buf[0] = '\0';
 				i = 0;
@@ -1027,7 +1027,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 	}
 	if (buf[0] != '\0')
 	{
-		TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+		TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 		buf[0] = '\0';
 		i = 0;
 		line++;
@@ -1105,7 +1105,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 
 					if (movecol1 == TRUE)
 					{
-						TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+						TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 						movecol1 = FALSE;
 						buf[0] = '\0';
 						i = 0;
@@ -1115,7 +1115,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 					}
 					if (movecol2 == TRUE)
 					{
-						TextOut(dc, (r.right - 85) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+						TextOut(dc, (r.right - 85) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 						movecol2 = FALSE;
 						buf[0] = '\0';
 						i = 0;
@@ -1123,7 +1123,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 						continue;
 					}
 
-					TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+					TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 					if (bold == TRUE)
 					{
 						hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, PROOF_QUALITY, 0, "Courier New");
@@ -1140,7 +1140,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 				{
 					if (buf[0] != '\0')
 					{
-						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 						if (bold == TRUE)
 						{
 							hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, PROOF_QUALITY, 0, "Courier New");
@@ -1161,7 +1161,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 					{
 						if (movecol1 == TRUE)
 						{
-							TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+							TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 							movecol1 = FALSE;
 							buf[0] = '\0';
 							i = 0;
@@ -1169,7 +1169,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 							continue;
 						}
 
-						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 						if (bold == TRUE)
 						{
 							hf = CreateFont(12 * y_offset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, PROOF_QUALITY, 0, "Courier New");
@@ -1191,7 +1191,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 					{
 						if (movecol1 == TRUE)
 						{
-							TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+							TextOut(dc, (r.left + 555) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 							movecol1 = FALSE;
 							buf[0] = '\0';
 							bold = TRUE;
@@ -1200,7 +1200,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 							continue;
 						}
 
-						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, strlen(buf));
+						TextOut(dc, (r.left + 20) * x_offset, ((line * (13)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 
 						buf[0] = '\0';
 						i = 0;
@@ -1216,7 +1216,7 @@ void DrawInvoiceBox(HDC dc, char* str)
 			}
 			if (buf[0] != '\0')
 			{
-				TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, strlen(buf));
+				TextOut(dc, (r.left + 20) * x_offset, ((line * (13 * y_offset)) + r.top + 220) * y_offset, buf, (int) strlen(buf));
 				buf[0] = '\0';
 				i = 0;
 				line++;

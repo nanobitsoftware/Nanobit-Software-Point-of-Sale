@@ -17,7 +17,7 @@ char* top_string;
 #undef strdup
 
 #define MAX_BUF 512
-
+ 
 double fround(double f)
 {
 	f *= 100;
@@ -106,8 +106,8 @@ char* str_dup1(const char* str, char* file, int line)
 	if (!str)
 		return NULL;
 
-	result = (char*)nano_malloc((strlen(str) + 10) * sizeof(char*), file, line);
-	//	result  = (char*)malloc((strlen(str) + 10) * sizeof(char*));
+	result = (char*)nano_malloc(((int) strlen(str) + 10) * sizeof(char*), file, line);
+	//	result  = (char*)malloc(((int) strlen(str) + 10) * sizeof(char*));
 	if (result == (char*)0)
 	{
 		free(result);
@@ -289,7 +289,7 @@ char* commaize(unsigned long long int x, char buf[]) // Turn a ULONG_INT into a 
 	// IE: 300000 = 300,000. Probably not the
 	// most efficent way to do it, but ah well
 {
-	char* to_ret = NULL;
+	static char* to_ret = NULL;
 	char temp[1024] = "";
 	char* point = temp;
 	int i, c, f = 0;
@@ -303,17 +303,17 @@ char* commaize(unsigned long long int x, char buf[]) // Turn a ULONG_INT into a 
 	if (x <= 999)
 	{
 		buf[0] = '\0';
-		sprintf(&buf[0], "%lu", x);
+		sprintf(&buf[0], "%llu", x);
 
 		return &buf[0];
 	}
 	else if (x > 999)
 	{
-		point += strlen(temp);
+		point += (int) strlen(temp);
 
 		if (!*--point)
 			return to_ret;
-		i = strlen(temp) - 1;
+		i = (int)(int) strlen(temp) - 1;
 		c = i / 3; // How many commas. :)
 		i += c;
 		temp[i + c + 1] = '\0';
@@ -411,17 +411,17 @@ char* make_to_col(char* str)
 	if (!str)
 		return NULL;
 
-	if (strlen(str) <= MAX_CHAR_COL)
+	if ((int) strlen(str) <= MAX_CHAR_COL)
 		return str;
 
-	i = strlen(str);
+	i = (int) strlen(str);
 
 	i = (i + (i / 2));
 
 	if (i < 1)
 		i = 2;
-	if (i > strlen(str))
-		i = (strlen(str) * 2);
+	if (i > (int) strlen(str))
+		i = ((int) strlen(str) * 2);
 	tmp_str = malloc(sizeof(char*) * i);
 
 	last_space = NULL;
@@ -491,16 +491,16 @@ char* make_to_page(char* str)
 	if (!str)
 		return NULL;
 
-	if (strlen(str) <= 90)
+	if ((int) strlen(str) <= 90)
 		return str;
 
-	i = strlen(str);
+	i = (int) strlen(str);
 	i = (i + (i / 2));
 
 	if (i < 1)
 		i = 2;
-	if (i > strlen(str))
-		i = (strlen(str) * 2);
+	if (i > (int) strlen(str))
+		i = ((int) strlen(str) * 2);
 	tmp_str = malloc(sizeof(char*) * i);
 
 	last_space = NULL;
@@ -599,7 +599,7 @@ BOOL is_date(char* range)
 	if (!token)
 		correct_date = FALSE;
 
-	if ((token) && strlen(token) > 2 || strlen(token) < 2)
+	if ((token) && (int) strlen(token) > 2 || (int) strlen(token) < 2)
 		correct_date = FALSE;
 
 	if (atoi(token) > 12)
@@ -611,7 +611,7 @@ BOOL is_date(char* range)
 	if (!(token) && is_number2(token))
 		correct_date = FALSE;
 
-	if ((token) && strlen(token) > 2 || strlen(token) < 2)
+	if ((token) && (int) strlen(token) > 2 || (int) strlen(token) < 2)
 		correct_date = FALSE;
 
 	if (atoi(token) > 31)
@@ -623,7 +623,7 @@ BOOL is_date(char* range)
 	if ((token) && !is_number2(token))
 		correct_date = FALSE;
 
-	if ((token) && strlen(token) > 4 || strlen(token) < 4)
+	if ((token) && (int) strlen(token) > 4 || (int) strlen(token) < 4)
 		correct_date = FALSE;
 	if (atoi(token) > 2500 || atoi(token) < 1950)
 		correct_date = FALSE;

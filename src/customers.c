@@ -148,7 +148,7 @@ int add_cs_db(void* NotUsed, int argc, char** argv, char** azColName)
 		if (!strcmp(azColName[i], "TotalTickets"))
 			cc->total_tickets = argv[i] == NULL ? 0 : atoi(argv[i]);
 		if (!strcmp(azColName[i], "UnpaidDue"))
-			cc->unpaid_due = argv[i] == NULL ? 0.0f : (float)atof(argv[i]);
+			cc->unpaid_due = argv[i] == NULL ? 0.0f : (float)atof(argv[i]); 
 		if (!strcmp(azColName[i], "TotalSpent"))
 			cc->total_spent = argv[i] == NULL ? 0.0f : (float)atof(argv[i]);
 		if (!strcmp(azColName[i], "HasCredit"))

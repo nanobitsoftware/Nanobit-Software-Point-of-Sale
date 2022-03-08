@@ -19,7 +19,7 @@ NWC_PARENT* TK_window;
 #define TK_BTN_PREMADE 1003
 #define TK_BTN_VIEWCS 1004
 #define TK_BTN_CHCMP 1005
-#define TK_BTN_BILL 1006
+#define TK_BTN_BILL 1006 
 #define TK_BTN_DISCOUNT 1007
 #define DI_PERC 1008
 #define DI_DOLL 1009
@@ -1930,7 +1930,7 @@ LRESULT APIENTRY TKWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 				{
 					i = 0;
 					idx = -1;
-					idx_labor = SendMessage(get_control(TK_window, "laborlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+					idx_labor = (int)SendMessage(get_control(TK_window, "laborlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 					if (idx_labor == -1)
 						break;
 
@@ -1974,7 +1974,7 @@ LRESULT APIENTRY TKWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 				{
 					i = 0;
 					idx = -1;
-					idx_labor = SendMessage(get_control(TK_window, "partlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+					idx_labor =(int) SendMessage(get_control(TK_window, "partlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 					if (idx_labor == -1)
 						break;
 
@@ -2026,7 +2026,7 @@ LRESULT APIENTRY TKWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 			case TK_LABOR:
 			{
 				i = 0;
-				idx_labor = SendMessage(get_control(TK_window, "laborlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+				idx_labor =(int) SendMessage(get_control(TK_window, "laborlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 				if (idx_labor == -1)
 					break;
 
@@ -2063,7 +2063,7 @@ LRESULT APIENTRY TKWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 			case TK_PARTS:
 			{
 				i = 0;
-				idx_parts = SendMessage(get_control(TK_window, "partlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+				idx_parts =(int) SendMessage(get_control(TK_window, "partlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 				if (idx_parts == -1)
 					break;
 

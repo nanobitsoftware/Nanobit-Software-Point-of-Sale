@@ -45,7 +45,7 @@ int read_string(char buf[], FILE* fp)
 	if (fp == NULL)
 		return -1;
 	len = 0;
-	f = 0;
+	f = 0; 
 	while (!feof(fp))
 	{
 		f++;

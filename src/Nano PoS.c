@@ -28,7 +28,7 @@
 #define ID_FIND_INVOICE	     4002
 #define WIP_LIST 1008
 
-extern NWC_PARENT* CS_window;
+extern NWC_PARENT* CS_window; 
 extern NWC_PARENT* FD_window;
 extern NWC_PARENT* INV_add;
 extern NWC_PARENT* INV_search;
@@ -75,7 +75,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 
 	char* err;
 
-	srand(time(NULL));
+	srand((UINT)time(NULL));
 
 	LPINITCOMMONCONTROLSEX comctrl;
 
@@ -616,7 +616,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 		DispatchMessage(&messages);
 	}
 
-	return messages.wParam;
+	return (int)messages.wParam;
 }
 
 void update_wip(void)
@@ -793,7 +793,7 @@ LRESULT APIENTRY POS_MainWindow(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpara
 		nm = (NMHDR*)lparam;
 		if (nm->code == NM_DBLCLK)
 		{
-			idx = SendMessage(get_control(POS_parent, "wip")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+			idx =(int) SendMessage(get_control(POS_parent, "wip")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 
 			if (idx == -1)
 				return 0;

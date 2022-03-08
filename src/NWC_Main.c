@@ -595,7 +595,7 @@ BOOL AddButton_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width,
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, WC_BUTTON, ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, (HMENU)ctrl->id, g_hInst, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, WC_BUTTON, ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, ( HMENU ) ( UINT_PTR )ctrl->id, g_hInst, 0);
 	CTRL_ChangeFont(p_window, ctrl->name, "Courier New");
 	ShowWindow(ctrl->handle, SW_SHOW);
 	return TRUE;
@@ -684,7 +684,7 @@ BOOL AddStatic_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width,
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_WINDOWEDGE, "STATIC", ctrl->name, ctrl->style | WS_CHILD, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, (HMENU)ctrl->id, g_hInst, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_WINDOWEDGE, "STATIC", ctrl->name, ctrl->style | WS_CHILD, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, ( HMENU ) ( UINT_PTR ) ctrl->id, g_hInst, 0);
 	CTRL_ChangeFont(p_window, ctrl->name, "Courier New");
 	ShowWindow(ctrl->handle, SW_SHOW);
 	return TRUE;
@@ -737,7 +737,7 @@ BOOL AddCheck_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, 
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_WINDOWEDGE, "BUTTON", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, (HMENU)ctrl->id, g_hInst, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_WINDOWEDGE, "BUTTON", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, ( HMENU ) ( UINT_PTR ) ctrl->id, g_hInst, 0);
 	CTRL_ChangeFont(p_window, ctrl->name, "Courier New");
 
 	ShowWindow(ctrl->handle, SW_SHOW);
@@ -806,7 +806,7 @@ BOOL check_set(NWC_PARENT* p_window, char* name)
 
 BOOL AddRadio_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, int height, HWND handle, DWORD id, DWORD style, BOOL show)
 {
-	NWC_CTRL* ctrl;
+	NWC_CTRL* ctrl;   
 
 	if (!p_window)
 	{
@@ -836,7 +836,7 @@ BOOL AddRadio_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, 
 
 	ctrl->name = str_dup(name);
 	ctrl->x = x;
-	ctrl->y = y;
+	ctrl->y = y;   
 	ctrl->width = width;
 	ctrl->height = height;
 	ctrl->style |= style | WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON | WS_TABSTOP;
@@ -851,7 +851,7 @@ BOOL AddRadio_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, 
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_WINDOWEDGE, "BUTTON", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, (HMENU)ctrl->id, g_hInst, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_WINDOWEDGE, "BUTTON", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, ( HMENU ) ( UINT_PTR ) ctrl->id, g_hInst, 0);
 	ShowWindow(ctrl->handle, SW_SHOW);
 	return TRUE;
 }
@@ -903,7 +903,7 @@ BOOL AddCombo_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, 
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_WINDOWEDGE, "COMBOBOX", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, (HMENU)ctrl->id, g_hInst, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_WINDOWEDGE, "COMBOBOX", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, ( HMENU ) ( UINT_PTR ) ctrl->id, g_hInst, 0);
 	ShowWindow(ctrl->handle, SW_SHOW);
 	return TRUE;
 }
@@ -958,7 +958,7 @@ BOOL AddEdit_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, i
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, WC_EDIT, ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_control, (HMENU)ctrl->id, g_hInst, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, WC_EDIT, ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_control, ( HMENU ) ( UINT_PTR ) ctrl->id, g_hInst, 0);
 	//CreateWindowEx((DWORD)p_window->window_options, p_window->name, p_window->name,(DWORD)p_window->style_options, p_window->x, p_window->y, p_window->width, p_window->heigth, p_window->window_control, 0, p_window->instance, 0);
 	CTRL_SetText(ctrl->parent, ctrl->name, "");
 	CTRL_ChangeFont(p_window, ctrl->name, "Courier New");
@@ -992,7 +992,7 @@ char* CTRL_gettext(NWC_PARENT* p_window, char* name)
 
 		if (strstr(p_window->controls[i]->name, name))
 		{
-			len = SendMessage(p_window->controls[i]->handle, WM_GETTEXTLENGTH, 0, 0);
+			len =(int) SendMessage(p_window->controls[i]->handle, WM_GETTEXTLENGTH, 0, 0);
 			if (len == 0)
 				return NULL;
 			to_ret = (char*)malloc((sizeof(char*) * len) + 1);
@@ -1076,7 +1076,7 @@ char* combo_get_text(NWC_PARENT* p_window, char* name, int idx)
 	if (ctrl->type != COMBO)
 		return NULL;
 
-	if ((count = SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count = (int)SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for listview (DelitemIDXlist)", 0);
 		return NULL;
@@ -1169,7 +1169,7 @@ void CTRL_combo_clearlist(NWC_PARENT* p_window, char* name)
 	if (ctrl->type != COMBO)
 		return;
 
-	if ((count = SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count = (int)SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for combo (Clearlist)", 0);
 		return;
@@ -1204,7 +1204,7 @@ void CTRL_List_clearlist(NWC_PARENT* p_window, char* name)
 	if (ctrl->type != LISTBOX)
 		return;
 
-	if ((count = SendMessage(ctrl->handle, LB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count = (int)SendMessage(ctrl->handle, LB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for listview (Clearlist)", 0);
 		return;
@@ -1243,7 +1243,7 @@ void CTRL_combo_delitem(NWC_PARENT* p_window, char* name, char* item)
 	if (ctrl->type != COMBO)
 		return;
 
-	if ((count = SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count =(int) SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for listview (DelItemlist)", 0);
 		return;
@@ -1285,7 +1285,7 @@ void CTRL_List_delitem(NWC_PARENT* p_window, char* name, char* item)
 	if (ctrl->type != LISTBOX)
 		return;
 
-	if ((count = SendMessage(ctrl->handle, LB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count = (int)SendMessage(ctrl->handle, LB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for listview (DelItemlist)", 0);
 		return;
@@ -1324,7 +1324,7 @@ void CTRL_combo_delitem_idx(NWC_PARENT* p_window, char* name, int idx)
 	if (ctrl->type != COMBO)
 		return;
 
-	if ((count = SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count =(int) SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for listview (DelitemIDXlist)", 0);
 		return;
@@ -1359,7 +1359,7 @@ void CTRL_List_delitem_idx(NWC_PARENT* p_window, char* name, int idx)
 	if (ctrl->type != LISTBOX)
 		return;
 
-	if ((count = SendMessage(ctrl->handle, LB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count = (int)SendMessage(ctrl->handle, LB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for listview (DelitemIDXlist)", 0);
 		return;
@@ -1394,13 +1394,13 @@ int CTRL_combo_get_sel_idx(NWC_PARENT* p_window, char* name)
 	if (ctrl->type != COMBO)
 		return -1;
 
-	if ((count = SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count = (int)SendMessage(ctrl->handle, CB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for listview (DelitemIDXlist)", 0);
 		return -1;
 	}
 
-	count = SendMessage(ctrl->handle, CB_GETCURSEL, 0, 0);
+	count = (int)SendMessage(ctrl->handle, CB_GETCURSEL, 0, 0);
 
 	if (count == CB_ERR)
 		return -1;
@@ -1429,13 +1429,13 @@ int CTRL_list_get_sel_idx(NWC_PARENT* p_window, char* name)
 	if (ctrl->type != LISTBOX)
 		return -1;
 
-	if ((count = SendMessage(ctrl->handle, LB_GETCOUNT, 0, 0)) == LB_ERR)
+	if ((count = (int)SendMessage(ctrl->handle, LB_GETCOUNT, 0, 0)) == LB_ERR)
 	{
 		GiveError("Sendmessage error for listview (DelitemIDXlist)", 0);
 		return -1;
 	}
 
-	count = SendMessage(ctrl->handle, LB_GETCURSEL, 0, 0);
+	count =(int) SendMessage(ctrl->handle, LB_GETCURSEL, 0, 0);
 
 	if (count == LB_ERR)
 		return -1;
@@ -1608,7 +1608,7 @@ BOOL AddRichedit_Parent(NWC_PARENT* p_window, char* name, int x, int y, int widt
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, "RICHEDIT", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, (HMENU)ctrl->id, g_hInst, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, "RICHEDIT", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, ( HMENU ) ( UINT_PTR ) ctrl->id, g_hInst, 0);
 	ShowWindow(ctrl->handle, SW_SHOW);
 	return TRUE;
 }
@@ -1662,7 +1662,7 @@ BOOL AddList_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, i
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, "LISTBOX", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, (HMENU)ctrl->id, g_hInst, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, "LISTBOX", ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, ( HMENU ) ( UINT_PTR ) ctrl->id, g_hInst, 0);
 	ShowWindow(ctrl->handle, SW_SHOW);
 	return TRUE;
 }
@@ -1718,8 +1718,8 @@ BOOL AddCList_Parent(NWC_PARENT* p_window, char* name, int x, int y, int width, 
 		show_parent(p_window);
 	}
 
-	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, WC_LISTVIEW, ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, (HMENU)ctrl->id, g_hInst, 0);
-	sstyle = SendMessage(ctrl->handle, LVM_GETEXTENDEDLISTVIEWSTYLE, 0, 0);
+	ctrl->handle = CreateWindowEx(WS_EX_CLIENTEDGE, WC_LISTVIEW, ctrl->name, ctrl->style, ctrl->x, ctrl->y, ctrl->width, ctrl->height, p_window->window_pointer, ( HMENU ) ( UINT_PTR )ctrl->id, g_hInst, 0);
+	sstyle = (int)SendMessage(ctrl->handle, LVM_GETEXTENDEDLISTVIEWSTYLE, 0, 0);
 	sstyle = style | LVS_EX_FULLROWSELECT;
 	SendMessage(ctrl->handle, LVM_SETEXTENDEDLISTVIEWSTYLE, 0, sstyle);
 
@@ -1951,11 +1951,11 @@ struct collate_ctrls* new_collate_ctrl(void)
 void collate_windows(void)
 {
 	NWC_PARENT* p;
-	NWC_CHILD* c;
-	NWC_CTRL* ctrl;
+	//NWC_CHILD* c;
+	//NWC_CTRL* ctrl;
 	struct collate_window** window_list;
 	struct collate_window* t_win;
-	struct collate_ctrls t_ctrl;
+	//struct collate_ctrls t_ctrl;
 
 	int pcount = 0, ccount = 0;
 	int i, j = 0;
@@ -2112,5 +2112,5 @@ bool  NWC_Getprinter(NWC_PARENT *p)
 	if ( !PrintDlg(&pd) )
 		return FALSE;
 
-
+	return TRUE;
 }

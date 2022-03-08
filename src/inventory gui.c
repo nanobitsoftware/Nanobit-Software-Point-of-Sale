@@ -882,7 +882,7 @@ LRESULT APIENTRY InvSearchWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM
 		nm = (NMHDR*)lparam;
 		if (nm->code == NM_DBLCLK)
 		{
-			idx = SendMessage(get_control(INV_search, "invlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+			idx = (int)SendMessage(get_control(INV_search, "invlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 
 			if (idx == -1)
 				return 0;
@@ -920,7 +920,7 @@ LRESULT APIENTRY InvSearchWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM
 		}
 		case INV_BTN_SEARCH_EDIT:
 		{
-			idx = SendMessage(get_control(INV_search, "invlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+			idx = (int)SendMessage(get_control(INV_search, "invlist")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 
 			if (idx == -1)
 			{

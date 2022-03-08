@@ -303,7 +303,7 @@ void create_cs_find_window(void)
 	return;
 }
 
-void populate_find_list(void)
+void populate_find_list(void) 
 {
 	CSDATA* cs;
 	char* phone;
@@ -608,7 +608,7 @@ BOOL do_add_customer(void)
 	}
 
 	sprintf(SQLStr, "INSERT INTO Customers (LastName, FirstName, Street, City, State, Zip, Phone, Notes, TaxID, CorporateAccount, AcceptCheck, AcceptCredit, CashOnly, "
-		"DenyWork, TaxFree, LastSeen, Cssince) VALUES('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d', '%d', '%d', '%d', '%s','%s');",
+		"DenyWork, TaxFree, LastSeen, Cssince) VALUES('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%d', '%d', '%d', '%s','%s');",
 		last_name, first_name, address, city, state, zip, realphone, notes, taxid, coract, acceptchk, acceptcre, cashonly, denywork, tfree, get_date(), get_date());
 	sqlite3_exec(db, SQLStr, NULL, NULL, NULL);
 	sprintf(SQLStr, "select * from customers order by id desc limit 1;");
@@ -842,7 +842,7 @@ LRESULT APIENTRY CSWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 					free(csid);
 					break;
 				}
-				idx = SendMessage(get_control(CS_window, "computer")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+				idx = (int)SendMessage(get_control(CS_window, "computer")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 
 				if (idx == -1)
 				{
@@ -972,7 +972,7 @@ LRESULT APIENTRY CSWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 				break;
 			}
 
-			idx = SendMessage(get_control(CS_window, "computer")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
+			idx =(int) SendMessage(get_control(CS_window, "computer")->handle, LVM_GETNEXTITEM, (WPARAM)-1, (LPARAM)LVNI_SELECTED);
 
 			if (idx == -1)
 			{

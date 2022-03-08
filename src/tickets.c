@@ -13,7 +13,7 @@
 TICKETDATA* new_ticket(void)
 {
 	TICKETDATA* tick;
-	int i;
+	int i; 
 
 	tick = (TICKETDATA*)malloc(sizeof(*tick));
 

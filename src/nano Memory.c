@@ -86,7 +86,7 @@ HEAP* new_heap(void)
 }
 
 void add_heap(HEAP* hp)
-{
+{ 
 	char temp[5000] = "";
 	int b_type = 0;
 	float t_total = 0.0;
@@ -228,7 +228,7 @@ void walk_heap(void)
 	for (i = 0, hp = firstheap; hp; hp = hp->next, i++)
 	{
 		LOG("Walkheap: %d) m_add: 0x%x, file: %s, line: %d", i, hp->m_add == 0 ? 0 : hp->m_add, hp->file == NULL ? "Undefined" : hp->file, hp->line);
-		count += hp->size;
+		count += (unsigned long int)hp->size;
 	}
 	LOG("Walkheap: Total size unfreed: %d bytes", count);
 	LOG("Walkheap: Allocations called: %d. Deallocations called: %d, total: %d. (This number SHOULD be zero. \n\tIf not, then we got some problems.\n", alloced, unalloced, alloced - unalloced);
@@ -249,7 +249,7 @@ void dump_heap(void)
 
 	for (i = 0, hp = firstheap; hp; hp = hp->next, i++)
 	{
-		count += hp->size;
+		count += (unsigned long int)hp->size;
 		total++;
 	}
 
@@ -393,7 +393,7 @@ void* nano_malloc(size_t chunk, const char* file, int line)
 	if (chunk < 0)
 		chunk = 1;
 
-	upper_mult = chunk;
+	upper_mult = (int)chunk;
 
 	while ((chunk) % ALIGN != 0)
 	{
@@ -411,7 +411,7 @@ void* nano_malloc(size_t chunk, const char* file, int line)
 	}
 	//memset(mem, 0, chunk);
 
-	total_alloc += chunk;
+	total_alloc +=(unsigned long int ) chunk;
 
 	//chunk |= MALLOC_MAGIC;
 
@@ -496,9 +496,9 @@ void* nano_realloc(void* seg, size_t sz, const char* file, int line)
 	total_alloc -= (*((int*)seg - sizeof(double)));
 	(*(int*)seg) -= sizeof(double);
 	to_ret = realloc(seg, sz);
-	*((DWORD*)seg) = sz;
+	*((DWORD*)seg) = (DWORD)sz;
 
-	total_alloc += sz;
+	total_alloc += (unsigned long int )sz;
 
 	return (void*)((*((int*)to_ret)) + sizeof(double));
 }

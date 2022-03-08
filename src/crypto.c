@@ -19,7 +19,7 @@
  */
 char* make_salt(void)
 {
-	char table[] =
+	char table[] = 
 		"abcdefghijklmnopqrstuvwxyz"
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 		"1234567890!@#$%^&*()`-=~_+"
@@ -39,14 +39,14 @@ char* make_salt(void)
 
 	int i = 0;
 	int r = 0;
-	int c = strlen(table);
+	int c = (int)strlen(table);
 
 	c--;
 
 	int seed_count = 0; // So we know when to switch boxes.
-	char s1;  // Seed 1 item
+	//char s1;  // Seed 1 item
 
-	char s2;  // Seed 2 item, xor.
+	//char s2;  // Seed 2 item, xor.
 	int mode = 0; // The mode we're using in seed creation
 	ssalt[0] = '\0';
 
@@ -119,7 +119,7 @@ char* make_salt(void)
 	// salt.
 	mode = 0;
 	seed_count = 0;
-	c = strlen(table) - 1;
+	c = (int)strlen(table) - 1;
 	for (i = 0; i < 512; i++)
 	{
 		r = rand() % ((c + 1) - 0) + 0; // Random number.
@@ -272,7 +272,7 @@ char* crypt_password(char* plaintext, char* salt, CRYPTHASH* chash)
 	char* pwsalt = NULL; // we'll malloc this.
 	char r_salt[1024];
 
-	SHA512_HASH  hash;          // [in]
+	//SHA512_HASH  hash;          // [in]
 
 	if (!plaintext || !salt)
 	{
@@ -285,8 +285,8 @@ char* crypt_password(char* plaintext, char* salt, CRYPTHASH* chash)
 	// than 512...Well, We'll do something bad and just put the salt
 	// at the end and make it 1024.
 
-	pwlen = strlen(plaintext);
-	taglen = strlen(salt_tag);
+	pwlen = (int)strlen(plaintext);
+	taglen = (int)strlen(salt_tag);
 	if (pwlen <= 0)
 		return NULL; // We need a password.
 	if (pwlen > 512)
@@ -310,11 +310,11 @@ char* crypt_password(char* plaintext, char* salt, CRYPTHASH* chash)
 	pwsalt[total_len] = '\0';
 
 	// We now have a password + salt that we can turn in to a hash.
-	Sha256Calculate(pwsalt, strlen(pwsalt), &hash);
+	//Sha256Calculate(pwsalt, strlen(pwsalt), &hash);
 
 	//LOG("Password: %s, Hash: %s",pwsalt, hash_to_str(hash));
 
-	sprintf(chash->hash, "%s", hash_to_str(hash));
+//	sprintf(chash->hash, "%s", hash_to_str(hash));
 
 	sprintf(chash->password, "%s", plaintext);
 
@@ -322,4 +322,5 @@ char* crypt_password(char* plaintext, char* salt, CRYPTHASH* chash)
 	sprintf(chash->pw_salt, "%s", pwsalt);
 
 	//return crypt(pwsalt);
+	return NULL;
 }

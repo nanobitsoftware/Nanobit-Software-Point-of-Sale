@@ -77,5 +77,5 @@ double tax_quote()
 {
 	if (CALC_TOTAL == 0.00f || !TAX)
 		return 0.00f;
-	return (CALC_TOTAL = (get_add_percent(CALC_TOTAL, TAX)));
+	return (CALC_TOTAL = (get_add_percent(CALC_TOTAL,(float) TAX)));
 }
