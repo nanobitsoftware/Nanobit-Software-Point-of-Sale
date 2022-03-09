@@ -153,12 +153,6 @@
     <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.h">
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClInclude>
-    <ClInclude Include="src\NWC.h">
-      <Filter>Source Files\NPOSSource</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sqlite3ext.h">
-      <Filter>Source Files\NPOSSource</Filter>
-    </ClInclude>
     <ClInclude Include="src\calculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -175,6 +169,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Nano PoS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sqlite3ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NWC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

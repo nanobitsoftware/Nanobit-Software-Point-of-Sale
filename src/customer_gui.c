@@ -716,6 +716,8 @@ LRESULT APIENTRY FDWindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam
 
 		case ID_FD_BTN_FIND:
 		{
+			
+
 			populate_find_list();
 			break;
 		}

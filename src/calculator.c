@@ -9,15 +9,18 @@
 #include <time.h>
 #include <commctrl.h>
 #include "Nano PoS.h"
-
+#include "calculator.h"
 #include "NWC.h"
 
-#define MAX_CALC_NUMBER 0xFFFFFF // Max allowed number that we can calculate. Smaller than most due to float.
+#define MAX_CALC_NUMBER 0xFFFFFFFFFFF // Max allowed number that we can calculate. Smaller than most due to float.
 #define MAX_NEST_CALC 256 // Max number of calculations we're allowed to do in a nest.
 
 double CALC_TOTAL; // Total calculated during calc functions.
 double LEFT_CALC; // Left side of quotent.
 double RIGHT_CALC; // Right side of quotent.
+
+extern NWC_PARENT* CALC_window; // We need this.
+
 
 inline double add_quote(void)
 {
@@ -78,4 +81,44 @@ double tax_quote()
 	if (CALC_TOTAL == 0.00f || !TAX)
 		return 0.00f;
 	return (CALC_TOTAL = (get_add_percent(CALC_TOTAL,(float) TAX)));
+}
+
+
+
+void calc_append_number(int num)
+{
+	char* orig;	// Original number
+	char p[1024]; // larger than we need, but that's fine.
+	orig = CTRL_gettext(CALC_window, "CALCINPUT");
+
+
+	sprintf(p, "\0");
+
+	switch ( num ) // Single number. We want to put on the end.
+	{
+	case '0':
+	case '1':
+	case '2':
+	case '3':
+	case '4':
+	case '5':
+	case '6':
+	case '7':
+	case '8':
+	case '9':
+	case '.':
+	{
+		sprintf(p, "%s%c", orig, ( char ) num); // Put the number at the end of orig.
+		/* if num was 8, and orig was 10, new number is 108.
+		 */
+		if ( atof(p) > MAX_CALC_NUMBER )
+			break; // We've reached the biggest number.
+		
+		CTRL_SetText(CALC_window, "CALCINPUT", p);
+		break;
+	}
+	default:
+		return; // Don't do a damn thing. 
+
+	}
 }

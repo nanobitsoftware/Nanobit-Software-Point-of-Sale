@@ -1,7 +1,7 @@
 #include "sqlite3.h"
 #include "nano_memory.h"
 
-#define IS_IN_DEBUGGING_MODE 1
+#define IS_IN_DEBUGGING_MODE 0
 #define REPORT_DEALLOCATION 0
 #define REPORT_ALLOCATION 0
 #define DEBUG_FILE "debug.txt"
@@ -81,6 +81,8 @@ HWND paytotal;
 HWND refundwindow;
 HWND dailywindow;
 HWND calcwindow;
+
+
 
 char Company_Name[1024];
 char Company_Motto[1024];
@@ -267,6 +269,10 @@ struct crypt_hash
 	char        password[1024];
 	char        pw_salt[1024];
 };
+
+
+
+
 
 //static int add_cs_db (void *NotUsed, int argc, char **argv, char **azColName);
 void write_buffer(const char* str);

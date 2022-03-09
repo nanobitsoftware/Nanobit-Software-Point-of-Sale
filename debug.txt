@@ -18840,3 +18840,103 @@ Walkheap: Total size unfreed: 57912 bytes
 Walkheap: Allocations called: 103. Deallocations called: 11, total: 92. (This number SHOULD be zero. 
 	If not, then we got some problems.
 
+Tax: 12
+TAX AFTER: 0.12
+Walkheap: 0) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 998
+Walkheap: 1) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 65
+Walkheap: 2) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 88
+Walkheap: 3) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 200
+Walkheap: 4) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 202
+Walkheap: 5) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 6) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 7) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 8) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 9) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 10) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 11) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 12) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 13) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 14) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 15) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 16) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 17) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 18) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 19) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 20) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 670
+Walkheap: 21) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 22) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 670
+Walkheap: 23) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 24) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 670
+Walkheap: 25) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 26) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 670
+Walkheap: 27) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 28) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 29) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 1702
+Walkheap: 30) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 31) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 32) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 1702
+Walkheap: 33) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 34) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 35) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 670
+Walkheap: 36) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 37) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 38) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 941
+Walkheap: 39) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 40) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 41) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 670
+Walkheap: 42) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 43) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 44) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 45) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 46) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 47) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 48) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 49) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 50) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 51) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 395
+Walkheap: 52) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 65
+Walkheap: 53) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 88
+Walkheap: 54) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 200
+Walkheap: 55) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 202
+Walkheap: 56) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 57) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 670
+Walkheap: 58) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 59) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 941
+Walkheap: 60) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 61) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 1702
+Walkheap: 62) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 63) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 64) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 65) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 66) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 67) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 68) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 69) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: 70) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 436
+Walkheap: 71) m_add: 0xffffffff, file: C:\Users\biote\source\repos\nanobitsoftware\Nanobit-Software-Point-of-Sale\src\NWC_Main.c, line: 581
+Walkheap: Total size unfreed: 16900 bytes
+Walkheap: Allocations called: 286. Deallocations called: 214, total: 72. (This number SHOULD be zero. 
+	If not, then we got some problems.
+
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
+Tax: 12
+TAX AFTER: 0.12
