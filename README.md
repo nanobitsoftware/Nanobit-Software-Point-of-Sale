@@ -21,7 +21,7 @@ Customer Creation Screen. Crude by being cleaned up at a very fast pace.![CSInpu
 
 
 
-Small but powerful INVENTORY management.
+Small but powerful INVENTORY management.<br>
 ![InventorySearchandManipulate](https://user-images.githubusercontent.com/16727948/158010627-43cca735-fe48-431e-b4e4-df4404587ae8.png)
 
 What a ticket looks like when set up for a customer and ready fot the tech to work on:
