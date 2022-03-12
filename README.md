@@ -1,5 +1,7 @@
 # Nanobit-Software-Point-of-Sale
-Point of software written as a hobby for Computer and Phone repair shops. Can be modified for any other type of shop.
+Point of software written as a hobby for Computer and Phone repair shops. Can be modified for any other type of shop. It is written in PURE and raw C Programming langauge and, as such sould easily be moivable to other pltforms without much eas, especially as I tend to no tuse libraries tied to specific platofrms.
+
+If you have any questions any any of the code or the code quality, please contact me at mike@nanobit.net -- Thank you! If you wish to join this team, please fee free, I would appreciate your help more than you could easily, ever, imagine.
 
 
 As of now, PoS Is in a working and well mannered state. If any wish to use this software in their store then they MUSt contact me first to ensure proper channels are taken. As I do own all the code as well as content of the program.
