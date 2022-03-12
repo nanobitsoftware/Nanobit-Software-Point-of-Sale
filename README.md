@@ -17,8 +17,8 @@ Searching for Customer ID to start a new ticket:
 ![CSFindWindow](https://user-images.githubusercontent.com/16727948/158010610-341870e2-386e-4caf-8037-a5796001d854.png)
 
 
-Customer Creation SCreen. Crude by being cleaned up at a very fast pace.
-![CSInputWindow](https://user-images.githubusercontent.com/16727948/158010618-11455f1c-a200-4196-b2c8-4b6ae1340880.png)
+Customer Creation Screen. Crude by being cleaned up at a very fast pace.![CSInputWindow](https://user-images.githubusercontent.com/16727948/158010618-11455f1c-a200-4196-b2c8-4b6ae1340880.png)
+
 
 
 Small but powerful INVENTORY management.
