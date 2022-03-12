@@ -29,5 +29,5 @@ What a ticket looks like when set up for a customer and ready fot the tech to wo
 ![CSTicketWindow](https://user-images.githubusercontent.com/16727948/158010642-5c5ad4b5-a1ee-4df3-a5d1-8327998191ce.png)
 
 
-Setup menu for NanoPOS. Short. Simle. To the point and not so difficult that even a child could figure it out (please do not let your children set this up, unless you cannot.)
+Setup menu for NanoPOS. Short. Simle. To the point and not so difficult that even a child could figure it out (please do not let your children set this up, unless you cannot.)<br>
 ![MinimalistSetup](https://user-images.githubusercontent.com/16727948/158010730-81923142-3d21-4ecc-9563-2fa40aed0837.png)
