@@ -1,15 +1,15 @@
 # Nanobit-Software-Point-of-Sale
-Point of software written as a hobby for Computer and Phone repair shops. Can be modified for any other type of shop. It is written in PURE and raw C Programming langauge and, as such sould easily be moivable to other pltforms without much eas, especially as I tend to no tuse libraries tied to specific platofrms.
+Point of software written as a hobby for Computer and Phone repair shops. Can be modified for any other type of shop. It is written in PURE and raw C Programming langauge and, as such sould easily be movable to other pltforms without much fus, especially as I tend to not use libraries tied to specific platofrms.
 
 If you have any questions any any of the code or the code quality, please contact me at mike@nanobit.net -- Thank you! If you wish to join this team, please fee free, I would appreciate your help more than you could easily, ever, imagine.
 
 
-As of now, PoS Is in a working and well mannered state. If any wish to use this software in their store then they MUSt contact me first to ensure proper channels are taken. As I do own all the code as well as content of the program.
+As of now, PoS Is in a working and well mannered state. If any wish to use this software in their store then PLEASE contact me first to ensure proper channels are taken. As I do own all the code as well as content of the program and I wish to make sure it works as designed for you.
 
-As of right now, It is written in Visul Studio 2022 -- Originally madein 2017 but works well under all WINs emulators and under mac.
+Right now, It is written in Visul Studio 2022 -- Originally madein 2017 but works well under all WINs emulators and under mac.
 
 
-Old, but general idea of the MAIN W.I.P SCreen
+Old, but general idea of the MAIN W.I.P Screen
  ![MainWIPSCreen(OLD)](https://user-images.githubusercontent.com/16727948/158010588-6fd6665b-7186-4a5d-aa14-965dbe308e92.png)
 
 Searching for Customer ID to start a new ticket:
