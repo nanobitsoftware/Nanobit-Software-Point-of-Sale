@@ -96,13 +96,50 @@ void create_calc_window(void)
 
 LRESULT APIENTRY CALCwindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 {
+	if (msg == WM_KEYUP)
+		LOG("wParam: LOWORD: 0x%x", wparam);
+	
+
 	switch (msg)
 	{
+
+	case WM_KEYUP:
+	{
+		break;
+	}
+
+	case WM_KEYDOWN:
+	{
+		switch (wparam)
+		{
+			//return  CallWindowProc(OldProc, hwnd, msg, wParam, lParam);
+		case 0x31: case 0x61: calc_append_number('1');break;
+		case 0x32: case 0x62: calc_append_number('2');break;
+		case 0x33: case 0x63: calc_append_number('3');break;
+		case 0x34: case 0x64: calc_append_number('4');break;
+		case 0x35: case 0x65: calc_append_number('5');break;
+		case 0x36: case 0x66: calc_append_number('6');break;
+		case 0x37: case 0x67: calc_append_number('7');break;
+		case 0x38: case 0x68: calc_append_number('8');break;
+		case 0x39: case 0x69: calc_append_number('9');break;
+		case 0x30: case 0x60: calc_append_number('0');break;
+		case 0x6E: case 0xBE: calc_append_number('.'); break;
+		case 0x6B: calc_append_number('+');break;
+		case 0x6F: calc_append_number('-');break;
+		case 0x6D: calc_append_number('/');break;
+		case 0x6A: calc_append_number('*');break;
+		case 0xBB: calc_append_number('=');break;
+		}
+		
+	}
 	case WM_COMMAND:
 	{
+
+
 		switch ( LOWORD(wparam) )
 		{
 			case ID_CALC_1:
+			
 				calc_append_number('1');
 				break;
 			case ID_CALC_2:
@@ -152,15 +189,15 @@ LRESULT APIENTRY CALCwindow_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpar
 
 	
 
-	default: {
+	default: 
+		//SetFocus(get_control(CALC_window, "=")->handle);
 		return DefWindowProc(hwnd, msg, wparam, lparam);
 		break;
 	}
 	
 	}
 
-	return DefWindowProc(hwnd, msg, wparam, lparam);
-}
+	
 
 
 

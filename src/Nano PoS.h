@@ -4,7 +4,7 @@
 #define IS_IN_DEBUGGING_MODE 0
 #define REPORT_DEALLOCATION 0
 #define REPORT_ALLOCATION 0
-#define DEBUG_FILE "debug.txt"
+#define DEBUG_FILE "c://nanopos//debug.txt"
 #define malloc(x) nano_malloc(x, __FILE__, __LINE__)
 #define free(x)   nano_free  (x, __FILE__, __LINE__)
 #define realloc(x, y) nano_realloc (x,y, __FILE__, __LINE__)
@@ -30,7 +30,7 @@
 HINSTANCE g_hInst;
 #define strcmp string_compare
 
-#define DB_FILE "nanoposdb.sql"
+#define DB_FILE "c://nanopos//nanoposdb.sql"
 
 #define MSB 1
 

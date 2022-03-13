@@ -19,7 +19,7 @@ double CALC_TOTAL; // Total calculated during calc functions.
 double LEFT_CALC; // Left side of quotent.
 double RIGHT_CALC; // Right side of quotent.
 
-extern NWC_PARENT* CALC_window; // We need this.
+extern NWC_PARENT* CALC_window; // We need this.     
 
 
 inline double add_quote(void)
@@ -90,8 +90,9 @@ void calc_append_number(int num)
 	char* orig;	// Original number
 	char p[1024]; // larger than we need, but that's fine.
 	orig = CTRL_gettext(CALC_window, "CALCINPUT");
-
-
+	
+	if (!orig)
+		orig = p;
 	sprintf(p, "\0");
 
 	switch ( num ) // Single number. We want to put on the end.

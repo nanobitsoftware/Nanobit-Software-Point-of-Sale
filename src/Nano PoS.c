@@ -13,8 +13,7 @@
 #include <commctrl.h>
 #include "sqlite3.h"
 
-//#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' ""version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
-
+//#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' ""version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language
 #define ID_POS_BTN_ESTIMATE  1000
 #define ID_POS_BTN_CUSTOMER  1001
 #define ID_POS_BTN_START     1002
@@ -112,6 +111,19 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 		{
 			GiveError("Unable to open DB.", TRUE);
 		}
+		sprintf(SQLString,
+
+			"CREATE TABLE IF NOT EXISTS Security (ID INTEGER PRIMARY KEY UNIQUE, Name Type TEXT, Description TEXT, RequiresPassword INT);"
+
+			"CREATE TABLE IF NOT EXISTS Clearance (ID INTEGER  PRIMARY KEY UNIQUE, Shadow_password TEXT, salt TEXT, Date INTEGER, time INTEGER, Permission TEXT);");
+
+
+
+
+		sqlite3_exec(db, SQLString, NULL, NULL, &err);
+		if (err)
+			GiveError(err, 0);
+
 
 		sprintf(SQLString,
 			"CREATE TABLE Customers(id INTEGER PRIMARY KEY AUTOINCREMENT, LastName CHAR, FirstName CHAR, "
@@ -120,7 +132,9 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 			"Zip INT, TimesVisited INT, CorporateID INT, TaxID INT, OpenTickets INT, TotalTickets INT, "
 			"LastSeen CHAR, UnpaidDue DECIMAL(18,2), TotalSpent DECIMAL(18,2), HasCredit INT, DenyWork INT, "
 			"TaxFree INT, CorporateAccount INT, CashOnly INT, AcceptCredit INT, AcceptCheck INT, Cssince CHAR);");
-
+			
+			
+			
 		sqlite3_exec(db, SQLString, NULL, NULL, &err);
 		if (err)
 			GiveError(err, 0);
@@ -163,7 +177,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 		sqlite3_exec(db, SQLString, NULL, NULL, &err);
 		if (err)
 			GiveError(err, 0);
-
+		
 		sprintf(SQLString,
 			"CREATE TABLE Computer(id INTEGER PRIMARY KEY, csid INT, DeviceID INT, Make CHAR, "
 			"Model CHAR, Ram CHAR, cSpeed CHAR, Windows CHAR, Notes CHAR, TicketTotal INT, "
@@ -294,7 +308,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 	lastinv = NULL;
 	lastemp = NULL;
 
-	POS_parent = create_parent("Nanobit Point of Sale system 2011(c)");
+	POS_parent = create_parent("Nanobit Point of Sale system 2011-2023(c)");
 
 	set_parent_config(POS_parent, (HWND)0, (LRESULT*)POS_MainWindow, 0, 0, 740, 768, 0, FALSE, 0, 0);
 
@@ -429,6 +443,13 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 
 			if (GetAsyncKeyState(VK_ESCAPE) & MSB)
 			{
+				if (calcwindow && parent_has_focus(CALC_window))
+				{
+					DestroyWindow(calcwindow);
+					calcwindow = NULL;
+					continue;
+				}
+
 				if (dailywindow && parent_has_focus(Daily))
 				{
 					DestroyWindow(dailywindow);
