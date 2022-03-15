@@ -12,6 +12,10 @@
 #include "Nano PoS.h"
 #include "WJCrypt_Repo\lib\WjCryptLib_Sha512.h"
 
+
+
+
+
 /* Go through a complex mathematical need to create a 512
  * byte salt so that we an use later for our passwords.
  * OVer kill? You're damnright it is. And I am okay with that.
@@ -259,6 +263,9 @@ char* hash_to_str(SHA512_HASH hash)
 	return str;
 }
 
+
+
+extern Sha512Calculate(void  const* Buffer, uint32_t            BufferSize, SHA512_HASH* Digest);
 // We WILL modify the salt during this operation.
 // Do not send a copy of it. send the actual pointer
 // to the real buffer.
@@ -271,6 +278,7 @@ char* crypt_password(char* plaintext, char* salt, CRYPTHASH* chash)
 	char salt_tag[] = "::$SALT$::\0";
 	char* pwsalt = NULL; // we'll malloc this.
 	char r_salt[1024];
+	SHA512_HASH hash;
 
 	//SHA512_HASH  hash;          // [in]
 
@@ -310,11 +318,11 @@ char* crypt_password(char* plaintext, char* salt, CRYPTHASH* chash)
 	pwsalt[total_len] = '\0';
 
 	// We now have a password + salt that we can turn in to a hash.
-	//Sha256Calculate(pwsalt, strlen(pwsalt), &hash);
+	Sha512Calculate(pwsalt, strlen(pwsalt), &hash);
+	
+	LOG("\r\nPassword: %s, Hash((512)): %s\r\n",pwsalt, hash_to_str(hash));
 
-	//LOG("Password: %s, Hash: %s",pwsalt, hash_to_str(hash));
-
-//	sprintf(chash->hash, "%s", hash_to_str(hash));
+	sprintf(chash->hash, "%s", hash_to_str(hash));
 
 	sprintf(chash->password, "%s", plaintext);
 

@@ -16,8 +16,23 @@
     <Filter Include="Source Files\WjCrypt Library">
       <UniqueIdentifier>{32dfdd48-cf7a-46a8-a7c5-56c7baf1acd7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\NPOSSource">
+    <Filter Include="Source Files\lua">
+      <UniqueIdentifier>{39f3f65f-072b-4d2e-be8a-89f03c638ed2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lua\src">
+      <UniqueIdentifier>{15ee06f5-2e6e-4b60-886a-a4100835d501}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lua\headers">
+      <UniqueIdentifier>{b07f40e7-f212-47a4-a447-9a048346e0e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NANOPOS">
       <UniqueIdentifier>{2ce03fd8-06ad-4f27-9959-48975240d2e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NANOPOS\src">
+      <UniqueIdentifier>{69a34a13-e2da-4c45-8e4c-7c4fa095abff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NANOPOS\headers">
+      <UniqueIdentifier>{8d6a7510-3b3f-4780-ae7e-747a56e15c21}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,153 +49,302 @@
     </Manifest>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.c">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCtr.c">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesOfb.c">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Md5.c">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Rc4.c">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha1.c">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha256.c">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClCompile>
     <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.c">
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClCompile>
-    <ClCompile Include="src\calculator.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lapi.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\computers gui.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lauxlib.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\crypto.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lbaselib.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\customer_gui.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lcode.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\customers.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lcorolib.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\db.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lctype.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\inventory gui.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\ldblib.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\inventory.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\ldebug.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\IO.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\ldo.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\NWC_Main.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\ldump.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\printer.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lfunc.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\reports.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lgc.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\setup GUI.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\linit.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\sqlite3.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\liolib.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\strings.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\llex.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\tickets gui.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lmathlib.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\tickets.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lmem.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\zipcodes.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\loadlib.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.c">
-      <Filter>Source Files\WjCrypt Library</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lobject.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Nano PoS.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\lopcodes.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\nano Memory.c">
-      <Filter>Source Files\NPOSSource</Filter>
+    <ClCompile Include="src\lua-5.4.4\src\loslib.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lparser.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lstate.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lstring.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lstrlib.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\ltable.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\ltablib.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\ltm.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lua.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\luac.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lundump.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lutf8lib.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lvm.c">
+      <Filter>Source Files\lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua-5.4.4\src\lzio.c">
+      <Filter>Source Files\lua\src</Filter>
     </ClCompile>
     <ClCompile Include="src\calcuator_gui.c">
-      <Filter>Source Files\NPOSSource</Filter>
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\calculator.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\computers_gui.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crypto.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\customer_gui.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\customers.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inventory.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inventory_gui.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IO.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memory.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nano_pos.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NWC_Main.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\printer.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\reports.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setup_gui.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sqlite3.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\strings.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tickets.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tickets_gui.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zipcodes.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.h">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.h">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCtr.h">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesOfb.h">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Md5.h">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Rc4.h">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha1.h">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha256.h">
-      <Filter>Source Files\WjCrypt Library</Filter>
-    </ClInclude>
     <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.h">
       <Filter>Source Files\WjCrypt Library</Filter>
     </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lapi.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lauxlib.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lcode.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lctype.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\ldebug.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\ldo.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lfunc.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lgc.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\ljumptab.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\llex.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\llimits.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lmem.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lobject.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lopcodes.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lopnames.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lparser.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lprefix.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lstate.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lstring.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\ltable.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\ltm.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lua.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lua.hpp">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\luaconf.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lualib.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lundump.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lvm.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua-5.4.4\src\lzio.h">
+      <Filter>Source Files\lua\headers</Filter>
+    </ClInclude>
     <ClInclude Include="src\calculator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\nano_memory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\resource1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sqlite3.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\NANOPOS\headers</Filter>
     </ClInclude>
     <ClInclude Include="src\Nano PoS.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\NANOPOS\headers</Filter>
     </ClInclude>
-    <ClInclude Include="src\sqlite3ext.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\nano_memory.h">
+      <Filter>Source Files\NANOPOS\headers</Filter>
     </ClInclude>
     <ClInclude Include="src\NWC.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\NANOPOS\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Source Files\NANOPOS\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource.h">
+      <Filter>Source Files\NANOPOS\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource1.h">
+      <Filter>Source Files\NANOPOS\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sqlite3.h">
+      <Filter>Source Files\NANOPOS\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sqlite3ext.h">
+      <Filter>Source Files\NANOPOS\headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram11.cd" />
     <None Include="src\printer.c.vsspell" />
+    <None Include="src\lua-5.4.4\src\Makefile">
+      <Filter>Source Files\lua</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\nanopos.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

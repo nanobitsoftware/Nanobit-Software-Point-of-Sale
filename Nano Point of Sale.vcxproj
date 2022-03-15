@@ -162,6 +162,7 @@
       <ExceptionHandling>false</ExceptionHandling>
       <CompileAs>CompileAsC</CompileAs>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <DisableSpecificWarnings>5105</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -197,37 +198,92 @@
   <ItemGroup>
     <ClCompile Include="src\calcuator_gui.c" />
     <ClCompile Include="src\calculator.c" />
-    <ClCompile Include="src\computers gui.c" />
+    <ClCompile Include="src\computers_gui.c" />
     <ClCompile Include="src\crypto.c" />
     <ClCompile Include="src\customers.c" />
     <ClCompile Include="src\customer_gui.c" />
     <ClCompile Include="src\db.c" />
-    <ClCompile Include="src\inventory gui.c" />
+    <ClCompile Include="src\inventory_gui.c" />
     <ClCompile Include="src\inventory.c" />
     <ClCompile Include="src\IO.c" />
-    <ClCompile Include="src\nano Memory.c" />
-    <ClCompile Include="src\Nano PoS.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lapi.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lauxlib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lbaselib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lcode.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lcorolib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lctype.c" />
+    <ClCompile Include="src\lua-5.4.4\src\ldblib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\ldebug.c" />
+    <ClCompile Include="src\lua-5.4.4\src\ldo.c" />
+    <ClCompile Include="src\lua-5.4.4\src\ldump.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lfunc.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lgc.c" />
+    <ClCompile Include="src\lua-5.4.4\src\linit.c" />
+    <ClCompile Include="src\lua-5.4.4\src\liolib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\llex.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lmathlib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lmem.c" />
+    <ClCompile Include="src\lua-5.4.4\src\loadlib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lobject.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lopcodes.c" />
+    <ClCompile Include="src\lua-5.4.4\src\loslib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lparser.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lstate.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lstring.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lstrlib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\ltable.c" />
+    <ClCompile Include="src\lua-5.4.4\src\ltablib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\ltm.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lua.c" />
+    <ClCompile Include="src\lua-5.4.4\src\luac.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lundump.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lutf8lib.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lvm.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lzio.c" />
+    <ClCompile Include="src\memory.c" />
+    <ClCompile Include="src\nano_pos.c" />
     <ClCompile Include="src\NWC_Main.c" />
     <ClCompile Include="src\printer.c" />
     <ClCompile Include="src\reports.c" />
-    <ClCompile Include="src\setup GUI.c" />
+    <ClCompile Include="src\setup_gui.c" />
     <ClCompile Include="src\sqlite3.c" />
     <ClCompile Include="src\strings.c" />
-    <ClCompile Include="src\tickets gui.c" />
+    <ClCompile Include="src\tickets_gui.c" />
     <ClCompile Include="src\tickets.c" />
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.c" />
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.c" />
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCtr.c" />
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_AesOfb.c" />
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Md5.c" />
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Rc4.c" />
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha1.c" />
-    <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha256.c" />
     <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.c" />
     <ClCompile Include="src\zipcodes.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="src\calculator.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lapi.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lauxlib.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lcode.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lctype.h" />
+    <ClInclude Include="src\lua-5.4.4\src\ldebug.h" />
+    <ClInclude Include="src\lua-5.4.4\src\ldo.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lfunc.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lgc.h" />
+    <ClInclude Include="src\lua-5.4.4\src\ljumptab.h" />
+    <ClInclude Include="src\lua-5.4.4\src\llex.h" />
+    <ClInclude Include="src\lua-5.4.4\src\llimits.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lmem.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lobject.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lopcodes.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lopnames.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lparser.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lprefix.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lstate.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lstring.h" />
+    <ClInclude Include="src\lua-5.4.4\src\ltable.h" />
+    <ClInclude Include="src\lua-5.4.4\src\ltm.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lua.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lua.hpp" />
+    <ClInclude Include="src\lua-5.4.4\src\luaconf.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lualib.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lundump.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lvm.h" />
+    <ClInclude Include="src\lua-5.4.4\src\lzio.h" />
     <ClInclude Include="src\Nano PoS.h" />
     <ClInclude Include="src\nano_memory.h" />
     <ClInclude Include="src\NWC.h" />
@@ -235,20 +291,16 @@
     <ClInclude Include="src\resource1.h" />
     <ClInclude Include="src\sqlite3.h" />
     <ClInclude Include="src\sqlite3ext.h" />
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Aes.h" />
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCbc.h" />
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesCtr.h" />
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_AesOfb.h" />
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Md5.h" />
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Rc4.h" />
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha1.h" />
-    <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha256.h" />
     <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram11.cd" />
+    <None Include="src\lua-5.4.4\src\Makefile" />
     <None Include="src\printer.c.vsspell" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\nanopos.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
