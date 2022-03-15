@@ -1,3 +1,26 @@
+/*
+tickets.c
+Nanobit Point of Sale - Enhanced Edition
+-------------------------------------------
+Written by; Bi0teq
+Between 2010 and 2022
+-------------------------------------------
+Owned and operated by Nanobit Softare (R) (C), 2023
+Version 0.0.0.1
+
+
+Most code is in an alpha stage. These tags will be updated as the code matures.
+These tags will also be added with information regarding the
+specific file that theyre in a the time.
+
+ Code description:
+ Takes all the DB info from the tivkets.gui and does all the data processing on it
+ as well as sets up and controls most of the behidn the scenes GUi stuff. NOthing special, really,
+ except it does all the work and gets none of the credit. I appreicate you, tickets.c; I apprecite you and love you. 
+
+
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 /*
-Inventory,c
+lua_gui.c
 Nanobit Point of Sale - Enhanced Edition
 -------------------------------------------
 Written by; Bi0teq
@@ -17,16 +14,9 @@ These tags will also be added with information regarding the
 specific file that theyre in a the time.
 
  Code description:
- Cause I got high...cause I got highhhhh.
+ This is where the lua code will start wrangling it way in to the GUI code of the system
+ mainly the NWC code system so that it, too, can create win32 API elementsd and control them
+ at will. Such as makng its own window. Or even finsih the entire program in lua. The options are engless, Thankfully.
+
 
  */
-#include <time.h>
-#include <windows.h>
-#include <winsock.h>
-#include <richedit.h>
-#include <assert.h>
-#include <time.h>
-#include <commctrl.h>
-#include "Nano PoS.h"
-
-#include "NWC.h"

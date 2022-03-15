@@ -1,3 +1,28 @@
+/*
+calculator.c
+Nanobit Point of Sale - Enhanced Edition
+-------------------------------------------
+Written by; Bi0teq
+Between 2010 and 2022
+-------------------------------------------
+Owned and operated by Nanobit Softare (R) (C), 2023
+Version 0.0.0.1
+
+
+Most code is in an alpha stage. These tags will be updated as the code matures.
+These tags will also be added with information regarding the
+specific file that theyre in a the time.
+
+ Code description:
+ This file contains all the core calculator code for the GUi written elsewhere.
+ It will take all the IDs and add them to a state machine to know if we 
+ should do any math to them or not. Once finished, it will send it off to
+ another part of the program for pasting in to a text box.
+
+
+ */
+
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

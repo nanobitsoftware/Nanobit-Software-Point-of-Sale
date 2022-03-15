@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 /*
-Inventory,c
+lua_sql.c
 Nanobit Point of Sale - Enhanced Edition
 -------------------------------------------
 Written by; Bi0teq
@@ -17,16 +14,7 @@ These tags will also be added with information regarding the
 specific file that theyre in a the time.
 
  Code description:
- Cause I got high...cause I got highhhhh.
+Well......Duh. This allows Lua to integrate with sqlite3 and our database so that it can read/write to what 
+ever it needs and wants. In fact, most writes and reads wil come from the lua subsection in the near future,
 
  */
-#include <time.h>
-#include <windows.h>
-#include <winsock.h>
-#include <richedit.h>
-#include <assert.h>
-#include <time.h>
-#include <commctrl.h>
-#include "Nano PoS.h"
-
-#include "NWC.h"

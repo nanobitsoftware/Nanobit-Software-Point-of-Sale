@@ -34,6 +34,12 @@
     <Filter Include="Source Files\NANOPOS\headers">
       <UniqueIdentifier>{8d6a7510-3b3f-4780-ae7e-747a56e15c21}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\NANOPOS\src\GUI">
+      <UniqueIdentifier>{6653b593-1fb7-45aa-8f58-4efa19a4a908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NANOPOS\src\LUA">
+      <UniqueIdentifier>{5b72e0f5-c7ad-4ea5-9a86-600a57efbaf1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="debug.txt" />
@@ -154,19 +160,10 @@
     <ClCompile Include="src\lua-5.4.4\src\lzio.c">
       <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\calcuator_gui.c">
-      <Filter>Source Files\NANOPOS\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\calculator.c">
       <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\computers_gui.c">
-      <Filter>Source Files\NANOPOS\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\crypto.c">
-      <Filter>Source Files\NANOPOS\src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\customer_gui.c">
       <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
     <ClCompile Include="src\customers.c">
@@ -178,9 +175,6 @@
     <ClCompile Include="src\inventory.c">
       <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\inventory_gui.c">
-      <Filter>Source Files\NANOPOS\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\IO.c">
       <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
@@ -190,16 +184,10 @@
     <ClCompile Include="src\nano_pos.c">
       <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\NWC_Main.c">
-      <Filter>Source Files\NANOPOS\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\printer.c">
       <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
     <ClCompile Include="src\reports.c">
-      <Filter>Source Files\NANOPOS\src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\setup_gui.c">
       <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
     <ClCompile Include="src\sqlite3.c">
@@ -211,11 +199,53 @@
     <ClCompile Include="src\tickets.c">
       <Filter>Source Files\NANOPOS\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\tickets_gui.c">
-      <Filter>Source Files\NANOPOS\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\zipcodes.c">
       <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wip.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\employees_handler.c">
+      <Filter>Source Files\NANOPOS\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\calcuator_gui.c">
+      <Filter>Source Files\NANOPOS\src\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\computers_gui.c">
+      <Filter>Source Files\NANOPOS\src\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\customer_gui.c">
+      <Filter>Source Files\NANOPOS\src\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\employees_gui.c">
+      <Filter>Source Files\NANOPOS\src\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inventory_gui.c">
+      <Filter>Source Files\NANOPOS\src\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NWC_Main.c">
+      <Filter>Source Files\NANOPOS\src\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setup_gui.c">
+      <Filter>Source Files\NANOPOS\src\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tickets_gui.c">
+      <Filter>Source Files\NANOPOS\src\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua.c">
+      <Filter>Source Files\NANOPOS\src\LUA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua_api.c">
+      <Filter>Source Files\NANOPOS\src\LUA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua_gui.c">
+      <Filter>Source Files\NANOPOS\src\LUA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua_nwc.c">
+      <Filter>Source Files\NANOPOS\src\LUA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua_sql.c">
+      <Filter>Source Files\NANOPOS\src\LUA</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

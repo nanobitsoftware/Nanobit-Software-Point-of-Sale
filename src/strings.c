@@ -1,3 +1,28 @@
+/*
+strings.c
+Nanobit Point of Sale - Enhanced Edition
+-------------------------------------------
+Written by; Bi0teq
+Between 2010 and 2022
+-------------------------------------------
+Owned and operated by Nanobit Softare (R) (C), 2023
+Version 0.0.0.1
+
+
+Most code is in an alpha stage. These tags will be updated as the code matures.
+These tags will also be added with information regarding the
+specific file that theyre in a the time.
+
+ Code description:
+ I tend to we-write all my own string commnads over the gnu / glib 
+ library....for obvious reasons. But I also tend to have some of my own special 
+ library needs so I Just amalgamate them all in to strings.c I use this in all my projects
+ so it's nothing to write home about, but it does make for some fun ways to fi erors in your
+ program that relies on glib.
+
+ */
+
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

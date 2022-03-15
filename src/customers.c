@@ -1,3 +1,24 @@
+/*
+customer.c
+Nanobit Point of Sale - Enhanced Edition
+-------------------------------------------
+Written by; Bi0teq
+Between 2010 and 2022
+-------------------------------------------
+Owned and operated by Nanobit Softare (R) (C), 2023
+Version 0.0.0.1
+
+
+Most code is in an alpha stage. These tags will be updated as the code matures.
+These tags will also be added with information regarding the
+specific file that theyre in a the time.
+
+ Code description:
+ Handles all the callbacks and hard liting of the customer_gui file.
+ It also handles, parses and puts where it needs to be, anything from the DB
+ to the GUI windows when asked to. Simple, really.
+
+ */
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

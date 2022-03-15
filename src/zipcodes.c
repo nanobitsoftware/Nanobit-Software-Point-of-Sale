@@ -1,3 +1,28 @@
+/*
+zipcode.c
+Nanobit Point of Sale - Enhanced Edition
+-------------------------------------------
+Written by; Bi0teq
+Between 2010 and 2022
+-------------------------------------------
+Owned and operated by Nanobit Softare (R) (C), 2023
+Version 0.0.0.1
+
+
+Most code is in an alpha stage. These tags will be updated as the code matures.
+These tags will also be added with information regarding the
+specific file that theyre in a the time.
+
+ Code description:
+ This was one of the worst. yet fun, bash scripts I have ever written
+ to convert a long list of data stripped from a site containing each zipcode and their
+ corresponding city. Then turnging them in to a readable, and usable data structre so that 
+ I could type '35405' and the program INSTANTLY pulls up Tuscaloosa in to its info . Dsagves time
+ and makes it look like a cool futuristing skill. NO one else today I've seen who has done this. DO NOT
+ STEAL MY LIST@!!!!! :'(
+
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

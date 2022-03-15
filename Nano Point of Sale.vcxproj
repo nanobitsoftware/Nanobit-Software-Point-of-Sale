@@ -203,6 +203,8 @@
     <ClCompile Include="src\customers.c" />
     <ClCompile Include="src\customer_gui.c" />
     <ClCompile Include="src\db.c" />
+    <ClCompile Include="src\employees_gui.c" />
+    <ClCompile Include="src\employees_handler.c" />
     <ClCompile Include="src\inventory_gui.c" />
     <ClCompile Include="src\inventory.c" />
     <ClCompile Include="src\IO.c" />
@@ -240,6 +242,11 @@
     <ClCompile Include="src\lua-5.4.4\src\lutf8lib.c" />
     <ClCompile Include="src\lua-5.4.4\src\lvm.c" />
     <ClCompile Include="src\lua-5.4.4\src\lzio.c" />
+    <ClCompile Include="src\lua.c" />
+    <ClCompile Include="src\lua_api.c" />
+    <ClCompile Include="src\lua_gui.c" />
+    <ClCompile Include="src\lua_nwc.c" />
+    <ClCompile Include="src\lua_sql.c" />
     <ClCompile Include="src\memory.c" />
     <ClCompile Include="src\nano_pos.c" />
     <ClCompile Include="src\NWC_Main.c" />
@@ -250,6 +257,7 @@
     <ClCompile Include="src\strings.c" />
     <ClCompile Include="src\tickets_gui.c" />
     <ClCompile Include="src\tickets.c" />
+    <ClCompile Include="src\wip.c" />
     <ClCompile Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.c" />
     <ClCompile Include="src\zipcodes.c" />
   </ItemGroup>
