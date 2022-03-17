@@ -422,7 +422,7 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 					continue;
 				}
 
-				//	if (cswindow)
+				//	if (cswindow)b
 					//	clist_clear_list(CS_window, "computer");
 
 				if (csfind != NULL)
@@ -446,15 +446,17 @@ int WINAPI WinMain(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszA
 				//	if (cswindow)
 					//	clist_clear_list(CS_window, "computer");
 
-				if (calcwindow != NULL)
+				if (calcwindow == NULL)
 				{
-					CloseWindow(calcwindow);
-					DestroyParent(CALC_window);
-					
+					create_calc_window();
+										
 				}
 				else 
 				{
-					create_calc_window();
+					DestroyWindow(calcwindow);
+					calcwindow = NULL;
+
+					
 				}
 
 			}

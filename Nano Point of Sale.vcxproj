@@ -159,10 +159,13 @@
       <ConformanceMode>true</ConformanceMode>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>true</MinimalRebuild>
-      <ExceptionHandling>false</ExceptionHandling>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
       <CompileAs>CompileAsC</CompileAs>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <DisableSpecificWarnings>5105</DisableSpecificWarnings>
+      <DiagnosticsFormat>Classic</DiagnosticsFormat>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -237,8 +240,10 @@
     <ClCompile Include="src\lua-5.4.4\src\ltablib.c" />
     <ClCompile Include="src\lua-5.4.4\src\ltm.c" />
     <ClCompile Include="src\lua-5.4.4\src\lua.c" />
-    <ClCompile Include="src\lua-5.4.4\src\luac.c" />
-    <ClCompile Include="src\lua-5.4.4\src\lundump.c" />
+    <ClCompile Include="src\lua-5.4.4\src\lundump.c">
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</MultiProcessorCompilation>
+      <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</SDLCheck>
+    </ClCompile>
     <ClCompile Include="src\lua-5.4.4\src\lutf8lib.c" />
     <ClCompile Include="src\lua-5.4.4\src\lvm.c" />
     <ClCompile Include="src\lua-5.4.4\src\lzio.c" />
@@ -302,8 +307,6 @@
     <ClInclude Include="src\WJCrypt_Repo\lib\WjCryptLib_Sha512.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram11.cd" />
     <None Include="src\lua-5.4.4\src\Makefile" />
     <None Include="src\printer.c.vsspell" />
   </ItemGroup>

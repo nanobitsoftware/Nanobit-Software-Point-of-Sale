@@ -145,9 +145,6 @@
     <ClCompile Include="src\lua-5.4.4\src\lua.c">
       <Filter>Source Files\lua\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\lua-5.4.4\src\luac.c">
-      <Filter>Source Files\lua\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\lua-5.4.4\src\lundump.c">
       <Filter>Source Files\lua\src</Filter>
     </ClCompile>
@@ -365,8 +362,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram11.cd" />
     <None Include="src\printer.c.vsspell" />
     <None Include="src\lua-5.4.4\src\Makefile">
       <Filter>Source Files\lua</Filter>

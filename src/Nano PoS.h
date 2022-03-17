@@ -5,8 +5,8 @@
 #define REPORT_DEALLOCATION 0
 #define REPORT_ALLOCATION 0
 #define DEBUG_FILE "c://nanopos//debug.txt"
-#define malloc(x) nano_malloc(x, __FILE__, __LINE__)
-#define free(x)   nano_free  (x, __FILE__, __LINE__)
+//#define malloc(x) nano_malloc(x, __FILE__, __LINE__)
+//#define free(x)   nano_free  (x, __FILE__, __LINE__)
 #define realloc(x, y) nano_realloc (x,y, __FILE__, __LINE__)
 #define str_dup(x)  str_dup1(x, __FILE__, __LINE__)
 //#define str_dup(x) _strdup(x)

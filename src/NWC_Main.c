@@ -1733,7 +1733,7 @@ void DestroyParent(NWC_PARENT* p_window)
 	int f;
 
 	f = 0;
-
+	
 	if (!p_window)
 	{
 		GiveError("Bad Window", 0);
@@ -1745,7 +1745,9 @@ void DestroyParent(NWC_PARENT* p_window)
 	{
 		if (p_window->controls[i] == NULL)
 			continue;
-
+		if (p_window == p_window->controls[i])
+			continue; // Possible weird case bug.
+		LOG("Destroying: %s (%s)", p_window->controls[i]->name, p_window->name);
 		free(p_window->controls[i]->name);
 		DestroyWindow(p_window->controls[i]->handle);
 		free(p_window->controls[i]);
@@ -1760,7 +1762,7 @@ void DestroyParent(NWC_PARENT* p_window)
 		if (parents[i] == p_window)
 			parents[i] = NULL;
 	}
-
+	
 	//free(p_window->controls);
 	//free(p_window->name);
 	//DestroyWindow(p_window->window_pointer);
